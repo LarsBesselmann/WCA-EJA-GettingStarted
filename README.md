@@ -20,82 +20,18 @@ You will need an estimated **60 to 90 minutes** to complete this lab.
     
   
 
-## Introduction – Liberty Tools extension for VS Code
+## Introduction – watsonx Code Assistant
+IBM watsonx Code Assistant is an innovative, generative AI coding companion that offers robust, contextually aware assistance for popular programming languages including Go, C, C++, Java, JavaScript, Python, TypeScript, and more. Seamlessly integrated into your IDE, you can accelerate your productivity and simplify coding tasks, all with trust, security, and compliance.
 
-In a separate lab, you learned how Open Liberty dev mode can be run from a command line while allowing you to edit your code with any text editor or IDE.
+- **AI-powered coding tasks**: Code generation, explanation, unit test, creation, AI-derived code documentation, and more.
+- **Chat for code**: Free-form AI conversational chat for planning applications and writing code.
+- **Prebuilt chat commands**: Use optimized prompts for specific tasks.
+- **Integrated directly into IDEs**: Available directly within Visual Studio Code and Eclipse, integrating seamlessly with your workflow.
 
-![](./images/media/image3.png)
+![](./images/media/WCA_Intro.png)
 
-In this lab, you will use the “**Liberty Tools”** **VS Code
-extension** to start Open Liberty in development mode, make changes to
-your application while the server is up, run tests and view results, and
-even debug the application without leaving the editor.
+In this lab, you will use the **watsonx Code Assistant** to understand and modernize an existing Java Enterprise application.
 
-Your code is automatically compiled and deployed to your running server,
-making it easy to iterate on your changes.
-
-The Liberty Tools for VS Code contains the following key Features
-
-  - View **liberty-maven-plugin projects** in the workspace (version 3.1
-    or higher)
-
-  - View **liberty-gradle-plugin projects** in the workspace (version
-    3.0 or higher)
-
-  - Start/Stop Open Liberty Server in dev mode
-
-  - Start Open Liberty Server dev mode with custom parameters
-
-  - Run Unit and Integration tests
-
-  - View unit and integration test reports
-
-The Liberty Tools for VS Code has a dependency on the **Tools for
-MicroProfile** VS Code extension to support the development of MicroProfile based microservices.
-
-The **Tools for MicroProfile** VS Code extension has dependencies on the following:
-
-  - Java JDK (or JRE) 11 or more recent
-
-  - Language Support for Java by Red Hat VS Code extension.
-
-### **Liberty Maven Plugin**
-
-The **Liberty Maven Plugin** provides several goals for managing a
-Liberty server and applications.
-
-Maven 3.5.0 or later is recommended to use the Liberty Maven Plugin.
-
-To enable the Liberty Maven Plugin in your project, simply add the
-following XML Stanza to your **pom.xml** file.
-
-![](./images/media/image4.png)
-
-For detailed information about the Maven goals supported by the Liberty
-Maven Plugin, visit:
-
-<https://github.com/OpenLiberty/ci.maven>
-
-### **Interacting with dev mode**
-
-Once the **Liberty Maven Plugin** is specified in your **pom.xml** file,
-your project name is then listed under the **Liberty Dashboard** in
-the side panel in VS Code, as illustrated below.
-
-You can interact with dev mode by right-clicking on your project name
-and selecting one of the commands supported by the Liberty Tools
-extension.
-
-> ![](./images/media/image5.png)
-
-### **Liberty dev mode Commands**
-
-The following commands can be selected from the drop-down menu after
-right-clicking on your project name in the Liberty Dashboard.
-
-![](./images/media/image6.png)
-
-  <br/>  
 
 ## Accessing the lab environment
 
