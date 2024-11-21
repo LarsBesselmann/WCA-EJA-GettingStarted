@@ -120,7 +120,7 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
 
 |         |           |  
 | ------------- |:-------------|
-| ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>IMPORTANT:</strong></p><p>Using the lab environment provided, all the required VS code extensions and dependencies have been installed for you.</p><p>This allows you to focus on the value of using the capabilities of the tools for fast, efficient inner-loop development, test, debug, of Java based applications and Microservices using Open Liberty in dev mode.</p></p> |
+| ![](./images/media/info.png?cropResize=100,100)   | <p><strong>IMPORTANT:</strong></p><p>Using the lab environment provided, all the required VS code extensions and dependencies have been installed for you.</p><p>This allows you to focus on the value of using the capabilities of the tools for fast, efficient inner-loop development, test, debug, of Java based applications and Microservices using Open Liberty in dev mode.</p></p> |
   <br/>
 
 
@@ -172,7 +172,7 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
 
 |         |           |  
 | ------------- |:-------------|
-| ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Important:</strong> <p><strong>Click CANCEL</strong>…. If, at any time during the lab, you get a pop-up asking to install updated software onto the Ubuntu VM.</p> <p>The one we experience is an update available for VS Code.</p><p><strong>CLICK CANCEL!</strong></p><p>![](./images/media/image15.png?cropResize=100,100)</p> |
+| ![](./images/media/info.png?cropResize=100,100)   | <p><strong>Important:</strong> <p><strong>Click CANCEL</strong>…. If, at any time during the lab, you get a pop-up asking to install updated software onto the Ubuntu VM.</p> <p>The one we experience is an update available for VS Code.</p><p><strong>CLICK CANCEL!</strong></p><p>![](./images/media/vscode_popup_update.png?cropResize=100,100)</p> |
 
 
 ## Getting Started with watsonx Code Assistant for Enterprise Java applications
@@ -358,11 +358,10 @@ There are different ways to interact with watsonx Code Assistant.
 
     Make sure that you get a **BUILD SUCCESS** message
 
-Hint: 
-1. Without installing the file was_public.jar into maven, the maven command would fail with an error like this: 
+    > Hints:
+    > - The build of the application is needed to perform watsonx Code Assistant tasks on Enterprise Java Application level (e.g. explain, modernize, upgrade).
+    > - If you did not install the file was_public.jar into maven, the maven command wwill fail with an error like: <br> Could not resolve dependencies for project com.acme.modres:modresorts:war:2.0.0: The following artifacts could not be resolved: com.ibm.websphere.appserver:was_public:jar:9.0.0 (absent)
 
-        [ERROR] Failed to execute goal on project modresorts: Could not resolve dependencies for project com.acme.modres:modresorts:war:2.0.0: The following artifacts could not be resolved: com.ibm.websphere.appserver:was_public:jar:9.0.0 (absent): com.ibm.websphere.appserver:was_public:jar:9.0.0 was not found in https://repo.maven.apache.org/maven2 during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of central has elapsed or updates are forced -> [Help 1]
-2. The build of the application is needed to perform watsonx Code Assistant tasks on Enterprise Java Application level (e.g. explain, modernize, upgrade).
 
 
 ### Scenario: Understand the Java Enterprise application modresorts
@@ -530,10 +529,13 @@ and select the file **modresorts.ear_migrationBundle.zip**, the click on **Open*
 
     You will see **4 issues** that must be fixed before the application can run successfully in Liberty. Three of the issues have automated fixes, and one issue has an assisted fix using the watsonx Code Assistant. 
 
-    HINTS: 
-    - If you want to get more details about the issues, click on the blue link called **View analysis report**. 
-    - To get more details about the architecture of the application and the used standards, take a look at **View inventory report**.
- 
+    <br>
+
+    > - If you want to get more details about the issues, click on the blue link called **View analysis report**. 
+    > - To get more details about the architecture of the application and the used standards, take a look at **View inventory report**.
+    
+   
+
 #### Test the application as is to show the impact of the issues
 
 At this point **BEFORE** you actually fix the issues, it is interesting to take a look at the ModResorts application. Because you have the server.xml in place, the application can be run on Liberty, although you will expect that at least some functionality is broken because you have not yet addressed the issues. 
@@ -541,8 +543,11 @@ At this point **BEFORE** you actually fix the issues, it is interesting to take 
 To launch the application, you must start the Liberty server which will be installed under the cover by the related maven process.
 
 1. Open the **Liberty Dashboard** and right-click on the application **modresorts**.
-    
-    HINT: If the application is not listed, click the reload button on the right.
+
+    |         |           |  
+    | ------------- |:-------------|
+    | ![](./images/media/info.png?cropResize=100,100)   | If the application is not listed, click the reload button on the right.</p></p> |
+  <br/>
     
 2.	Select Start to start the Liberty instance including the application.
  
