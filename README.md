@@ -25,8 +25,35 @@ You will need an estimated **60 to 90 minutes** to complete this lab.
 - [Getting started](#getting-started)
 - [How to use watsonx Code Assistant](#how-to-use-watsonx-code-assistant)
 - [Scenario: Understand the Java Enterprise application modresorts](#scenario-understand-the-java-enterprise-application-modresorts)
+    - [Use watsonx Code Assistant to explain the application](#use-watsonx-code-assistant-to-explain-the-application)
+    - [Use the wizard inside the application code to explain a class](#use-the-wizard-inside-the-application-code-to-explain-a-class)
+    - [Use the chat command to explain a class or method](#use-the-chat-command-to-explain-a-class-or-method)
+    - [Use the WCA chat to ask questions about the application](#use-the-wca-chat-to-ask-questions-about-the-application)
+
 - [Scenario: Modernize the modresorts application from WebSphere Traditional to Liberty](#scenario-modernize-the-modresorts-application-from-websphere-traditional-to-liberty)
+
+    - [Modernize: Analyze the applicatzion via watsonx Code Assistant for Enterprise Java Application](#modernize-analyze-the-application-via-watsonx-code-assistant-for-enterprise-java-application)
+
+    - [Modernize: Test the application as is to show the impact of the issues](#modernize-test-the-application-as-is-to-show-the-impact-of-the-issues)
+
+    - [Modernize: Resolve the automated fix issues using watsonx Code Assistant](#modernize-resolve-the-automated-fix-issues-using-watsonx-code-assistant)
+
+    - [Modernize: Resolve the assisted fix issues using watsonx Code Assistant](#modernize-resolve-the-assisted-fix-issues)
+
+
 - [Scenario: Upgrade the Java version of the modresorts application](#scenario-upgrade-the-java-version-of-the-modresorts-application)
+
+    - [Upgrade: Identify the issues resulting of a Java upgrade](#upgrade-identify-the-issues-resulting-of-a-java-upgrade)
+
+    - [Upgrade: Test the application on the target Java before upgrading](#upgrade-test-the-application-on-the-target-java-before-upgrading)
+
+    - [Upgrade: Resolve the automated fix issues](#upgrade-resolve-the-automated-fix-issues)
+
+    - [Upgrade: Resolve the assisted fix issues](#upgrade-resolve-the-assisted-fix-issues)
+
+    - [Upgrade: Test the application if the error has been resolved](#upgrade-test-the-application-if-the-error-has-been-resolved)
+
+
 - [Appendix](#appendix)
 
 
@@ -425,7 +452,7 @@ This will include three parts:
 - Get a better understanding of modresorts classes and methods or other files by using some of the core capabilities of watsonx Code Assistant.
 - Get a better understanding of the modresorts applications by asking questions by using some of the core capabilities of watsonx Code Assistant.
  
-#### Use watsonx Code Assistant to explain the code
+#### Use watsonx Code Assistant to explain the application
 
 1. Within the project, click on the Project Explorer shortcut.
   
@@ -531,7 +558,7 @@ There are additional questions that you could ask. For example:
 - Who is providing the Weather Underground API? 
 - What is the URL of the Weather Underground API? 
  
-#### Summary
+#### Understand: Summary
 As you could see, watsonx Code Assistant makes it much easier to understand the code. Instead of having to read through all the application code, you can get explanations or ask questions or even use a combination to get the nsiht that you need.
 
 Additional capabilities that have nbot been covered as part of the section are the generation of code documentation for example.
@@ -544,7 +571,7 @@ The generated data collection can be used as input for Transformation Advisor to
 In this case, the IBM Transformation Advisor was used to scan the application and create a migration bundle which contains next to the reports about required code changes also the Liberty server configuration (server.ml).
 The data collection can be found in the file **ta-collection/ AppSrv01.zip**, the generated migration bundle in the file **migration-bundle/modresorts.ear_migrationBundle.zip**
 
-#### Analyze the applicatzion via watsonx Code Assistant for Enterprise Java Application 
+#### Modernize: Analyze the application via watsonx Code Assistant for Enterprise Java Application 
 
 1.	Switch to the **Project Explorer**, expand the **modresorts** application and right click on the **src** directory. Then select **watsonx Code Assistant > Modernize to Liberty**.
 
@@ -588,7 +615,7 @@ and select the file **modresorts.ear_migrationBundle.zip**, the click on **Open*
     
    
 
-#### Test the application as is to show the impact of the issues
+#### Modernize: Test the application as is to show the impact of the issues
 
 At this point **BEFORE** you actually fix the issues, it is interesting to take a look at the ModResorts application. Because you have the server.xml in place, the application can be run on Liberty, although you will expect that at least some functionality is broken because you have not yet addressed the issues. 
 
@@ -634,7 +661,7 @@ To launch the application, you must start the Liberty server which will be insta
 
 
    
-#### Resolve the automated fix issues using watsonx Code Assistant.
+#### Modernize: Resolve the automated fix issues using watsonx Code Assistant.
 
 Now you will use watsonx Code Assistant to fix the identified automated fix issues.
 
@@ -660,7 +687,7 @@ Now you will use watsonx Code Assistant to fix the identified automated fix issu
      <kbd>![](./images/media/ModResorts_Modernize_AutomatedFixes4.png)</kbd>
 
 
-#### Resolve the assisted fix issues
+#### Modernize: Resolve the assisted fix issues using watsonx Code Assistant
 Now we will use watsonx Code Assistant to fix the remaining issue.
 
 1. Switch to the tab called **Assisted fixes** and take a look at the issue.
@@ -744,7 +771,7 @@ Now we will use watsonx Code Assistant to fix the remaining issue.
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes14.png)</kbd>
 
 
-#### Test the application again to show if the issue has been resolved
+#### Modernize: Test the application again to show if the issue has been resolved
 
 To launch the application, you must start the Liberty server which will be installed under the cover by the related maven process.
 
@@ -785,7 +812,7 @@ Congratulations, you have just migrated an enterprise application from WebSphere
 
 watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 8 to Java 17 or Java 21. This scenarios assumes that the ModResorts application has already been modernized to work on Liberty. It begins with the code in the state that we finished the Modernize to Liberty scenario. You can also start the scenario by starting with the zip called modresorts-lib-j8.zip.
 
-#### Identify the issues resulting of a Java upgrade
+#### Upgrade: Identify the issues resulting of a Java upgrade
 
 1.	Switch to the **Project Explorer**, expand the **modresorts** application and right click on the **src** directory. Then select **watsonx Code Assistant > Upgrade Java Version**.
 
@@ -820,7 +847,7 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
      <kbd>![](./images/media/ModResorts_Upgrade_Panel_04.png)</kbd>
  
 
-#### Test the application on the target Java before upgrading
+#### Upgrade: Test the application on the target Java before upgrading
 
 1.	At this point you can run ModResorts in a Java 17 or Java 21 environment to observe how the application is not functioning correctly **BEFORE** you fix the Java upgrade issues. 
 
@@ -847,7 +874,7 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
      <kbd>![](./images/media/UpgradeJava_Stop_Liberty.png)</kbd>
  
 
-#### Resolve the automated fix issues
+#### Upgrade: Resolve the automated fix issues
 
 1. In VS Code, click the **Run automated fixes** button.
 
@@ -862,7 +889,7 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
      <kbd>![](./images/media/ModResorts_Upgrade_AutomatedFixes3.png)</kbd>
 
 
-#### Resolve the assisted fix issues
+#### Upgrade: Resolve the assisted fix issues
 1. Switch to the tab for Assisted fixes.
 
      <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes01.png)</kbd>
@@ -910,7 +937,7 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
      <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes09.png)</kbd>
 
 
-## Test the application if the error has been resolved
+## Upgrade: Test the application if the error has been resolved
 
 1.	Start the application using the **LIBERTY DASHBOARD**  in the side panel.
   
