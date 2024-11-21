@@ -440,49 +440,53 @@ Another way to get an explanation for a class is to use the chat window directly
     <kbd>![Toolbar_Terminal](./images/media/WCA_explainCode_CustomerInformation-Result.png)</kbd>
 
 
+#### Use the WCA chat to ask questions about the application
+As mentioned above, the chat function within watsonx Code Assisant can also be used to ask questions about the code for example. Here some examples
+
+1. In the chat window, enter the question: **Where does the weather data come from?**
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-askQuestion1.png)</kbd>
+
+    The answer could look like this:
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-askQuestion1-Result.png)</kbd>
+
+    
+2. In the chat window, enter the question: **Which class is calling the Weather Underground API?** and take a look at the result.
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-askQuestion2.png)</kbd>
+
+    
+3. In the chat window, enter the question: **What happens if the Weather Underground API is not available?** and take a look at the result.
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-askQuestion3.png)</kbd>
+
+    
+4. In the chat window, enter the question: **Where is the default weather data defined?** and take a look at the result.
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-askQuestion4.png)</kbd>
+
+5. To better understand the **DefaultWeatherData** class, ask for an explanation by entering
+
+        /explain @DefaultWeatherData
+
+    watsonx Code Assistant will provide an explanation of the class.
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_explainCode_DefaultWeatherData.png)</kbd>
+
+There are additional questions that you could ask. For example:
+
+- What is the Weather Underground API?
+- Who is providing the Weather Underground API? 
+- What is the URL of the Weather Underground API? 
+ 
+#### Summary
+As you could see, watsonx Code Assistant makes it much easier to understand the code. Instead of having to read through all the application code, you can get explanations or ask questions or even use a combination to get the nsiht that you need.
+
+Additional capabilities that have nbot been covered as part of the section are the generation of code documentation for example.
+
  **to be done begins**
 
-#### Use the WCA chat to ask questions about the application
-
-In the chat window, enter the question: Where does the weather data come from?
- 
-The answer could look like this:
- 
-
-
-
-Ask the question: Which class is calling the Weather Underground API?
- 
-
-
-
-Ask the question: What happens if the Weather Underground API is not available?
- 
-
-
-Ask the question: Where is the default weather data defined?
- 
-
-
-Get details about the DefaultWeatherData class by asking 
-/explain @DefaultWeatherData
-
- 
-
-
- 
-Additional questions that you could ask:
-
-What is the Weather Underground API?
-  
-
-Who is providing the Weather Underground API? 
- 
-
-
-What is the URL of the Weather Underground API? 
- 
- 
 
 
 
