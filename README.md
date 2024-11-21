@@ -726,16 +726,9 @@ Congratulations, you have just migrated an enterprise application from WebSphere
 
 
 
-
-
-
- **to be done begins**
+# to be done 
  
-Upgrade Java
-
-
-
-**to be done end**
+- Upgrade Java
 
 
 
