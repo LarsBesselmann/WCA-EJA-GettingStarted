@@ -276,17 +276,17 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
 
     c. Click on the extension **watsonx Code Assistant for Enterprise Java Applications** to view its details.
 
-    <kbd>![Toolbar_Terminal](./images/media/vscode_Extension_for_WCA.png)</kbd>
+    <kbd>![](./images/media/vscode_Extension_for_WCA.png)</kbd>
 
 
     d. Click on the extension **Liberty Tools** to view its details.
 
-    <kbd>![Toolbar_Terminal](./images/media/vscode_LibertyTools.png)</kbd>
+    <kbd>![](./images/media/vscode_LibertyTools.png)</kbd>
 
 
     e. Switch back to the Project Explorer view and you should see the Liberty Dashboard at the bottom.
 
-    <kbd>![Toolbar_Terminal](./images/media/vscode_LibertyTools_Dashboard.png)</kbd>
+    <kbd>![](./images/media/vscode_LibertyTools_Dashboard.png)</kbd>
 
 
 ## Using the watsonx Code Assistant
@@ -305,20 +305,20 @@ There are different ways to interact with watsonx Code Assistant.
 
 1. Click on the shortcut for watsonx Code Assistant.
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_shortcut.png)</kbd>
+    <kbd>![](./images/media/WCA_shortcut.png)</kbd>
 
 2. In the chat session, you should see a Chat session.
  
-    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-Hello.png)</kbd>
+    <kbd>![](./images/media/WCA_Chat-Hello.png)</kbd>
  
 3. Enter **/help** and press **Enter** or click on the **blue arrow**.
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-help.png)</kbd>
+    <kbd>![](./images/media/WCA_Chat-help.png)</kbd>
 
  
 4. You should see a short introduction. Feel free to expand the different sections.
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-help2.png)</kbd>
+    <kbd>![](./images/media/WCA_Chat-help2.png)</kbd>
 
 
 
@@ -326,7 +326,7 @@ There are different ways to interact with watsonx Code Assistant.
 
 1. Open a terminal window in VS Code.
 
-    <kbd>![Toolbar_Terminal](./images/media/vcsode_NewTerminal.png)</kbd>
+    <kbd>![](./images/media/vcsode_NewTerminal.png)</kbd>
 
 2. Run the command 
 
@@ -334,7 +334,7 @@ There are different ways to interact with watsonx Code Assistant.
 
     You should see something like
 
-    <kbd>![Toolbar_Terminal](./images/media/modresorts_mvn_clean.png)</kbd>
+    <kbd>![](./images/media/modresorts_mvn_clean.png)</kbd>
 
     Make sure that you get a **BUILD SUCCESS** message
 
@@ -344,7 +344,7 @@ There are different ways to interact with watsonx Code Assistant.
 
     You should see something like
 
-    <kbd>![Toolbar_Terminal](./images/media/modresorts_mvn_install_jar.png)</kbd>
+    <kbd>![](./images/media/modresorts_mvn_install_jar.png)</kbd>
 
     Make sure that you get a **BUILD SUCCESS** message
 
@@ -354,7 +354,7 @@ There are different ways to interact with watsonx Code Assistant.
 
     You should see something like
 
-    <kbd>![Toolbar_Terminal](./images/media/modresorts_mvn_package.png)</kbd>
+    <kbd>![](./images/media/modresorts_mvn_package.png)</kbd>
 
     Make sure that you get a **BUILD SUCCESS** message
 
@@ -378,34 +378,34 @@ This will include three parts:
 
 1. Within the project, click on the Project Explorer shortcut.
   
-    <kbd>![Toolbar_Terminal](./images/media/vscode_ProjectExplorer.png)</kbd>
+    <kbd>![](./images/media/vscode_ProjectExplorer.png)</kbd>
 
 
 2. Right-click on **src** and select **watsonx Code Assistant > Explain Application**
  
-    <kbd>![Toolbar_Terminal](./images/media/WCA_menu-explainApplication.png)</kbd>
+    <kbd>![](./images/media/WCA_menu-explainApplication.png)</kbd>
 
  
 3. You will get a pop-up like:
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_explainApplication_popup.png)</kbd>
+    <kbd>![](./images/media/WCA_explainApplication_popup.png)</kbd>
 
 4. Click on **Proceed with code analysis**. 
 You will see something several messages
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_explainApplication_CodeAnalysis1.png)</kbd>
+    <kbd>![](./images/media/WCA_explainApplication_CodeAnalysis1.png)</kbd>
 
     Then after a minute or so:
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_explainApplication_CodeAnalysis2.png)</kbd>
+    <kbd>![](./images/media/WCA_explainApplication_CodeAnalysis2.png)</kbd>
 
     And then
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_explainApplication_CodeAnalysis3.png)</kbd>
+    <kbd>![](./images/media/WCA_explainApplication_CodeAnalysis3.png)</kbd>
 
 5. Click on Open explanation to see the results.
  
-    <kbd>![Toolbar_Terminal](./images/media/WCA_explainApplication_Result.png)</kbd>
+    <kbd>![](./images/media/WCA_explainApplication_Result.png)</kbd>
 
 
 #### Use the wizard inside the application code to explain a class:
@@ -413,11 +413,11 @@ You will see something several messages
 1. In the Project Explorer, expand the **src** directory and open the file **WeatherServlet.java**.
 
  
-    <kbd>![Toolbar_Terminal](./images/media/vscode_Explorer_WeatherServer.png)</kbd>
+    <kbd>![](./images/media/vscode_Explorer_WeatherServer.png)</kbd>
 
 2. Scroll down to **line 45**.
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_WeatherServer_snippet.png)</kbd>
+    <kbd>![](./images/media/WCA_WeatherServer_snippet.png)</kbd>
 
 
 3. Click on **Explain** in the line above line 45 to get the explanation for the class.
@@ -425,19 +425,19 @@ This will trigger watsonx Code Assistant to analyze the code.
 
 4. The WCA chat window will open to explain the WeatherServlet. Take a look at the resulting explanation.
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_explainCode_WeatherServlet.png)</kbd>
+    <kbd>![](./images/media/WCA_explainCode_WeatherServlet.png)</kbd>
 
 #### Use the chat command to explain a class or method:
 Another way to get an explanation for a class is to use the chat window directly.
 
 1. Enter into the chat window the text **/explain @ModResortsCustomerInformation.java**
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_explainCode_CustomerInformation.png)</kbd>
+    <kbd>![](./images/media/WCA_explainCode_CustomerInformation.png)</kbd>
 
 
 2. Press Enter and you should get an explanation like:
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_explainCode_CustomerInformation-Result.png)</kbd>
+    <kbd>![WCA_explainCode_CustomerInformation-Result](./images/media/WCA_explainCode_CustomerInformation-Result.png)</kbd>
 
 
 #### Use the WCA chat to ask questions about the application
@@ -445,26 +445,26 @@ As mentioned above, the chat function within watsonx Code Assisant can also be u
 
 1. In the chat window, enter the question: **Where does the weather data come from?**
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-askQuestion1.png)</kbd>
+    <kbd>![WCA_Chat-askQuestion1](./images/media/WCA_Chat-askQuestion1.png)</kbd>
 
     The answer could look like this:
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-askQuestion1-Result.png)</kbd>
+    <kbd>![WCA_Chat-askQuestion1-Result](./images/media/WCA_Chat-askQuestion1-Result.png)</kbd>
 
     
 2. In the chat window, enter the question: **Which class is calling the Weather Underground API?** and take a look at the result.
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-askQuestion2.png)</kbd>
+    <kbd>![WCA_Chat-askQuestion2](./images/media/WCA_Chat-askQuestion2.png)</kbd>
 
     
 3. In the chat window, enter the question: **What happens if the Weather Underground API is not available?** and take a look at the result.
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-askQuestion3.png)</kbd>
+    <kbd>![WCA_Chat-askQuestion3](./images/media/WCA_Chat-askQuestion3.png)</kbd>
 
     
 4. In the chat window, enter the question: **Where is the default weather data defined?** and take a look at the result.
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-askQuestion4.png)</kbd>
+    <kbd>![WCA_Chat-askQuestion4](./images/media/WCA_Chat-askQuestion4.png)</kbd>
 
 5. To better understand the **DefaultWeatherData** class, ask for an explanation by entering
 
@@ -472,7 +472,7 @@ As mentioned above, the chat function within watsonx Code Assisant can also be u
 
     watsonx Code Assistant will provide an explanation of the class.
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_explainCode_DefaultWeatherData.png)</kbd>
+    <kbd>![WCA_explainCode_DefaultWeatherData](./images/media/WCA_explainCode_DefaultWeatherData.png)</kbd>
 
 There are additional questions that you could ask. For example:
 
@@ -485,19 +485,253 @@ As you could see, watsonx Code Assistant makes it much easier to understand the 
 
 Additional capabilities that have nbot been covered as part of the section are the generation of code documentation for example.
 
+
+### Scenario: Modernize the modresorts application from WebSphere Traditional to Liberty
+
+watsonx Code Assistant helps with the application modernize from a traditional application server like WebSphere Application Server Traditional, Oracle WebLogic, JBoss EAP or Tomcat to Liberty. It uses a binary scanner to scan the existing Java Enterprise applications and provides insight into issues when migrating to Liberty and/or another Java version. It also can scan the existing application server configuration.
+The generated data collection can be used as input for Transformation Advisor to estimate modernization efforts as well as to generate the deployment artefacts as part of a migration bundle.
+In this case, the IBM Transformation Advisor was used to scan the application and create a migration bundle which contains next to the reports about required code changes also the Liberty server configuration (server.ml).
+The data collection can be found in the file **ta-collection/ AppSrv01.zip**, the generated migration bundle in the file **migration-bundle/modresorts.ear_migrationBundle.zip**
+
+#### Analyze the applicatzion via watsonx Code Assistant for Enterprise Java Application 
+
+1.	Switch to the **Project Explorer**, expand the **modresorts** application and right click on the **src** directory. Then select **watsonx Code Assistant > Modernize to Liberty**.
+
+
+    <kbd>![WCA_menu-Modernize](./images/media/WCA_menu-Modernize.png)</kbd>
+
+
+    A panel opens and you can either upload a migration bundle or let the WCA extension scan the code. 
+
+    <kbd>![ModResorts_Modernize_Overview](./images/media/ModResorts_Modernize_Overview.png)</kbd>
+
+ 
+2. Select the option Upload migration bundle.
+<br>
+In the pop-up **Open File**, navigate to the directory **/modresorts/migration-bundle**
+and select the file **modresorts.ear_migrationBundle.zip**, the click on **Open**.
+ 
+    <kbd>![](./images/media/ModResorts_Modernize_OpenFile.png)</kbd>
+
+
+    - That migration bundle has been generated by Transformation Advisor as a result of scanning the ModResorts application that was deployed to the traditional WebSphere Application Server environment. 
+    - It contains configuration information for the application (the server.xml), and analysis that describes the issues that need to be addressed (the code changes that need to be made) in order for the application to run successfully on Liberty.
+
+3. You should see the following screen after choosing the migration bundle:
+
+    <kbd>![](./images/media/ModResorts_Modernize_ConfigurationFiles.png)</kbd>
+
+    - The **server.xml** contains the configuration for the application. 
+    - The Containerfile can be used to build a Liberty image of your application (outside the scope of this scenario)
+    
+4. Click the button to **Proceed** the files to the project. You should see the following panel:
+ 
+    <kbd>![](./images/media/ModResorts_Modernize_AnalysisResults.png)</kbd>
+
+    You will see **4 issues** that must be fixed before the application can run successfully in Liberty. Three of the issues have automated fixes, and one issue has an assisted fix using the watsonx Code Assistant. 
+
+    HINTS: 
+    - If you want to get more details about the issues, click on the blue link called **View analysis report**. 
+    - To get more details about the architecture of the application and the used standards, take a look at **View inventory report**.
+ 
+#### Test the application as is to show the impact of the issues
+
+At this point **BEFORE** you actually fix the issues, it is interesting to take a look at the ModResorts application. Because you have the server.xml in place, the application can be run on Liberty, although you will expect that at least some functionality is broken because you have not yet addressed the issues. 
+
+To launch the application, you must start the Liberty server which will be installed under the cover by the related maven process.
+
+1. Open the **Liberty Dashboard** and right-click on the application **modresorts**.
+    
+    HINT: If the application is not listed, click the reload button on the right.
+    
+2.	Select Start to start the Liberty instance including the application.
+ 
+    <kbd>![](./images/media/ModernizeLiberty_Start_Liberty.png)</kbd>
+
+3.	The terminal window will show the startup of the application server.
+ 
+    <kbd>![](./images/media/ModernizeLiberty_Start_Liberty-Output.png)</kbd>
+
+    Wait until the application server has completed the startup. It can take around a minute as the Liberty server packages required for the application must be downloaded from the Maven repository.
+    As you can see in the terminal, Liberty will listen on port 9080. 
+
+4.	Click on the related link in the terminal or open in a browser the URL http://localhost:9080/resorts. 
+
+    You should see the mod resorts application UI.
+ 
+ 
+    <kbd>![ModResorts](./images/media/ModResorts.png)</kbd>
+
+    
+5.	Let’s take a look at a part of the functionality that is broken. Click the **Logout** button. You should see the following:
+
+    <kbd>![ModResorts](./images/media/ModResorts-Logout-Error.png)</kbd>
+
+    You see this exception because the logout is using a WebSphere API that is not supported on Liberty.
+
+6.	Switch back to VS Code and see the related error message in the VS Code terminal window. You will fix the issue in the next steps.
+
+7.	Stop the Liberty instance by using the Liberty Dashboard.
+ 
+    <kbd>![](./images/media/ModernizeLiberty_Stop_Liberty.png)</kbd>
+
+
+   
+#### Resolve the automated fix issues using watsonx Code Assistant.
+
+Now you will use watsonx Code Assistant to fix the identified automated fix issues.
+
+1.	In VS Code, switch back to the **Modernize too Liberty** panel. 
+
+    Scroll down and you will see on the Automated Fixes tab three issues. 
+ 
+    <kbd>![](./images/media/ModResorts_Modernize_AutomatedFixes1.png)</kbd>
+
+2.	Click on the blue button called **Run automated fixes**. This will start three recipes to fix the issues. They should complete in less than a minute.
+
+3.	In the **terminal window** in VS Code, you should see that the build was successfull.
+
+    <kbd>![](./images/media/ModResorts_Modernize_AutomatedFixes2.png)</kbd>
+
+4.	Click the **Rebuild and refresh** button. 
+        watsonx Code Assistant will rebuild the application and scan it for issues.
+ 
+     <kbd>![](./images/media/ModResorts_Modernize_AutomatedFixes3.png)</kbd>
+
+5.	You should observe that the 3 issues with auto fixes now go away from the list:
+
+     <kbd>![](./images/media/ModResorts_Modernize_AutomatedFixes4.png)</kbd>
+
+
+#### Resolve the assisted fix issues
+Now we will use watsonx Code Assistant to fix the remaining issue.
+
+1. Switch to the tab called **Assisted fixes** and take a look at the issue.
+
+   <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes01.png)</kbd>
+
+2.	Open the twisties to see the details of the issue as well as the guideline to fix it.
+
+    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes02.png)</kbd>
+ 
+3. Click on the blue link to open the file **UpperServlet.java** in the IDE.
+    To have both tabs side by side, move the UpperSetvlet.java window to the right and a bit down.
+  
+    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes03.png)</kbd>
+
+4.	Now you can see the instructions and the code next to each other.
+ 
+    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes04.png)</kbd>
+
+5.	Select the class or the method that uses the ResponseUtils.encodeDataString() method.  Recommended it so select the code from line 14 to 34.
+ 
+    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes05.png)</kbd>
+
+6. Switch back to the tab **Modernize to Liberty** and click the button **Help me**.
+
+    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes06.png)</kbd>
+
+7. The IDE will automatically switch to the chat window, and you will see that watsonx Code Assistant is working on the solution. After a couple of moments, you should get a code snippet returned:
+ 
+    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes07.png)</kbd>
+
+    This code suggestion shows how the Apache Commons Text library can be used instead of the ResponseUtils.encodeDataString() method
+
+8.	Take a look at the recommended changes. The returned solution consists of two parts:
+
+    - The returned code snippet contains the code you selected but adjusted to fix the issue. 
+    - The required adjustment to the pom file to reflect the additional dependency.
+
+9. Replace the previously selected with the code recommended by watsonx Code Assistant.
+
+    a. Select the code suggested by watsonx Code Assistant 
+
+    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes08.png)</kbd>
+
+    Hint: You can use the copy function to select/copy the code.
+ 
+    <kbd>![](./images/media/WCA_copyCode.png)</kbd>
+
+    b.	Switch back to the source code and replace the selected code.
+ 
+    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes09.png)</kbd>
+
+    c.	Save the code changes, then close the Java class.
+
+10.	Add the recommended dependency to the pom.xml. 
+
+    a.	Switch to the Project Explorer and open the pom.xml
+ 
+    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes10.png)</kbd>
+
+    b.	Switch to the watsonx Code Assistant and select/copy the recommended dependency. 
+ 
+    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes11.png)</kbd>
+
+    Hint: You can use the copy function to select/copy the code.
+ 
+    <kbd>![](./images/media/WCA_copyCode.png)</kbd>
+
+    c.	Add the dependency to the pom.xml
+
+    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes12.png)</kbd>
+
+    d.	Save the configuration change and close the pom file.
+
+11.	Switch to the Modernize to Liberty tab and click on Rebuild and refresh
+
+    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes13.png)</kbd>
+ 
+12.	Watsonx Code Assistant rebuilds the code and scans It again. The issue should have gone.
+
+    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes14.png)</kbd>
+
+
+#### Test the application again to show if the issue has been resolved
+
+To launch the application, you must start the Liberty server which will be installed under the cover by the related maven process.
+
+1.	Switch to the Project Explorer and use the **Liberty Dashboard** to start Liberty:
+
+    <kbd>![](./images/media/ModernizeLiberty_Start_Liberty.png)</kbd>
+
+2.	Monitor the terminal window to see when the server has been started.
+ 
+    <kbd>![](./images/media/ModernizeLiberty_Start_Liberty-Output2.png)</kbd>
+
+3.	Click on the related link in the terminal or open in a browser the URL http://localhost:9080/resorts. 
+
+    You should see the mod resorts application UI.
+ 
+    <kbd>![ModResorts](./images/media/ModResorts.png)</kbd>
+
+    
+4.	Click on Logout and verify that the Logout has been fixed.
+
+    i.	You should see a login page similar to this:
+
+    <kbd>![ModResorts](./images/media/ModResorts-Logout-Working.png)</kbd>
+
+    ii.	For ease of demo setup, security for the application is actually turned off. You can enter any credentials and click login.
+
+5.	Switch back to VS Code and stop the Liberty instance by using the Liberty Dashboard.
+ 
+    <kbd>![](./images/media/ModernizeLiberty_Stop_Liberty.png)</kbd>
+
+
+Congratulations, you have just migrated an enterprise application from WebSphere Traditional to Liberty. ModResorts is now a Liberty application! At this point, your code should be the same as the code in the zip called modresorts-lib-j8.zip. 
+
+
+
+
+
+
+
+
+
  **to be done begins**
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+Upgrade Java
 
 
 
@@ -558,22 +792,22 @@ Steps to install the extension for WCA for Enterprise Java Applications
 
 1. Switch to the Extensions View in VS- Code.
 
-    <kbd>![Toolbar_Terminal](./images/media/vscode_Extensions.png)</kbd>
+    <kbd>![](./images/media/vscode_Extensions.png)</kbd>
 
 
 2. In VS Code, use the three dots and select Install from VSIX: 
  
-    <kbd>![Toolbar_Terminal](./images/media/vscode_VSIX.png)</kbd>
+    <kbd>![](./images/media/vscode_VSIX.png)</kbd>
 
 3. Select the VSIX file that has been provided to you, then select Install.:
-    <kbd>![Toolbar_Terminal](./images/media/vscode_Extension_for_WCA_driver.png)</kbd>
+    <kbd>![](./images/media/vscode_Extension_for_WCA_driver.png)</kbd>
 
     The extension will also add the extension for watsonx Code Assistant Core.
     Finally, you should see both extensions. 
 
 4. Click on the extension **watsonx Code Assistant for Enterprise Java Applications** and take a look at the description
 
-    <kbd>![Toolbar_Terminal](./images/media/vscode_Extension_for_WCA.png)</kbd>
+    <kbd>![](./images/media/vscode_Extension_for_WCA.png)</kbd>
 
 
 ### Configure watsonx Code Assistant 
@@ -582,40 +816,40 @@ To access the cloud-based watsonx Code Assistant, an API key must be provided.
 
 1. Click on the shortcut for watsonx Code Assistant.
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_shortcut.png)</kbd>
+    <kbd>![](./images/media/WCA_shortcut.png)</kbd>
 
 2. On the welcome screen, click on Log in with you API key.
  
-    <kbd>![Toolbar_Terminal](./images/media/WCA_WelcomeScreen.png)</kbd>
+    <kbd>![](./images/media/WCA_WelcomeScreen.png)</kbd>
 
 3. On the pop-up, click Allow to sign in.
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_API-Key-1.png)</kbd>
+    <kbd>![](./images/media/WCA_API-Key-1.png)</kbd>
 
 4. Enter the provided API key into the entry field.
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_API-Key-2.png)</kbd>
+    <kbd>![](./images/media/WCA_API-Key-2.png)</kbd>
  
 5. Wait until you get a message changes to **Valid API** Key. 
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_API-Key-3.png)</kbd>
+    <kbd>![](./images/media/WCA_API-Key-3.png)</kbd>
  
 6. Press **Enter** to confirm the key.
 
 7. In the chat session, you should see a Chat session.
  
-    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-Hello.png)</kbd>
+    <kbd>![](./images/media/WCA_Chat-Hello.png)</kbd>
  
 ### Test if the WCA chat works 
 
 1. Enter **/help** and press **Enter** or click on the blue arrow.
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-help.png)</kbd>
+    <kbd>![](./images/media/WCA_Chat-help.png)</kbd>
 
  
 2. You should see a short introduction. Feel free to expand the different sections.
 
-    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-help2.png)</kbd>
+    <kbd>![](./images/media/WCA_Chat-help2.png)</kbd>
 
 
 Your watsonx Code Assistant is now ready to be used. 
@@ -625,12 +859,12 @@ Your watsonx Code Assistant is now ready to be used. 
 
 To follow the application modernization part of the tutorial, install the Liberty Tools extension. Switch to the extensions view and search for Liberty Tools, then install them.
 
-<kbd>![Toolbar_Terminal](./images/media/vscode_LibertyTools.png)</kbd>
+<kbd>![](./images/media/vscode_LibertyTools.png)</kbd>
 
 
 Switch back to the Project Explorer view and you should see the Liberty Dashboard at the bottom.
 
-<kbd>![Toolbar_Terminal](./images/media/vscode_LibertyTools_Dashboard.png)</kbd>
+<kbd>![](./images/media/vscode_LibertyTools_Dashboard.png)</kbd>
 
  
 ## How to reset the environment for another demo
