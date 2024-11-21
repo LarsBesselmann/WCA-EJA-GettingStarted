@@ -708,11 +708,11 @@ To launch the application, you must start the Liberty server which will be insta
     
 4.	Click on Logout and verify that the Logout has been fixed.
 
-    i.	You should see a login page similar to this:
+    You should see a login page similar to this:
 
     <kbd>![ModResorts](./images/media/ModResorts-Logout-Working.png)</kbd>
 
-    ii.	For ease of demo setup, security for the application is actually turned off. You can enter any credentials and click login.
+    For ease of demo setup, security for the application is actually turned off. You can enter any credentials and click login.
 
 5.	Switch back to VS Code and stop the Liberty instance by using the Liberty Dashboard.
  
