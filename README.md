@@ -4,9 +4,9 @@
 
 In this exercise, you will learn how developers can use watsonx Code Assistant with VS Code Integrated Development Environment for modernizing an existing Java Enterprise Application. 
 
-At the end of this lab you should be able to:
+At the end of this lab, you should be able to:
 
-  - use watsonx Code Assistant to explain existingf Java Enterprise Code
+  - use watsonx Code Assistant to explain existing Java Enterprise Code
   - use watsonx Code Assistant to modernize an existing WebSphere Traditional application to Liberty
   - use watsonx Code Assistant to update an existing Java Enterprise Application to Liberty
   
@@ -16,10 +16,22 @@ You will need an estimated **60 to 90 minutes** to complete this lab.
 
 ## Lab requirements
 
-  - Use the lab environment that we prepared for this lab. It already has the prerequisite software installed and configured.
-    
-  
+Use the lab environment that we prepared for this lab. It already has the prerequisite software installed and configured.
 
+
+### Required software
+To perform the exercise, the following software is required:
+- Java 17 or Java 21
+- Maven 
+- Git (Optional but recommended:)
+- Visual Studio Code
+- Visual Studio Code extensions
+    - watsonx Code Assistant for Enterprise Java application
+    - Liberty Tools
+
+### Connectivity
+Internet access is required to download artefacts from the maven repository.
+  
 ## Introduction – watsonx Code Assistant
 IBM watsonx Code Assistant is an innovative, generative AI coding companion that offers robust, contextually aware assistance for popular programming languages including Go, C, C++, Java, JavaScript, Python, TypeScript, and more. Seamlessly integrated into your IDE, you can accelerate your productivity and simplify coding tasks, all with trust, security, and compliance.
 
@@ -27,6 +39,8 @@ IBM watsonx Code Assistant is an innovative, generative AI coding companion that
 - **Chat for code**: Free-form AI conversational chat for planning applications and writing code.
 - **Prebuilt chat commands**: Use optimized prompts for specific tasks.
 - **Integrated directly into IDEs**: Available directly within Visual Studio Code and Eclipse, integrating seamlessly with your workflow.
+
+<br>
 
 ![](./images/media/WCA_Intro.png)
 
@@ -39,6 +53,8 @@ If you are doing this lab as part of an instructor led workshop (virtual or face
 
 Otherwise, you will need to reserve an environment for the lab. You can obtain one here. Follow the on-screen instructions for the “**Reserve now**” option.
 
+**TBD: Link to be updated**
+
 <https://techzone.ibm.com/my/reservations/create/660d7f062945d2001e009449>
 
  The lab environment contains one (1) Linux VM, named **Workstation**.
@@ -49,8 +65,9 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
   
   - Maven 3.6.0 
   - IBM Semeru Runtime Open Edition 17.0.8.1
-  - Visual Studio Code 1.85.1
-
+  - Visual Studio Code 1.95.2
+    - Liberty Tools Plugin
+    - watsonx Code Assistant plugins for Core and Enterprise Java
   <br/>
 
 1. Access the lab environment from your web browser. 
@@ -158,70 +175,74 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
 | ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Important:</strong> <p><strong>Click CANCEL</strong>…. If, at any time during the lab, you get a pop-up asking to install updated software onto the Ubuntu VM.</p> <p>The one we experience is an update available for VS Code.</p><p><strong>CLICK CANCEL!</strong></p><p>![](./images/media/image15.png?cropResize=100,100)</p> |
 
 
-## Getting Started with Liberty Tools in VS Code
+## Getting Started with watsonx Code Assistant for Enterprise Java applications
 
-**Liberty Dev mode** allows you, as the developer, to focus on your
-code. When Open Liberty is running in dev mode, your code is
-automatically compiled and deployed to the running server, making it
-easy to iterate on your changes.
+Here some additional information which should allow you to get a better understanding about the environment and how it has been set up.
 
-In this lab, as a developer, you will experience using the **Open
-Liberty Tools** extension in **VS Code** to work with your code, run
-tests on demand, so that you can get immediate feedback on your changes.
+### Source code
 
-You will also work with integrated debugging tools and attach a Java
-debugger to debug your running application.
+The source code here is provided in zips. You can unzip the code and run the Modernize to Liberty and Java Upgrade scenarios locally without the code in a git repo, however, it might be convenient to have a repo so that you can track and review the changes that are happening. For the differential summaries scenario, the code will need to be in a git repo.
 
-From a developer perspective, this is a huge gain in efficiency, as all
-these iterative inner-loop development activities occur without ever
-leaving the integrated development environment (IDE).
+- modresorts-twas-j8.zip
+    - This is the version of ModResorts that can be deployed traditional WebSphere Application Server. It is built with and targeted and Java 8. This is the starting point for running the scenarios.
+    - Its a Maven project and in addition to the source code, it contains the migration bundle from Transformation Advisor migration-bundle/modresorts.ear_migrationBundle.zip. This will be required when running the WebSphere to Liberty migration.
 
-<br/>
+- modresorts-lib-j8.zip
+    - This is the version of ModResorts after it has been modernized to Liberty. It contains Liberty configuration, and all code changes necessary for the application to run correctly on Liberty have been made. It is still build with and targeted at Java 8.
+    - The archive is only required if you so not want to start with modresorts-twas-j8.zip or run into issues.
 
-### **Review the VS Code extensions and projects pom.xm file used for this project**
+- modresorts-lib-j21.zip
+    - This is the version of ModResorts after it has been modernized to Liberty and it has been upgraded to Java 21.
+    - The archive is only required if you so not want to start with modresorts-twas-j8.zip or run into issues.
 
-The sample application used in this lab is configured to be built with
-Maven. Every Maven-configured project contains a pom.xml file, which
-defines the project configuration, dependencies, plug-ins, and so on.
+### Building the Source
 
-Your pom.xml file is in the root directory of the project and is
-configured to include the **liberty-maven-plugin**, which allows you to
-install applications into Open Liberty and manage the server instances.
+- WebSphere APIs
+The ModResorts application uses WebSphere APIs. In order to build the ModResorts application in its original state, the WebSphere library must be available in your environment. You can use the following command to install the WebSphere public jar into your local maven repository where the build can automatically pick it up from:
+mvn install:install-file -Dfile=<location>/was_public.jar -DpomFile=<location>/was_public-9.0.0.pom
 
-To begin, navigate to the project directory and review the IDE
-extensions and pom.xml file that is used for the “**system”**
-microservice that is provided in the lab.
+- Java version information
+ModResorts is a Java 8 application. That is to say, it is built with Java 8 and targets a Java 8 environment. However, the nature of the code in the case of ModResorts, is such that it will compile with higher Java versions up to Java 21. The Java upgrade scenario described below can take advantage of this to simplify the flow, otherwise, you would need to change the JDK in the middle of the demo, because after the Java 21 changes have been made to the application, Java 21 must be used to build the application. Older Java versions will not be able to build the application.
+For the Java upgrade scenario, I recommend configuring the IDE such that it is always building the project with Java 21. In addition, ensure that JAVA_HOME is pointing to Java 21. This will ensure that when the Build and refresh button is clicked (see scenario below), Java 21 will be used for the build.
+Of course not all Java 8 applications can be built with a higher level of Java. In cases where applications use Java 8 APIs that have been removed in newer versions, Java 8 would be required in order to build. 
+ 
+### Integrated Development Environment (IDE)
 
-First, add the project folder to a VS Code Workspace
+The scenario is described here with reference to Visual Studio Code (VS Code) but would also work similar with Eclipse (2023 12). 
+Liberty Tools can be installed in the IDEs to allow us to run the application in Liberty.
+Related links:
+- https://openliberty.io/blog/2022/08/01/liberty-tools-eclipse.html
+- https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext
+In the prepared lab environment, the Visual Studio Code and the Liberty Tools are already installed. 
+ 
+
+
+
+## Getting started
 
 1.  **Close** all **Terminal** windows and **Browser** Tabs used in any previous lab.
 
 2.  Use the **Activities** Icon to switch to the toolbar, then click the **Terminal** icon to open a Terminal window.
 
-    <!-- LBH: Updated description how to access toolbar -->
-
     <kbd>![Toolbar_Terminal](./images/media/Toolbar_Terminal.png)</kbd>
 
 3.  Clone the GitHub repo that includes artifacts required for this lab
-    <!-- LBH: Adjusted lab to use Student folder instead of home to store content -->
-
+    
         mkdir -p /home/techzone/Student/labs
 
-        git clone https://github.com/openliberty/guide-getting-started.git /home/techzone/Student/labs/vscode
+        git clone https://github.com/openliberty/wca-guide-getting-started.git /home/techzone/Student/labs/wca
         
-        cd /home/techzone/Student/labs/vscode
+        cd /home/techzone/Student/labs/wca
+
+4. Run the following command to set up the modresorts environment.
+
+        . modresorts_demo_setup.sh
 
     Once completed, the local lab artifacts repo is cloned at the following directory on the desktop VM. 
     
-    > **/home/techzone/Student/labs/vscode**
-2.  Navigate to the project directory and launch VS Code from the **start**” folder of the project.
-    
-    a.  Open a terminal window and change to the following directory:
+    > **/home/techzone/Student/labs/wca/temp*/modresorts**
 
-        cd /home/techzone/Student/labs/vscode/start
-
-
-3.  Launch VS Code using the current directory as the root folder for
+5.  Launch VS Code using the current directory as the root folder for
     the workspace
 
         code .
@@ -231,7 +252,7 @@ First, add the project folder to a VS Code Workspace
     
     When the VS Code UI launches, the Explorer view is shown. The “START” folder contains the source code for the project.
 
-    <kbd>![](./images/media/image16.png)</kbd>
+    <kbd>![](./images/media/vscode_modresorts_1.png)</kbd>
 
     <br/>
 
@@ -240,7 +261,7 @@ First, add the project folder to a VS Code Workspace
     a.  Click on the **Extensions** icon in the left navigation bar in
         VS Code.
         
-    <kbd>![](./images/media/image17.png)</kbd>
+    <kbd>![](./images/media/vscode_Extensions.png)</kbd>
     
     b.  Expand the “INSTALLED” extensions section to list the extensions that are currently installed in this environment. The notable extensions used in this lab are:
         
@@ -248,717 +269,386 @@ First, add the project folder to a VS Code Workspace
     -  Tools for MicroProfile
     -  Language Support for Java
     -  Debugger for Java
+    - watsonx Code Assistant
+    - watsonx Code Assistant for Enterprise Java Applications
     
     <br/>
 
-    c.  Click on the “**Liberty Tools**” extension to view its details.
-    
-    d.  Notice the list of commands that are supported by the Liberty Tools extension.
-        
-    <kbd>![](./images/media/image18.png)</kbd>
-    
-    e.  Click on **Dependencies** of the Liberty Tools details page.
-        
-    Notice the requirement for “Tools for MicroProfile” to support development of Microservices that use MicroProfile APIs with   Open Liberty.
-        
-    <kbd>![](./images/media/image19.png)</kbd>
+    c. Click on the extension **watsonx Code Assistant for Enterprise Java Applications** to view its details.
+
+    <kbd>![Toolbar_Terminal](./images/media/vscode_Extension_for_WCA.png)</kbd>
 
 
-    |         |           |  
-    | ------------- |:-------------|
-    | ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Information:</strong></p><p>The <strong>Tools for MicroProfile</strong> extension requires the following component to be installed in the environment:</p><p><img src="./images/media/image20.png" /></p> |
+    d. Click on the extension **Liberty Tools** to view its details.
+
+    <kbd>![Toolbar_Terminal](./images/media/vscode_LibertyTools.png)</kbd>
 
 
-    f.  **Close** the Liberty Tools Extension details page.
+    e. Switch back to the Project Explorer view and you should see the Liberty Dashboard at the bottom.
 
-    <br/>
-
-5.  Review the **pom.xml** file used to configure and build the "system” microservice.
-    
-    a.  Click on the **Explorer** icon ![](./images/media/image21.png) located on the left navigation bar in VS Code.
-    
-    b.  Expand the **START** folder if it is not already expanded
-        
-    <kbd>![](./images/media/image22.png)</kbd>
-    
-    c.  Click on the **pom.xml** file to open it in the editor pane
-    
-    d.  Close any Pop-up boxes asking if you want to install extensions
-        or switch views.
-        
-    **Note:** You may see additional pop-ups, just close them, or ignore them.
-        
-    <kbd>![](./images/media/image23.png)</kbd>
-    
-    e.  Note the binary packaging of the Java application war file that
-        is produced from the Maven Build. The WAR file produced will be
-        named **guide-getting-started** version 1.0-SNAPSHOT.
-        
-    <kbd>![](./images/media/image24.png)</kbd>
-    
-    f.  Default HTTP and HTTPS Ports are defined, and substituted into
-        the server.xml file
-        
-    <kbd>![](./images/media/image25.png)</kbd>
-    
-    g.  The Liberty Tools Plugin is enabled, with a supported version of 3.10.3
-        
-    <kbd>![](./images/media/image26.png)</kbd>
-    
-    h. The plugin for running Tests is also added to the Maven       configuration, that leverage the testing dependencies also        defined in the pom.xml file.
-        
-    <kbd>![](./images/media/image27.png)</kbd>
-    
-    i.  **Close** the pom.xml file
-
-    <br/>
-
-    |         |           |  
-    | ------------- |:-------------|
-    | ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Information:</strong></p><p><strong>Tip:</strong> Additional information on the liberty-maven-plugin can be found here:</p><p><a href="https://github.com/OpenLiberty/ci.maven">https://github.com/OpenLiberty/ci.maven</a></p> |
-
-    <br/>
-
-## Using Liberty Tools in VS Code 
-
-In this section of the lab, you will use the **Liberty Tools** in
-**VS Code** to work with your code and run tests on demand, so that you
-can get immediate feedback on your changes.
-
-|         |           |  
-| ------------- |:-------------|
-| ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Important:</strong></p><p><strong>For Liberty Tools</strong> (LIBERTY DASHBOARD)</p><p>VS Code provides extensions for Java to support the Java language features.</p><p>VS Code for Java supports two modes.</p><ul><li><p>Lightweight mode</p></li><li><p>Standard mode</p></li></ul><p>VS Code has a default configuration called “hybrid mode” where a workspace is opened in Lightweight mode, but as needed, you are prompted to switch to Standard mode.</p><p>The <strong>Tools for MicroProfile</strong> Extension, which is required for the <strong>Liberty Tools</strong> extension, requires the Java workspace to be opened in “<strong>STANDARD</strong>” mode. Otherwise the LIBERTY DASHBOARD will not function properly.</p><p><strong>Tip:</strong> In this lab environment, the workspace is already configured to use Standard mode.</p><p>For more details on VS Code for Java is available here: <a href="https://code.visualstudio.com/docs/java/java-project">https://code.visualstudio.com/docs/java/java-project</a></p> |
+    <kbd>![Toolbar_Terminal](./images/media/vscode_LibertyTools_Dashboard.png)</kbd>
 
 
-1.  Use the Liberty Dashboard to **start** the Liberty Server in dev mode
-    
-    a.  In VS Code, expand the LIBERTY DASHBOARD section
-    
-    b.  Right-mouse click on the **guide-getting-started** Liberty
-        Server
-    
-    c.  Select **Start** from the menu to start the server
-        
-    <kbd>![](./images/media/image28.png)</kbd>
-    
-    d.  The Terminal view opens, and you see the server log messages as
-        the server starts. When the following message appears in the Terminal, the Liberty server is started.
-        
-    <kbd>![](./images/media/image29.png)</kbd>
+## Using the watsonx Code Assistant
 
-    <br/>
+There are different ways to interact with watsonx Code Assistant.
+- Use the **chat** 
+    - to generate code, documentation, explanation and more via command line
+    - to ask questions to watsonx Code Assistant
+- Use the **Enterprise Java Application menu** project to access Enterprise Java capabilities such as 
+    - Explain an application
+    - Modernize an application to Liberty
+    - Update the Java version 
+- Use the functions embedded in the editor to explain code and more
 
-2.  Run the system Properties sample application from a web browser
-    
-    a.  Use the **Activities** icon to switch to the toolbar, then click the **Firefox** icon to open a Firefox browser window.
+### Using the watsonx Code Assistant Chat
 
-    <!-- LBH: Updated description how to access toolbar -->
+1. Click on the shortcut for watsonx Code Assistant.
 
-    <kbd>![Toolbar_Terminal](./images/media/Toolbar_Firefox.png)</kbd>
-    
-    
-    b.  Go to <http://localhost:9080> to verify the application is running.
-        
-    <kbd>![](./images/media/image30.png)</kbd>
+    <kbd>![Toolbar_Terminal](./images/media/WCA_shortcut.png)</kbd>
 
-    <br/>
-
-### **Developer experience Using Liberty Tools in VS Code** 
-
-The System Properties Sample application is up and running in the
-Liberty server.
-
-Next, as a developer, you want to implement a health check for the
-application.
-
-The developer experience is frictionless, as all code and configuration
-change the developer introduces, are automatically detected and the
-server and application are dynamically updated in the running server to
-reflect the updated code and configuration.
-
-Let’s explore a couple of examples of the very efficient developer
-experience by implementing some new capability into our service.
-
-In this example, you will leverage the **mpHealth-4.0** feature in Open
-Liberty, which implements the MicroProfile mpHealth-4.0 API, to
-implement the new health checks for the application.
-
-The **mpHealth-4.0** feature provides a **/health** endpoint that
-represents a binary status, either UP or DOWN, of the microservices that
-are installed.
-
-To learn more about the MicroProfile mpHealth feature, visit:
-<https://www.openliberty.io/docs/24.0.0.6/health-check-microservices.html>
-
-1.  Update the Liberty server configuration file (server.xml) to include the mpHealth-4.0 feature to begin implementing the health checks for the application.
-    
-    a.  In the VS Code Explorer view, navigate to **START** -> **src** -> **main** -> **liberty / config**
-    
-    b.  Click on **server.xml** to open the file in the editor pane
-        
-    <kbd>![](./images/media/image31.png)</kbd>
-    
-    c.  Add the **mpHealth-4.0** feature to the server.xml file using the text below:
-
-        <feature>mpHealth-4.0</feature>
-
-    <kbd>![](./images/media/image32.png)</kbd>
+2. In the chat session, you should see a Chat session.
  
-    <br/>
-
-    d.  **Save** and **Close** the server.xml file
-    
-    When the server.xml file is saved, the configuration changes are
-    detected, and the server is dynamically updated, installing the new
-    feature and updating the application in the running server.
-
-    <br/>
-
-2.  View the messages in the **Terminal** view, showing the feature being installed and the application being updated.
-    
-    <kbd>![](./images/media/image33.png)</kbd>
-    
-    Once the changes are saved, and the server is automatically updated,
-    the new /**health** endpoint is available.
-
-    <br/>
-
-3.  From the Web browser in the VM access the **/health** endpoint to view the health status of the application.
-
-        http://localhost:9080/health
-
-    <kbd>![](./images/media/image34.png)</kbd>
-
-    <br/>
-
-    Currently, the basic health check provides a simple status indicating if the service is running, but not if it is healthy.
-
-    In the next steps, you will implement a **liveness** check that implements logic that gathers memory and cpu usage information and reports the service DOWN in the health check if the system resources exceed a certain threshold.
-
-    You will also implement a **readiness** check that checks external property configuration in the server.xml file, that is used to place the service in maintenance mode. And if the service is in maintenance mode, the service is marked DOWN from the health check.
-
-    <br/>
-
-4.  Copy an implementation of the **SystemReadinessCheck.java** to the project
-    
-    a.  Use the **Activities** Icon to switch to the toolbar, then click the **Terminal** icon to open a Terminal window.
-
-    <!-- LBH: Updated description how to access toolbar -->
-
-    <kbd>![Toolbar_Terminal](./images/media/Toolbar_Terminal.png)</kbd>
-    
-    b.  Run the following command to copy the **SystemReadinessCheck.java** to the project
-
-        cp /home/techzone/Student/labs/vscode/finish/src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java /home/techzone/Student/labs/vscode/start/src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java
-
-
-    |         |           |  
-    | ------------- |:-------------|
-    | ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Information:</strong></p><p>For the purposes of the lab, the copy command above copies a fully implemented Readiness check from the “finished” project, into the current working project.</p> |
-
-
-5.  Review the **SystemReadinessCheck.java i**mplementation
-    
-    a.  Return to the VS Code Explorer view
-    
-    b.  Navigate to **START \> main \> java / io / openliberty / sample
-        / system**
-    
-    c.  Click on the **SystemReadinessCheck.java** file to open it in
-        the editor pane
-        
-    <kbd>![](./images/media/image36.png)</kbd>
-        
-    The SystemReadinessCheck simply evaluates the **“inMaintenance**” ConfigProperty, which is implemented via the mpConfig MicroProfile feature, and configured in the Liberty Server’s server.xml file.
-    
-    - If the “inMaintenance” property is set to “**false**” the
-        readiness check sets the Health Status to **UP**.
-    
-    - If the inMaintenance property is set to “**true**” the status is
-        set to **DOWN**.
-
-    <br/>
-
-6.  From the Web Browser in the VM, rerun the **/health** endpoint to view the health status of the application.
-
-        http://localhost:9080/health
-
-    <kbd>![](./images/media/image37.png)</kbd>
-
-
-    |         |           |  
-    | ------------- |:-------------|
-    | ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Information:</strong></p><p>Did you notice that while implementing the new readiness check code in the application, that you did not have to restart the application or Liberty Server?</p><p>The Liberty Tools detected the code changes in the project, and dynamically updated the application in the running server.</p></p> |
-
-7.  Copy an implementation of the **SystemLivenessCheck.java** to the project
-    
-    a.  Open a Terminal window ![](./images/media/image35.png) on        the VM
-    
-    b.  Run the following command to copy the **SystemLivenessCheck.java** to the project
-
-        cp /home/techzone/Student/labs/vscode/finish/src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java /home/techzone/Student/labs/vscode/start/src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java
-
-
-    |         |           |  
-    | ------------- |:-------------|
-    | ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Information:</strong></p><p>For the purposes of the lab, the copy command above copies a fully implemented Liveness check from the “finished” project, into the current working project.</p> |
-
-
-8.  Review the **SystemLivenessCheck.java i**mplementation
-    
-    a.  Return to the VS Code Explorer view
-    
-    b.  Navigate to **START** -> **main** -> **java / io / openliberty / sample / system**
-    
-    c.  Click on the **SystemLivenessCheck.java** file to open it in the
-        editor pane
-        
-    <kbd>![](./images/media/image38.png)</kbd>
-        
-    The SystemLivenessCheck evaluates the **“memory”** and **“cpu”**    resources used.
-        
-      - If the “memory” used is less than 90%, the liveness probe sets
-        the status to UP.
-    
-      - If the “memory” used is greater than 90%, the liveness probe
-        sets the status to DOWN.
-
-    <br/>
-
-9.  From the Web Browser in the VM, rerun the **/health** endpoint to view the health status of the application.
-
-        http://localhost:9080/health
-
-    <kbd>![](./images/media/image39.png)</kbd>
-
-    **Note:** in the case where there are multiple health checks being performed, as in our example, ALL the health checks must have the UP status for the service to be marked UP.
-
-
-    |         |           |  
-    | ------------- |:-------------|
-    | ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Hint:</strong></p><p>You can access the server metrics via following URL: **http://localhost:9080/metrics**</p> |
-
-
-
-    **So, what happens when we change the inMaintenance property to“true”?**
-
-    Let’s modify the external configuration to set the service in maintenance mode and see the results of the health checks.
-
-    <br/>
-
-10. Modify the inMaintenance property in the server.xml file
-    
-    a.  Return to the VS Code console and navigate to **START** -> **src** -> **main -> liberty / config**
-    
-    b.  Click on **server.xml** to open the file in the editor
-    
-    c.  Modify the inMaintenance variable value to “**true**” as
-        illustrated below
-    
-    d.  **Save** the server.xml file. The server configuration is
-        dynamically updated to reflect the update.
-        
-    <kbd>![](./images/media/image40.png)</kbd>
-
-    <br/>
-
-11. From the Web Browser in the VM, rerun the **/health** endpoint to view the health status of the application.
-
-        http://localhost:9080/health
-
-    <kbd>![](./images/media/image41.png)</kbd>
-
-    <br/>
-
-12. In the server.xml file, change the inMaintenance variable back to false”
-    
-    a.  **Save** the server.xml file
-    
-    b.  **Close** the server.xml editor view
-        
-    <kbd>![](./images/media/image42.png)</kbd>
-
-    <br/> 
-
-13. Rerun the **/health** endpoint to verify the service is now marked UP again.
-    
-<kbd>![](./images/media/image43.png)</kbd>
-
-<br/>
-
-### **Running Tests using the Liberty Tools in VS Code** 
-
-In this section of the lab, you will make some simple changes to the
-sample application code and run test cases directly from the VS Code IDE
-using the built-in capabilities in the Liberty Tools.
-
-To simulate a breaking change in the application code, you will modify
-the path to the service endpoint from **/properties** to
-**/all-properties**.
-
-Because the test case attempts to run the system service using the
-**/properties** path, the test case will fail and return an HTTP Code of
-404, rather than the expected response code of 200.
-
-Since the developer is purposely introducing this change, the test case
-needs to be updated to reflect the new path to the service for the tests
-to pass.
-
-1.  Use the Liberty Dashboard to **Run Tests** against the System Properties Sample service.
-    
-    a.  In VS Code, expand the LIBERTY DASHBOARD section
-    
-    b.  Right-mouse click on the **guide-getting-started** Liberty
-        Server
-    
-    c.  Select **Run Test** from the menu to run the tests
-        
-    <kbd>![](./images/media/image44.png)</kbd>
-    
-    d.  In the Terminal view, you will see the results of the tests. One
-        test was executed, and one test PASSED.
-        
-    <kbd>![](./images/media/image45.png)</kbd>
-        
-    <br/>
-
-    Next, as a developer on the project, you have been asked to change the code to specify a different path to the “properties” service. Doing so, has an impact on the tests. In the next few steps, you will make the code change, and update the tests to match the NEW expected results.
-
-    <br/>
-
-2.  Open the **SytemResources.java** in VS Code editor
-    
-    a.  In VS Code Explorer view, expand **START** -> **src** -> **main -> java / io / openliberty / sample / system**
-    
-    b.  Click on **SystemResource.java** to open it in the editor
-        
-    <kbd>![](./images/media/image46.png)</kbd>
-
-    <br/>
-
-3.  Update the **@Path** to the system properties service to specify a different service path
-    
-    a.  From the editor, make the following change to the **systemResource.java** file:
-
-    **Change the highlighted line:**
+    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-Hello.png)</kbd>
  
-    <kbd>![](./images/media/image47.png)</kbd>
+3. Enter **/help** and press **Enter** or click on the **blue arrow**.
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-help.png)</kbd>
+
  
-    **Updated to read:** @Path("/all-properties")
+4. You should see a short introduction. Feel free to expand the different sections.
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-help2.png)</kbd>
+
+
+
+### Build the war file via maven (necessary for the next steps)
+
+1. Open a terminal window in VS Code.
+
+    <kbd>![Toolbar_Terminal](./images/media/vcsode_NewTerminal.png)</kbd>
+
+2. Run the command 
+
+    mvn clean
+
+    You should see something like
+
+    <kbd>![Toolbar_Terminal](./images/media/modresorts_mvn_clean.png)</kbd>
+
+    Make sure that you get a **BUILD SUCCESS** message
+
+3. As the modresorts project depends on was_public.jar, you must make it visible to maven to avoid build failures. Run the following command 
+
+    mvn install:install-file -Dfile=./was_dependency/was_public.jar -DpomFile=./was_dependency/was_public-9.0.0.pom
+
+    You should see something like
+
+    <kbd>![Toolbar_Terminal](./images/media/modresorts_mvn_install_jar.png)</kbd>
+
+    Make sure that you get a **BUILD SUCCESS** message
+
+4. Run the command to package the application
+
+    mvn package
+
+    You should see something like
+
+    <kbd>![Toolbar_Terminal](./images/media/modresorts_mvn_package.png)</kbd>
+
+    Make sure that you get a **BUILD SUCCESS** message
+
+Hint: 
+1. Without installing the file was_public.jar into maven, the maven command would fail with an error like this: 
+
+        [ERROR] Failed to execute goal on project modresorts: Could not resolve dependencies for project com.acme.modres:modresorts:war:2.0.0: The following artifacts could not be resolved: com.ibm.websphere.appserver:was_public:jar:9.0.0 (absent): com.ibm.websphere.appserver:was_public:jar:9.0.0 was not found in https://repo.maven.apache.org/maven2 during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of central has elapsed or updates are forced -> [Help 1]
+2. The build of the application is needed to perform watsonx Code Assistant tasks on Enterprise Java Application level (e.g. explain, modernize, upgrade).
+
+
+**to be done begins**
+
+### Scenario: Understand the Java Enterprise application modresorts
+One of theh challenges during a modernization project is often, that there is no good documentation about the application code available. Often also the developers that developed the application initially are no longer available.
+You will use the explain capabilities in watsonx Code Assistant to get a better understanding of the Java Enterprise applications. 
+This will include three parts:
+
+•	Get a better understanding of the modresorts application overall by using some of the Enterprise Java Application capabilities of watsonx Code Assistant.
+•	Get a better understanding of modresorts classes and methods or other files by using some of the core capabilities of watsonx Code Assistant.
+•	Get a better understanding of the modresorts applications by asking questions by using some of the core capabilities of watsonx Code Assistant.
+ 
+Use watsonx Code Assistant to explain the code
+
+Within the project, click on the Project Explorer shortcut.
+  
+
+Right-click on src and select watsonx Code Assistant > Explain Application
  
-    <kbd>![](./images/media/image48.png)</kbd>
-
-    b.  **SAVE** the file. The Liberty server and application are
-    dynamically updated.
-
-    c.  **Close** the editor view for the **SystemResource.java** file
-
-    <br/>
-
-4.  From the Web browser, run the service using the NEW endpoint URL
-
-    **http://localhost:9080/system/all-properties**
-
-    <kbd>![](./images/media/image49.png)</kbd>
-
-    <br/>
-
-5.  Use the Liberty Dashboard to **Run Tests** against the System Properties Sample service.
-    
-    a.  In VS Code, expand the LIBERTY DASHBOARD section
-    
-    b.  Right-mouse click on the **guide-getting-started** Liberty
-        Server
-    
-    c.  Select **Run Test** from the menu to start the server
-        
-    <kbd>![](./images/media/image44.png)</kbd>
-    
-    d.  Alternatively, you can run the tests by simply pressing the
-        **ENTER** key in the Terminal window. Give it a try. **The tests
-        now FAIL**.
-        
-    <kbd>![](./images/media/image50.png)</kbd>
-
-    <br/>
-
-6. Use the Liberty Dashboard to **View integration test report**.
-    
-    a.  In VS Code, expand the LIBERTY DASHBOARD section
-    
-    b.  Right-mouse click on the **guide-getting-started** Liberty
-        Server
-    
-    c.  Select **View integration test report** from the menu
-        
-    <kbd>![](./images/media/image51.png)</kbd>
-
-    <br/>
-
-7.  View the test results details in the “**guide-getting-started Failsafe report**” that is now displayed the editor pane
-    
-    a.  Notice that the test case failed
-        
-    <kbd>![](./images/media/image52.png)</kbd>
-    
-    b.  Scroll to the bottom of the report to see the ERROR message that
-        was produced from the failing test.
-        
-    <kbd>![](./images/media/image53.png)</kbd>
-    
-    c.  The issue is obvious. Since we changed the endpoint path, the
-        test case assertion failed because it got a HTTP response code
-        of 404 (Not Found) when attempting to run the service using the
-        original path of /properties.
-    
-    d.  **Close** the Failsafe Report in the Editor pane
-        
-    **NOTE:** In this case, we expected the test case to fail. And as the developer, you must update the test case to match the      expected results based on to your code change.
-
-    <br/>
-
-8.  Modify the test case that is included in the application project to invoke the updated path to the service.
-    
-    a.  From the Explorer view in VS Code, navigate to **START** -> **src** -> **test / java / it /io /openliberty / sample**
-    
-    b.  Click on **PropertiesEndpointIT.java** to open it in an editor
-        pane
-    
-    c.  From the editor, make the following change to the
-        **PropertiesEndpointIT.java** file:
-
-    **Change the highlighted line:** “system/properties”
+You will get a pop-up like:
  
-    <kbd>![](./images/media/image54.png)</kbd>
+Click on “Proceed with code analysis”
+You will see something like
  
-    **Updated to read:** “system/all-properties”
+Then after a minute or so:
  
-    <kbd>![](./images/media/image55.png)</kbd>
-
-    d.  **SAVE** and **CLOSE** the file. The Liberty server and application are dynamically updated.
-
-    <br/>
-
-9.  Rerun the tests by Pressing the **ENTER** key in the Terminal view. The test PASS.
-    
-    <kbd>![](./images/media/image56.png)</kbd>
-    
-    At this point, you have explored using the Liberty Developer Tools
-    to develop code, make server configuration changes, and run test
-    cases to get immediate feedback on the updates.
-    
-    Using the Liberty Tools in VS Code provides an integrated
-    development environment where your updates were automatically
-    detected and dynamically applied to the running server. This
-    provides a rapid inner-loop development cycle for development and
-    testing.
-    
-    In the next section of the lab, you will explore how simple it is to
-    integrate application debugging in the same development environment
-    without having to restart the Liberty server.
-
-    <br/>
-
-## OPTIONAL: Integrated debugging using the Liberty Tools in VS Code 
-
-Application debugging is an important part of application development.
-Developers expect to easily and quickly iterate through **dev – test –
-debug** without having to leave the development environment or having to
-restart servers and applications for debugging.
-
-In this section of the lab, you will explore how easy it is for
-developers to debug their Java application using the integrated
-development environment and Open Liberty.
-
-**<span class="underline">Here are the basics steps for
-debugging</span>**
-
-  - Set a breakpoint in the source code
-
-  - Add a “Java Attach” in the launch configuration and set the debug
-    port
-
-  - Go to Debug view and select the “Attach” configuration
-
-  - Click the Start debugging icon
-
-  - Run the application in the Browser
-
-  - The application stops at the breakpoint
-
-  - Step through the app in debug mode to explore the variables and code
-    to resolve issues
-    
-  One of the key features of Visual Studio Code is its great debugging
-    support.
-    
-  In this section of the lab, you will use VS Code debugger to debug the Java application running on Liberty server.
-    
-  <kbd>![](./images/media/image57.png)</kbd>
-    
-  In this scenario, you will set a breakpoint and debug the SystemLivenessCheck.java code that is executed when running the /health endpoint in the application.
-
-
-1.  Open the **SystemLivenessCheck.java** in VS Code editor
-    
-    a.  In VS Code Explorer view, expand **START** -> **src** -> **main** -> **java / io / openliberty / sample / system**
-    
-    b.  Click on **SystemLivenessCheck.java** to open it in the editor
-        
-    <kbd>![](./images/media/image58.png)</kbd>
-
-    <br/>
-
-2.  Set a breakpoint in the code where the **MemoryMaxBean** variable is set
-    
-    a.  Locate the line with the text:
-        
-    **MemoryMXBean memBean = ManagementFactory.getMemoryMXBean();**
-    
-    b.  **Left-mouse click** on the left side of the Line Number (31 in
-        the screen shot) to set a breakpoint. A red dot will appear, indicating the breakpoint is set
-        
-    <kbd>![](./images/media/image59.png)</kbd>
-
-    <br/>
-
-3.  Create a new **Java Attach configuration** and specify the debug port **7777**
-    
-    a.  Select **Run > Add Configuration…** from the main menu in VS
-        Code
-        
-    <kbd>![](./images/media/image60.png)</kbd>
-        
-    A new file named **launch.json** file was created in the **.vscode** directory. You can see the new file in the explorer       view.
-    
-    b.  In the **launch.json** file that opened in the Editor view,
-        click on the “**Add Configuration**” button located on the lower
-        right corner of the screen.
-        
-    <kbd>![](./images/media/image61.png)</kbd>
-    
+And then
  
-    c.  Select **Java: Attach** from the menu.
-        
-    <kbd>![](./images/media/image62.png)</kbd>
-    
-    d.  A new configuration is added to the launch.json file, that includes a “**port”** parameter to attach the debugger for Open    Liberty.
-        
-    **Note:** Open Liberty is configured to use debug port 7777 by
-        default.
-        
-    <kbd>![](./images/media/image63.png)</kbd>
-
-    <br/>
-
-4.  Change the “port” parameter to 7777
-    
-    a.  From the editor, make the following change to the **lauch.json**
-        file:
-
-    **Change the highlighted line:** "port": "<debug port of the debugger>"
-
-    <kbd>![](./images/media/image64.png)</kbd>
+Click on Open explanation to see the results.
  
-    **Updated to read:** “port”: 7777
+
+ 
+Use the wizard inside the application code to explain a class:
+
+In the Project Explorer, expand the src directory and open the file WeatherServlet.java.
+
  
-    **Note”** Be sure to REMOVE the double quotes around 7777, as illustrated below.
 
-    <kbd>![](./images/media/image65.png)</kbd>
+Scroll down to line 45.
 
-    b.  **SAVE and CLOSE** the file. The Liberty server and application are dynamically updated.
+ 
 
-    <br/>
+Click on Explain in the line above line 45 to get the explanation for the class.
 
-5.  Now, attach the new Java Attach configuration
+The WCA chat window will open to explain the WeatherServlet.
 
-    a.  Switch to the **Debug** perspective in VS Code, by selecting the
-    **Debug Icon** on the left side navigation menu
-    
-    <kbd>![](./images/media/image66.png)</kbd>
+ 
 
-    b.  Using the launch Drop-down menu in the Debug perspective, set the **Launch action** to the “**Attach**” configuration that you
-    created.
-    
-    <kbd>![](./images/media/image67.png)</kbd>
 
-    
-    c.  The “Attach” configuration is now selected. You are ready to debug.
-    
-    <kbd>![](./images/media/image68.png)</kbd>
+ 
+Another way to get an explanation for a class is to use the chat window directly.
 
-    <br/>
 
-6.  Click on the **Start** Icon to start the debugger.
-    
-    <kbd>![](./images/media/image69.png)</kbd>
-    
-    The debugger is now attached, and the CALL STACK and BREAKPOINTS are
-    displayed in the Debug perspective, as illustrated below:
-    
-    <kbd>![](./images/media/image70.png)</kbd>
+Enter into the chat window the line /explain @ModResortsCustomerInformation.java
 
-    <br/>
+ 
+Then press Enter and you should get an explanation like:
+ 
 
-7.  From the Web Browser in the VM, run the **/health** endpoint to view the health status of the application. The application will stop at the breakpoint in the SystemLivenessCheck.java code.
 
-        http://localhost:9080/health
 
-    In VS Code’s Debugger perspective, the application stopped at the breakpoint you set in the SystemLivenessCheck.java, as illustrated below.
 
-    <kbd>![](./images/media/image71.png)</kbd>
+ 
+Use the WCA chat to ask questions about the application
 
-    <br/>
+In the chat window, enter the question: Where does the weather data come from?
+ 
+The answer could look like this:
+ 
 
-8.  Now you can use the “step Over”, “Step In” “Step Out”,” Run” or “Disconnect” actions.
 
-    a.  Click the “**Step Over**” to execute the existing line of code and step to the next line of code in the application.
-    
-    <kbd>![](./images/media/image72.png)</kbd>
 
-    <br/>
-    
-    b.  The debugger switches to the next line. Take a look at the **VARIABLES** section to see the value of the variable **memUsed**.
-    
-    <kbd>![](./images/media/image72b.png)</kbd>
+Ask the question: Which class is calling the Weather Underground API?
+ 
 
-    <br/>
 
-9.  When you are finished stepping through the debugger and exploring the local variables, click the **Disconnect**” icon to disconnect the debugger
-    
-    <kbd>![](./images/media/image73.png)</kbd>
 
-    <br/>
+Ask the question: What happens if the Weather Underground API is not available?
+ 
 
-10. Use the Liberty Dashboard to **STOP** the Liberty Server in dev mode
-    
-    a. In VS Code, switch back to the **Explorer** view
-    
-    b.  Expand the LIBERTY DASHBOARD section
-    
-    c.  Right-mouse click on the **guide-getting-started** Liberty
-        Server
-    
-    d.  Select **Stop** from the menu to stop the server
-        
-    <kbd>![](./images/media/image74.png)</kbd>
 
-    <br/>
+Ask the question: Where is the default weather data defined?
+ 
 
-11. **Exit** the VS Code UI
-    
-    a.  Select **File \> Exit** from the main menu in VS Code to Exit  the UI
 
-    <br/>
+Get details about the DefaultWeatherData class by asking 
+/explain @DefaultWeatherData
 
-12. **Close** all opened **Terminal** Windows and **Browser** tabs
+ 
 
-Congratulations! You have successfully used the **Liberty Tools** extension for VS Code to start Open Liberty in development mode, make changes to
-your application and Liberty server configuration while the server is
-up, run tests and view results, and even debug the application without
-leaving the editor.
 
-As you explored the fast and efficient inner-loop development experience
-using the Liberty Tools and VS Code IDE, your code was automatically compiled and deployed to your running server, making it easy to iterate on your changes.
+ 
+Additional questions that you could ask:
+
+What is the Weather Underground API?
+  
+
+Who is providing the Weather Underground API? 
+ 
+
+
+What is the URL of the Weather Underground API? 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**to be done end**
+
+
+
+Congratulations! You have successfully used **watsonx Code Assistant** to perform different tasks during an application mdoernization journey. 
 
 **===== END OF LAB =====**
+
+
+# Appendix
+
+## How to set up Visual Studio Code and the watsonx Code Assistant Plugin
+If an environment is provided to you, this section is only for your interest and to get a better understanding - the steps described here have already been performed.
+
+### Install VS Code
+You can download Visual Studio Code (VS Code) from the side https://code.visualstudio.com/download. 
+
+- To check the VS Code version, use the command 
+
+        code -v
+
+- To see the available VS Code commands, use the command 
+
+        code --help
+
+- If you are on an older version of VS Code, update to 1.85.1 or later or you will later on get an error in the WCA output logs like
+
+        2024-11-13 07:14:44 - [wca] - [INFO]: - Launching LSP /home/techzone/.vscode/extensions/ibm.wca-core-1.0.21/assets/common/server.min.cjs
+        2024-11-13 07:14:52 - [wca] - [ERROR]: - Could not instantiate LSP [Error: The language client requires VS Code version ^1.86.0 but received version 1.85.1
+
+    To update VS Code, open VS Code. In VS Code, select **Help > Update**, then open the URL (https://code.visualstudio.com/docs/setup/setup-overview) and follow the steps provided. Then stop and start VS Code.
+    In the provided environment, those steps have already been done.
+
+#### How the update to vscode 1.95.1 was done in this environment:
+
+1. In VS-Code, select Help > Update, then open the URL https://code.visualstudio.com/
+2. Select rpm and follow the instructions to execute the following commands. For your convenience, here the commands:
+
+        sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+    
+        echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+
+        dnf check-update
+    
+        sudo dnf install code # or code-insiders
+
+3. Stop and start VS-Code.
+
+### Install the Visual Studio Code extensions for watsonx Code Assistant 
+There are two extensions required to install wats, the one for WCA Core and the one for WCA EJA. The extension WCA-EJA will install the WCA Core automatically.
+
+Comment: The WCA for Java Enterprise extension is at this point of time not available in the public extension repository. 
+
+Steps to install the extension for WCA for Enterprise Java Applications
+
+1. Switch to the Extensions View in VS- Code.
+
+    <kbd>![Toolbar_Terminal](./images/media/vscode_Extensions.png)</kbd>
+
+
+2. In VS Code, use the three dots and select Install from VSIX: 
+ 
+    <kbd>![Toolbar_Terminal](./images/media/vscode_VSIX.png)</kbd>
+
+3. Select the VSIX file that has been provided to you, then select Install.:
+    <kbd>![Toolbar_Terminal](./images/media/vscode_Extension_for_WCA_driver.png)</kbd>
+
+    The extension will also add the extension for watsonx Code Assistant Core.
+    Finally, you should see both extensions. 
+
+4. Click on the extension **watsonx Code Assistant for Enterprise Java Applications** and take a look at the description
+
+    <kbd>![Toolbar_Terminal](./images/media/vscode_Extension_for_WCA.png)</kbd>
+
+
+### Configure watsonx Code Assistant 
+
+To access the cloud-based watsonx Code Assistant, an API key must be provided.
+
+1. Click on the shortcut for watsonx Code Assistant.
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_shortcut.png)</kbd>
+
+2. On the welcome screen, click on Log in with you API key.
+ 
+    <kbd>![Toolbar_Terminal](./images/media/WCA_WelcomeScreen.png)</kbd>
+
+3. On the pop-up, click Allow to sign in.
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_API-Key-1.png)</kbd>
+
+4. Enter the provided API key into the entry field.
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_API-Key-2.png)</kbd>
+ 
+5. Wait until you get a message changes to **Valid API** Key. 
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_API-Key-3.png)</kbd>
+ 
+6. Press **Enter** to confirm the key.
+
+7. In the chat session, you should see a Chat session.
+ 
+    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-Hello.png)</kbd>
+ 
+### Test if the WCA chat works 
+
+1. Enter **/help** and press **Enter** or click on the blue arrow.
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-help.png)</kbd>
+
+ 
+2. You should see a short introduction. Feel free to expand the different sections.
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_Chat-help2.png)</kbd>
+
+
+Your watsonx Code Assistant is now ready to be used. 
+
+
+## Install the Liberty Tools extension
+
+To follow the application modernization part of the tutorial, install the Liberty Tools extension. Switch to the extensions view and search for Liberty Tools, then install them.
+
+<kbd>![Toolbar_Terminal](./images/media/vscode_LibertyTools.png)</kbd>
+
+
+Switch back to the Project Explorer view and you should see the Liberty Dashboard at the bottom.
+
+<kbd>![Toolbar_Terminal](./images/media/vscode_LibertyTools_Dashboard.png)</kbd>
+
+ 
+## How to reset the environment for another demo
+
+If you ran the “Modernize to Liberty” use case once, it will be remembered until you do the task again from another project directory.
+
+The following script called **modresorts_demo_setup.sh** “resets” the environment by creating a temporary path which then includes the modresorts application.
+
+To reset the environment, follow these steps:
+
+1. Delete the old directory “temp-xxx” via the command 
+
+        rm -rf temp-*
+
+2. Run the script to create a new environment.
+To run the script and switch automatically into the new project directory, use the following command: 
+(the “. “ makes sure that the script will not start a new process and therefore the cd command stays effective even after the shell script stopped.)
+
+
+        . modresorts_demo_setup.sh
+
+Content of the file **modresorts_demo_setup.sh**
+
+     #!/bin/bash
+    NOW="$(date +"%m-%d-%Y-%H-%M")"
+    DIR="temp-$NOW/modresorts"
+    mkdir -p $DIR
+    cd $DIR
+    unzip ~/software/modresorts*.zip
+    git init
+    git config --global user.name "John Doe"
+    $ git config --global user.email johndoe@example.com
+    git add .
+    git commit -a -m "Initial project"
+
+
+
+
+
+ 
