@@ -365,69 +365,84 @@ Hint:
 2. The build of the application is needed to perform watsonx Code Assistant tasks on Enterprise Java Application level (e.g. explain, modernize, upgrade).
 
 
-**to be done begins**
-
 ### Scenario: Understand the Java Enterprise application modresorts
 One of theh challenges during a modernization project is often, that there is no good documentation about the application code available. Often also the developers that developed the application initially are no longer available.
 You will use the explain capabilities in watsonx Code Assistant to get a better understanding of the Java Enterprise applications. 
 This will include three parts:
 
-•	Get a better understanding of the modresorts application overall by using some of the Enterprise Java Application capabilities of watsonx Code Assistant.
-•	Get a better understanding of modresorts classes and methods or other files by using some of the core capabilities of watsonx Code Assistant.
-•	Get a better understanding of the modresorts applications by asking questions by using some of the core capabilities of watsonx Code Assistant.
+- Get a better understanding of the modresorts application overall by using some of the Enterprise Java Application capabilities of watsonx Code Assistant.
+- Get a better understanding of modresorts classes and methods or other files by using some of the core capabilities of watsonx Code Assistant.
+- Get a better understanding of the modresorts applications by asking questions by using some of the core capabilities of watsonx Code Assistant.
  
-Use watsonx Code Assistant to explain the code
+#### Use watsonx Code Assistant to explain the code
 
-Within the project, click on the Project Explorer shortcut.
+1. Within the project, click on the Project Explorer shortcut.
   
+    <kbd>![Toolbar_Terminal](./images/media/vscode_ProjectExplorer.png)</kbd>
 
-Right-click on src and select watsonx Code Assistant > Explain Application
- 
-You will get a pop-up like:
- 
-Click on “Proceed with code analysis”
-You will see something like
- 
-Then after a minute or so:
- 
-And then
- 
-Click on Open explanation to see the results.
- 
 
- 
-Use the wizard inside the application code to explain a class:
-
-In the Project Explorer, expand the src directory and open the file WeatherServlet.java.
+2. Right-click on **src** and select **watsonx Code Assistant > Explain Application**
+ 
+    <kbd>![Toolbar_Terminal](./images/media/WCA_menu-explainApplication.png)</kbd>
 
  
+3. You will get a pop-up like:
 
-Scroll down to line 45.
+    <kbd>![Toolbar_Terminal](./images/media/WCA_explainApplication_popup.png)</kbd>
+
+4. Click on **Proceed with code analysis**. 
+You will see something several messages
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_explainApplication_CodeAnalysis1.png)</kbd>
+
+    Then after a minute or so:
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_explainApplication_CodeAnalysis2.png)</kbd>
+
+    And then
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_explainApplication_CodeAnalysis3.png)</kbd>
+
+5. Click on Open explanation to see the results.
+ 
+    <kbd>![Toolbar_Terminal](./images/media/WCA_explainApplication_Result.png)</kbd>
+
+
+#### Use the wizard inside the application code to explain a class:
+
+1. In the Project Explorer, expand the **src** directory and open the file **WeatherServlet.java**.
 
  
+    <kbd>![Toolbar_Terminal](./images/media/vscode_Explorer_WeatherServer.png)</kbd>
 
-Click on Explain in the line above line 45 to get the explanation for the class.
+2. Scroll down to **line 45**.
 
-The WCA chat window will open to explain the WeatherServlet.
-
- 
+    <kbd>![Toolbar_Terminal](./images/media/WCA_WeatherServer_snippet.png)</kbd>
 
 
- 
+3. Click on **Explain** in the line above line 45 to get the explanation for the class.
+This will trigger watsonx Code Assistant to analyze the code.
+
+4. The WCA chat window will open to explain the WeatherServlet. Take a look at the resulting explanation.
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_explainCode_WeatherServlet.png)</kbd>
+
+#### Use the chat command to explain a class or method:
 Another way to get an explanation for a class is to use the chat window directly.
 
+1. Enter into the chat window the text **/explain @ModResortsCustomerInformation.java**
 
-Enter into the chat window the line /explain @ModResortsCustomerInformation.java
-
- 
-Then press Enter and you should get an explanation like:
- 
+    <kbd>![Toolbar_Terminal](./images/media/WCA_explainCode_CustomerInformation.png)</kbd>
 
 
+2. Press Enter and you should get an explanation like:
+
+    <kbd>![Toolbar_Terminal](./images/media/WCA_explainCode_CustomerInformation-Result.png)</kbd>
 
 
- 
-Use the WCA chat to ask questions about the application
+ **to be done begins**
+
+#### Use the WCA chat to ask questions about the application
 
 In the chat window, enter the question: Where does the weather data come from?
  
