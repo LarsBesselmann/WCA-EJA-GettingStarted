@@ -721,16 +721,166 @@ To launch the application, you must start the Liberty server which will be insta
 
 Congratulations, you have just migrated an enterprise application from WebSphere Traditional to Liberty. ModResorts is now a Liberty application! At this point, your code should be the same as the code in the zip called modresorts-lib-j8.zip. 
 
+**===== END OF Application Modernization LAB =====**
 
 
+### Scenario: Upgrade the Java version of the modresorts application
+
+watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 8 to Java 17 or Java 21. This scenarios assumes that the ModResorts application has already been modernized to work on Liberty. It begins with the code in the state that we finished the Modernize to Liberty scenario. You can also start the scenario by starting with the zip called modresorts-lib-j8.zip.
+
+#### Identify the issues resulting of a Java upgrade
+
+1.	Switch to the **Project Explorer**, expand the **modresorts** application and right click on the **src** directory. Then select **watsonx Code Assistant > Upgrade Java Version**.
+
+     <kbd>![](./images/media/WCA_menu-Upgrade.png)</kbd>
+ 
+2.	The **Upgrade Java Version** view opens
+
+     <kbd>![](./images/media/ModResorts_Upgrade_Panel_01.png)</kbd>
 
 
+    a.	The **Source Java** version displayed is detected in the build configuration.
 
-# to be done 
- 
-- Upgrade Java
+    b.	The **Target Java** version displayed is calculated by first determining the current Java version set in the build configuration (pom.xml). It will give a list of target versions that are supported when coming from the detected source version.
+
+3.	Before you analyze the application, the application needs to be built. 
+
+    If it's not built at this point, build it now from the terminal via command: 
+
+        mvn clean package 
+
+4.	Expand the list of targets and select **Java 17** or **Java21** based on your environment. In this case, you will use **Java 17**.
+ 
+     <kbd>![](./images/media/ModResorts_Upgrade_Panel_02.png)</kbd>
+
+5.	Once you have selected a target Java, the **Build and Analyze** button gets enabled.
+
+     <kbd>![](./images/media/ModResorts_Upgrade_Panel_03.png)</kbd>
 
 
+6.	Click the **Build and Analyze** button to analyze the application for target Java 17 (in this case). After a few moments you should see the issues. There are two issues with an auto fix, and one issue with a watsonx Code Assistant assisted fix:
+ 
+     <kbd>![](./images/media/ModResorts_Upgrade_Panel_04.png)</kbd>
+ 
+
+#### Test the application on the target Java before upgrading
+
+1.	At this point you can run ModResorts in a Java 17 or Java 21 environment to observe how the application is not functioning correctly **BEFORE** you fix the Java upgrade issues. 
+
+    a.	Start the application using the **LIBERTY DASHBOARD**  in the side panel.
+  
+     <kbd>![](./images/media/UpgradeJava_Start_Liberty.png)</kbd>
+
+    b.	Monitor the **terminal window** and wait until Liberty has been started.
+ 
+     <kbd>![](./images/media/UpgradeJava_Start_Liberty-Output.png)</kbd>
+
+    c.	Click within the terminal on the **application link** or open the URL **localhost:9080/resorts** in a browser.
+
+     <kbd>![](./images/media/Modresorts.png)</kbd>
+ 
+    d.	Click the **Where to** drop-down. Select any value. You should observer errors in the UI:
+
+     <kbd>![](./images/media/ModResorts-Paris-Error.png)</kbd>
+ 
+    These errors are ultimately the result of the Java upgrade issue with the **MBeanOperatorInfo constructor** which causes a server error when fetching data for the UI.
+
+    e.	Stop the Liberty instance via the Liberty Dashboard
+
+     <kbd>![](./images/media/UpgradeJava_Stop_Liberty.png)</kbd>
+ 
+
+#### Resolve the automated fix issues
+
+1. In VS Code, click the **Run automated fixes** button.
+
+     <kbd>![](./images/media/ModResorts_Upgrade_AutomatedFixes1.png)</kbd>
+
+2. Click on Rebuild and refresh to check if the issues have been resolved.
+
+     <kbd>![](./images/media/ModResorts_Upgrade_AutomatedFixes2.png)</kbd>
+
+3.	Review the results and verify that there is no automated fix issue remaining.
+
+     <kbd>![](./images/media/ModResorts_Upgrade_AutomatedFixes3.png)</kbd>
+
+
+#### Resolve the assisted fix issues
+1. Switch to the tab for Assisted fixes.
+
+     <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes01.png)</kbd>
+
+    The issue **Behavior change in the javax.management.MBeanOperationInfo constructor** is listed. You will resolve the issue with the help of the watsonx Code Assistant. 
+
+2.	Scroll down and open all twisties to see the guidance how to fix the issue.
+
+     <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes02.png)</kbd>
+
+3.	Open the **DMBeanUtils** class by clicking on the **blue link**. To have both tabs side by side, move the window to the lower right.
+
+     <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes03.png)</kbd>
+
+4.	Now you can see the instructions and the code next to each other.
+
+     <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes04.png)</kbd>
+
+5.	Select the **DMBeanUtils** class, then click in the left tab on **Help me**.
+
+     <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes05.png)</kbd>
+
+6.	watsonx Code Assistant generates a code suggestion to fix the issue.
+
+     <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes06.png)</kbd>
+ 
+7.	Review the changes, which are mainly in the try-catch block, then replace the previously selected code with the suggestion provided by watsonx Code Assistant. You can use the copy function to select/copy the code.
+
+     <kbd>![](./images/media/WCA_copyCode.png)</kbd>
+
+8.	Your final update code should look like this:
+
+     <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes07.png)</kbd>
+
+
+9.	**Save** the code, then close the java class.
+    
+10. On the **Upgrade Java Version** tab, click on **Rebuild and refresh**.
+
+
+     <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes08.png)</kbd>
+
+11.	If everything worked well, all issues should have been resolved.
+
+     <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes09.png)</kbd>
+
+
+## Test the application if the error has been resolved
+
+1.	Start the application using the **LIBERTY DASHBOARD**  in the side panel.
+  
+     <kbd>![](./images/media/UpgradeJava_Start_Liberty.png)</kbd>
+
+2.	Monitor the **terminal window** and wait until Liberty has been started.
+ 
+     <kbd>![](./images/media/UpgradeJava_Start_Liberty-Output2.png)</kbd>
+
+3.	Click within the terminal on the **application link** or open the URL **localhost:9080/resorts** in a browser.
+
+     <kbd>![](./images/media/Modresorts.png)</kbd>
+ 
+4.	Click the **Where to** drop-down. Select any value. You should observer that the previous errors in the UI have been resolved.
+
+     <kbd>![](./images/media/ModResorts-Paris-working.png)</kbd>
+ 
+    These errors are ultimately the result of the Java upgrade issue with the **MBeanOperatorInfo constructor** which causes a server error when fetching data for the UI.
+
+ 5. Stop the Liberty instance via the Liberty Dashboard
+
+     <kbd>![](./images/media/UpgradeJava_Stop_Liberty.png)</kbd>
+
+ 
+Congratulations, you have just migrated an enterprise application from Java 8 to Java 17.
+
+**===== END OF the Application Upgrade LAB =====**
 
 Congratulations! You have successfully used **watsonx Code Assistant** to perform different tasks during an application mdoernization journey. 
 
