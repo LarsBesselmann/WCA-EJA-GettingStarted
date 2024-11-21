@@ -17,11 +17,15 @@ You will need an estimated **60 to 90 minutes** to complete this lab.
 ## Table of Contents
 
 - [Objectives](#objectives)
+
 - [Lab requirements](#Lab-requirements)
+
 - [Tips for working in the lab environment](#tips-for-working-in-the-lab-environment)
+
 - [Introduction to watsonx Code Assistant](#introduction--watsonx-code-assistant)
-- [Accessing the lab environment](#accessing-the-lab-environment)
-- [About the environment](#about-the-environment)
+
+- [Accessing and using the lab environment](#accessing-and-using-the-lab-environment)
+
 - [Getting started](#getting-started)
 - [How to use watsonx Code Assistant](#how-to-use-watsonx-code-assistant)
 - [Scenario: Understand the Java Enterprise application modresorts](#scenario-understand-the-java-enterprise-application-modresorts)
@@ -126,7 +130,9 @@ IBM watsonx Code Assistant is an innovative, generative AI coding companion that
 In this lab, you will use the **watsonx Code Assistant** to understand and modernize an existing Java Enterprise application.
 
 
-## Accessing the lab environment
+## Accessing and using the lab environment
+
+### Accessing the lab environment
 
 If you are doing this lab as part of an instructor led workshop (virtual or face to face), an environment has already been provisioned for you. The instructor will provide the details for accessing the lab environment.
 
@@ -203,7 +209,7 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
   <br/>
 
 
-## Tips for working in the lab environment     
+### Tips for working in the lab environment     
 
 1. You can resize the viewable area using the **noVNC Settings** options to resize the virtual desktop to fit your screen.
 
@@ -247,16 +253,15 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
     
     <br>
 
-### If, at aytime during the lab, you ar asked to install updates, click CANCEL!
 
 |         |           |  
 | ------------- |:-------------|
 | ![](./images/media/info.png?cropResize=100,100)   | <p><strong>Important:</strong> <p><strong>Click CANCEL</strong>…. If, at any time during the lab, you get a pop-up asking to install updated software onto the Ubuntu VM.</p> <p>The one we experience is an update available for VS Code.</p><p><strong>CLICK CANCEL!</strong></p><p>![](./images/media/vscode_popup_update.png?cropResize=100,100)</p> |
 
 
-## About the environment
+## Getting started 
 
-Here some additional information which should allow you to get a better understanding about the environment and how it has been set up.
+Before you get started, here some additional information which should allow you to get a better understanding about the environment and how it has been set up.
 
 ### Source code
 
@@ -295,9 +300,8 @@ Related links:
 In the prepared lab environment, the Visual Studio Code and the Liberty Tools are already installed. 
  
 
+### Getting started with the tutorial
 
-
-## Getting started 
 
 1.  **Close** all **Terminal** windows and **Browser** Tabs used in any previous lab.
 
