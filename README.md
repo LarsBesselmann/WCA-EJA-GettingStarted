@@ -27,7 +27,7 @@ You will need an estimated **60 to 90 minutes** to complete this lab.
 - [Scenario: Understand the Java Enterprise application modresorts](#scenario-understand-the-java-enterprise-application-modresorts)
 - [Scenario: Modernize the modresorts application from WebSphere Traditional to Liberty](#scenario-modernize-the-modresorts-application-from-websphere-traditional-to-liberty)
 - [Scenario: Upgrade the Java version of the modresorts application](#scenario-upgrade-the-java-version-of-the-modresorts-application)
-
+- [Appendix](#appendix)
 
 
 
