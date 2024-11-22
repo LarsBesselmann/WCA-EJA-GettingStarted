@@ -702,35 +702,31 @@ Now we will use watsonx Code Assistant to fix the remaining issue.
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes02.png)</kbd>
  
-3. Click on the blue link to open the file **UpperServlet.java** in the IDE.
-    To have both tabs side by side, move the UpperSetvlet.java window to the right and a bit down.
-  
-    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes03.png)</kbd>
-
-4.	Now you can see the instructions and the code next to each other.
+3. Click on the blue link to open the file **UpperServlet.java** in the IDE. The UpperSetvlet.java window will open in a new group
+and you can see the instructions and the code next to each other.
  
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes04.png)</kbd>
 
-5.	Select the class or the method that uses the ResponseUtils.encodeDataString() method.  Recommended it so select the code from line 14 to 34.
+4.	Select the class or the method that uses the ResponseUtils.encodeDataString() method.  Recommended it so select the code from line 14 to 34.
  
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes05.png)</kbd>
 
-6. Switch back to the tab **Modernize to Liberty** and click the button **Help me**.
+5. Switch back to the tab **Modernize to Liberty** and click the button **Help me**.
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes06.png)</kbd>
 
-7. The IDE will automatically switch to the chat window, and you will see that watsonx Code Assistant is working on the solution. After a couple of moments, you should get a code snippet returned:
+6. The IDE will automatically switch to the chat window, and you will see that watsonx Code Assistant is working on the solution. After a couple of moments, you should get a code snippet returned:
  
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes07.png)</kbd>
 
     This code suggestion shows how the Apache Commons Text library can be used instead of the ResponseUtils.encodeDataString() method
 
-8.	Take a look at the recommended changes. The returned solution consists of two parts:
+7.	Take a look at the recommended changes. The returned solution consists of two parts:
 
     - The returned code snippet contains the code you selected but adjusted to fix the issue. 
     - The required adjustment to the pom file to reflect the additional dependency.
 
-9. Replace the previously selected with the code recommended by watsonx Code Assistant.
+8. Replace the previously selected with the code recommended by watsonx Code Assistant.
 
     a. Select the code suggested by watsonx Code Assistant 
 
@@ -746,7 +742,7 @@ Now we will use watsonx Code Assistant to fix the remaining issue.
 
     c.	Save the code changes, then close the Java class.
 
-10.	Add the recommended dependency to the pom.xml. 
+9.	Add the recommended dependency to the pom.xml. 
 
     a.	Switch to the Project Explorer and open the pom.xml
  
@@ -766,11 +762,11 @@ Now we will use watsonx Code Assistant to fix the remaining issue.
 
     d.	Save the configuration change and close the pom file.
 
-11.	Switch to the Modernize to Liberty tab and click on Rebuild and refresh
+10.	Switch to the Modernize to Liberty tab and click on Rebuild and refresh
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes13.png)</kbd>
  
-12.	Watsonx Code Assistant rebuilds the code and scans It again. The issue should have gone.
+11.	Watsonx Code Assistant rebuilds the code and scans It again. The issue should have gone.
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes14.png)</kbd>
 
@@ -904,39 +900,35 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
 
      <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes02.png)</kbd>
 
-3.	Open the **DMBeanUtils** class by clicking on the **blue link**. To have both tabs side by side, move the window to the lower right.
-
-     <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes03.png)</kbd>
-
-4.	Now you can see the instructions and the code next to each other.
+3.	Open the **DMBeanUtils** class by clicking on the **blue link**. This will open the class in a new group and you can see the instructions and the code next to each other.
 
      <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes04.png)</kbd>
 
-5.	Select the **DMBeanUtils** class, then click in the left tab on **Help me**.
+4.	Select the **DMBeanUtils** class, then click in the left tab on **Help me**.
 
      <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes05.png)</kbd>
 
-6.	watsonx Code Assistant generates a code suggestion to fix the issue.
+5.	watsonx Code Assistant generates a code suggestion to fix the issue.
 
      <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes06.png)</kbd>
  
-7.	Review the changes, which are mainly in the try-catch block, then replace the previously selected code with the suggestion provided by watsonx Code Assistant. You can use the copy function to select/copy the code.
+6.	Review the changes, which are mainly in the try-catch block, then replace the previously selected code with the suggestion provided by watsonx Code Assistant. You can use the copy function to select/copy the code.
 
      <kbd>![](./images/media/WCA_copyCode.png)</kbd>
 
-8.	Your final update code should look like this:
+7.	Your final update code should look like this:
 
      <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes07.png)</kbd>
 
 
-9.	**Save** the code, then close the java class.
+8.	**Save** the code, then close the java class.
     
-10. On the **Upgrade Java Version** tab, click on **Rebuild and refresh**.
+9. On the **Upgrade Java Version** tab, click on **Rebuild and refresh**.
 
 
      <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes08.png)</kbd>
 
-11.	If everything worked well, all issues should have been resolved.
+10.	If everything worked well, all issues should have been resolved.
 
      <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes09.png)</kbd>
 
