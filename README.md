@@ -13,7 +13,7 @@ At the end of this lab, you should be able to:
 
 You will need an estimated **60 to 90 minutes** to complete this lab.
 
-
+Select the option Upload migration bundle.
 ## Table of Contents
 
 - [Objectives](#objectives)
@@ -589,9 +589,10 @@ The data collection can be found in the file **ta-collection/ AppSrv01.zip**, th
 
  
 2. Select the option Upload migration bundle.
-<br>
-In the pop-up **Open File**, navigate to the directory **/modresorts/migration-bundle**
-and select the file **modresorts.ear_migrationBundle.zip**, the click on **Open**.
+
+    <br>
+    In the pop-up **Open File**, navigate to the directory **/modresorts/migration-bundle**
+    and select the file **modresorts.ear_migrationBundle.zip**, the click on **Open**.
  
     <kbd>![](./images/media/ModResorts_Modernize_OpenFile.png)</kbd>
 
