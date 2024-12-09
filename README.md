@@ -560,11 +560,40 @@ There are additional questions that you could ask. For example:
 - What is the Weather Underground API?
 - Who is providing the Weather Underground API? 
 - What is the URL of the Weather Underground API? 
- 
+
+Hint:
+
+The answer to a question is only as good as the context that has been provided.
+- If an "Explain application" has been performed, all Java files have been loaded into the context.
+- If an "Explain application" has not been performed, WCA typically only knows a subset of the files which impacts the quality of the answer. 
+
+To set the context, you could use the following commands:
+
+1. Create a list of all relevant files
+
+    a) On Windows, use a command like 
+        
+        dir /s/b *.java > modres_java.txt
+
+    b) On Linux, use a command like 
+    
+        find ./src -type f | grep java > modres_java.txt
+
+2. In chat, enter the following "command" to get all files explained and loaded:
+
+        explain all files listed in @modres_java.txt
+
+3. Once the files has been interpreted, you can ask questions like:
+    - "what is the purpose of the modres application?"
+    - "what happens if the weather data endpoint is not available?"
+
+
+
 #### Understand: Summary
 As you could see, watsonx Code Assistant makes it much easier to understand the code. Instead of having to read through all the application code, you can get explanations or ask questions or even use a combination to get the nsiht that you need.
 
-Additional capabilities that have nbot been covered as part of the section are the generation of code documentation for example.
+Additional capabilities that have not been covered as part of the section are the generation of code documentation for example.
+
 
 
 ### Scenario: Modernize the modresorts application from WebSphere Traditional to Liberty

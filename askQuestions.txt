@@ -1,0 +1,15 @@
+The answer to a question is only as good as the context that has been provided.
+If an "Explain application" has been performed, all Java files have been loaded into the context.
+If you do not do an "Explain application", WCA does not know anything about the application and can only answer based on the code it knows.
+To set the context, you could use the following commands:
+
+Create a list of all relevant files
+On Windows, use a command like "dir /s/b *.java > modres_java.txt"
+On Linux, use a command like "find ./src -type f | grep java > modres_java.txt"
+
+In chat, use the command "explain all files listed in @modres_java.txt"
+
+Once the files has been interpreted, you can ask questions like:
+"what is the purpose of the modres application?"
+"what happens if the weather data endpoint is not available?"
+and so on. 
