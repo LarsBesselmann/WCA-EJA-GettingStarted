@@ -1,0 +1,8 @@
+Create a file called TimeServlet.java
+Use WCA to create a servlet via "Create a web servlet that display the current time and date"
+Use WCA to add the path via "add WebServlet path"
+Start Liberty via Liberty Dashboard
+Test at URL localhost:9080/resorts/time
+
+/unit-test @TimeServlet.java
+

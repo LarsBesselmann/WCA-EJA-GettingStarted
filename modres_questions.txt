@@ -1,0 +1,6 @@
+/explain all files listed in @modres_java.txt
+/explain @WeatherServlet
+Where does the weather data come from?
+Which class is calling the Weather Underground API?
+What happens if the Weather Underground API is not available?
+Where is the default weather data defined?
