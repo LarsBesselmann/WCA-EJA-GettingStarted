@@ -309,12 +309,16 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
     <kbd>![Toolbar_Terminal](./images/media/Toolbar_Terminal.png)</kbd>
 
 3.  Clone the GitHub repo that includes artifacts required for this lab
-    
+    <!-- Initial URL: git clone https://github.com/openliberty/wca-guide-getting-started.git /home/techzone/Student/labs/wca -->
+        
         mkdir -p /home/techzone/Student/labs
 
-        git clone https://github.com/openliberty/wca-guide-getting-started.git /home/techzone/Student/labs/wca
+        git clone https://github.com/LarsBesselmann/WCA-EJA-GettingStarted.git/home/techzone/Student/labs/wca
         
         cd /home/techzone/Student/labs/wca
+
+        mv modresorts*.zip ~/software
+        
 
 4. Run the following command to set up the modresorts environment.
 
