@@ -426,7 +426,7 @@ There are different ways to interact with watsonx Code Assistant.
 
 3. As the modresorts project depends on was_public.jar, you must make it visible to maven to avoid build failures. Run the following command 
 
-    mvn install:install-file -Dfile=./was_dependency/was_public.jar -DpomFile=./was_dependency/was_public-9.0.0.pom
+        mvn install:install-file -Dfile=./was_dependency/was_public.jar -DpomFile=./was_dependency/was_public-9.0.0.pom
 
     You should see something like
 
