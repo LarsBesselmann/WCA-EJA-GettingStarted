@@ -1016,7 +1016,7 @@ You can download Visual Studio Code (VS Code) from the side https://code.visuals
 
         code --help
 
-- If you are on an older version of VS Code, update to 1.85.1 or later or you will later on get an error in the WCA output logs like
+- If you are on an older version of VS Code, update to 1.86.0 or later or you will later on get an error in the WCA output logs like
 
         2024-11-13 07:14:44 - [wca] - [INFO]: - Launching LSP /home/techzone/.vscode/extensions/ibm.wca-core-1.0.21/assets/common/server.min.cjs
         2024-11-13 07:14:52 - [wca] - [ERROR]: - Could not instantiate LSP [Error: The language client requires VS Code version ^1.86.0 but received version 1.85.1
@@ -1157,6 +1157,21 @@ Content of the file **modresorts_demo_setup.sh**
     git commit -a -m "Initial project"
 
 
+## How to install gradle
+To install grade and register it to the system, use the following commands:
+
+    cd ~/Downloads
+    wget https://services.gradle.org/distributions/gradle-8.12-bin.zip
+    unzip gradle-*.zip
+    sudo mkdir /opt/gradle
+    sudo cp -pr gradle-*/* /opt/gradle
+    sudo echo "export PATH=/opt/gradle/bin:${PATH}" | sudo tee /etc/profile.d/gradle.sh
+    sudo chmod +x /etc/profile.d/gradle.sh
+    source /etc/profile.d/gradle.sh
+
+To test if gradle works, run the following command
+
+    gradle -v
 
 
 
