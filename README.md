@@ -1051,19 +1051,19 @@ Steps to install the extension for WCA for Enterprise Java Applications
     <kbd>![](./images/media/vscode_Extensions.png)</kbd>
 
 
-2. In VS Code, use the three dots and select Install from VSIX: 
+2. In VS Code, enter **watsonx** to search in the marketplace for watsonx extensions: 
  
-    <kbd>![](./images/media/vscode_VSIX.png)</kbd>
+    <kbd>![](./images/media/vscode_WCA_Install_Extension_Marketplace1.png)</kbd>
 
-3. Select the VSIX file that has been provided to you, then select Install.:
-    <kbd>![](./images/media/vscode_Extension_for_WCA_driver.png)</kbd>
+3. Select **watsonx Code Assistant for Enterprise Java Applications**, then select Install.:
+    <kbd>![](./images/media/vscode_WCA_Install_Extension_Marketplace2.png)</kbd>
 
     The extension will also add the extension for watsonx Code Assistant Core.
     Finally, you should see both extensions. 
 
 4. Click on the extension **watsonx Code Assistant for Enterprise Java Applications** and take a look at the description
 
-    <kbd>![](./images/media/vscode_Extension_for_WCA.png)</kbd>
+    <kbd>![](./images/media/vscode_WCA_Extension_installed.png)</kbd>
 
 
 ### Configure watsonx Code Assistant 
