@@ -436,7 +436,7 @@ There are different ways to interact with watsonx Code Assistant.
 
 4. Run the command to package the application
 
-    mvn package
+        mvn package
 
     You should see something like
 
