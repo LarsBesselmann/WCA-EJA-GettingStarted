@@ -416,7 +416,7 @@ There are different ways to interact with watsonx Code Assistant.
 
 2. Run the command 
 
-    mvn clean
+        mvn clean
 
     You should see something like
 
