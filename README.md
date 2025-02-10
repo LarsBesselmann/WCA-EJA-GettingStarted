@@ -309,7 +309,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
     <kbd>![Toolbar_Terminal](./images/media/Toolbar_Terminal.png)</kbd>
 
 3.  Clone the GitHub repo that includes artifacts required for this lab
-    <!-- Initial URL: git clone https://github.com/openliberty/wca-guide-getting-started.git /home/techzone/Student/labs/wca -->
+    <!-- Initial URL: git clone https://github.com/openliberty/wca-guide-getting-started.git  /home/techzone/Student/labs/wca -->
         
         mkdir -p /home/techzone/Student/labs
 
@@ -564,6 +564,8 @@ There are additional questions that you could ask. For example:
 - What is the Weather Underground API?
 - Who is providing the Weather Underground API? 
 - What is the URL of the Weather Underground API? 
+- What is the package name of the DefaultWeatherData class?
+
 
 Hint:
 
