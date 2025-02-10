@@ -63,7 +63,7 @@ You will need an estimated **60 to 90 minutes** to complete this lab.
 
 ## Notices and disclaimers
 
-© 2024 International Business Machines Corporation. No part of this document may be reproduced or transmitted in any form without written permission from IBM.
+© 2025 International Business Machines Corporation. No part of this document may be reproduced or transmitted in any form without written permission from IBM.
 
 **U.S. Government Users Restricted Rights — use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM.**
 
@@ -95,10 +95,12 @@ IBM, the IBM logo, and ibm.com are trademarks of International Business Machines
 
 
 
-
 ## Lab requirements
+<details>
 
-Use the lab environment that we prepared for this lab. It already has the prerequisite software installed and configured.
+<summary>The section contains details about the environment.
+If you use the lab environment that we prepared for this lab. It already has the prerequisite software installed and configured.</summary>
+
 
 
 ### Required software
@@ -113,8 +115,12 @@ To perform the exercise, the following software is required:
 
 ### Connectivity
 Internet access is required to download artefacts from the maven repository.
-  
+
+</details>
+
 ## Introduction – watsonx Code Assistant
+<details>
+<summary>What is watsonx Code Assistant</summary>
 IBM watsonx Code Assistant is an innovative, generative AI coding companion that offers robust, contextually aware assistance for popular programming languages including Go, C, C++, Java, JavaScript, Python, TypeScript, and more. Seamlessly integrated into your IDE, you can accelerate your productivity and simplify coding tasks, all with trust, security, and compliance.
 
 - **AI-powered coding tasks**: Code generation, explanation, unit test, creation, AI-derived code documentation, and more.
@@ -127,9 +133,11 @@ IBM watsonx Code Assistant is an innovative, generative AI coding companion that
 ![](./images/media/WCA_Intro.png)
 
 In this lab, you will use the **watsonx Code Assistant** to understand and modernize an existing Java Enterprise application.
-
+</details>
 
 ## Accessing and using the lab environment
+<details>
+<summary>How to use the lab environment</summary>
 
 ### Accessing the lab environment
 
@@ -256,6 +264,7 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
 |         |           |  
 | ------------- |:-------------|
 | ![](./images/media/info.png?cropResize=100,100)   | <p><strong>Important:</strong> <p><strong>Click CANCEL</strong>…. If, at any time during the lab, you get a pop-up asking to install updated software onto the Ubuntu VM.</p> <p>The one we experience is an update available for VS Code.</p><p><strong>CLICK CANCEL!</strong></p><p>![](./images/media/vscode_popup_update.png?cropResize=100,100)</p> |
+</details>
 
 
 ## Getting started 
