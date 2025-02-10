@@ -612,6 +612,8 @@ Additional capabilities that have not been covered as part of the section are 
 </details>
 
 ### Scenario: Modernize the modresorts application from WebSphere Traditional to Liberty
+<details>
+<summary>How to use WCA to modernize the runtime</summary>
 
 watsonx Code Assistant helps with the application modernize from a traditional application server like WebSphere Application Server Traditional, Oracle WebLogic, JBoss EAP or Tomcat to Liberty. It uses a binary scanner to scan the existing Java Enterprise applications and provides insight into issues when migrating to Liberty and/or another Java version. It also can scan the existing application server configuration.
 The generated data collection can be used as input for Transformation Advisor to estimate modernization efforts as well as to generate the deployment artefacts as part of a migration bundle.
@@ -850,9 +852,11 @@ To launch the application, you must start the Liberty server which will be insta
 Congratulations, you have just migrated an enterprise application from WebSphere Traditional to Liberty. ModResorts is now a Liberty application! At this point, your code should be the same as the code in the zip called modresorts-lib-j8.zip. 
 
 **===== END OF Application Modernization LAB =====**
-
+</details>
 
 ### Scenario: Upgrade the Java version of the modresorts application
+<details>
+<summary>How to use WCA to upgrade the Java version</summary>
 
 watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 8 to Java 17 or Java 21. This scenarios assumes that the ModResorts application has already been modernized to work on Liberty. It begins with the code in the state that we finished the Modernize to Liberty scenario. You can also start the scenario by starting with the zip called modresorts-lib-j8.zip.
 
@@ -1005,6 +1009,8 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
 Congratulations, you have just migrated an enterprise application from Java 8 to Java 17.
 
 **===== END OF the Application Upgrade LAB =====**
+
+</details>
 
 Congratulations! You have successfully used **watsonx Code Assistant** to perform different tasks during an application mdoernization journey. 
 
