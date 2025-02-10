@@ -14,6 +14,8 @@ At the end of this lab, you should be able to:
 You will need an estimated **60 to 90 minutes** to complete this lab.
 
 ## Table of Contents
+<details>
+<summary>Content of the lab</summary>
 
 - [Objectives](#objectives)
 
@@ -59,7 +61,7 @@ You will need an estimated **60 to 90 minutes** to complete this lab.
 
 - [Appendix](#appendix)
 
-
+</details>
 
 ## Notices and disclaimers
 
