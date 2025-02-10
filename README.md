@@ -454,7 +454,7 @@ There are different ways to interact with watsonx Code Assistant.
 
     > Hints:
     > - The build of the application is needed to perform watsonx Code Assistant tasks on Enterprise Java Application level (e.g. explain, modernize, upgrade).
-    > - If you did not install the file was_public.jar into maven, the maven command wwill fail with an error like: <br> Could not resolve dependencies for project com.acme.modres:modresorts:war:2.0.0: The following artifacts could not be resolved: com.ibm.websphere.appserver:was_public:jar:9.0.0 (absent)
+    > - If you did not install the file was_public.jar into maven, the maven command will fail with an error like: <br> Could not resolve dependencies for project com.acme.modres:modresorts:war:2.0.0: The following artifacts could not be resolved: com.ibm.websphere.appserver:was_public:jar:9.0.0 (absent)
 
 
 
@@ -1013,7 +1013,7 @@ Congratulations, you have just migrated an enterprise application from Java 8 to
 
 </details>
 
-Congratulations! You have successfully used **watsonx Code Assistant** to perform different tasks during an application mdoernization journey. 
+Congratulations! You have successfully used **watsonx Code Assistant** to perform different tasks during an application modernization journey. 
 
 **===== END OF LAB =====**
 
