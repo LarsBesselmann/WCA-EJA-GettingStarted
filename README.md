@@ -313,7 +313,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
         
         mkdir -p /home/techzone/Student/labs
 
-        git clone https://github.com/LarsBesselmann/WCA-EJA-GettingStarted.git/home/techzone/Student/labs/wca
+        git clone https://github.com/LarsBesselmann/WCA-EJA-GettingStarted.git /home/techzone/Student/labs/wca
         
         cd /home/techzone/Student/labs/wca
 
