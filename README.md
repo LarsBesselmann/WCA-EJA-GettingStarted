@@ -136,9 +136,6 @@ In this lab, you will use the **watsonx Code Assistant** to understand and moder
 </details>
 
 ## Accessing and using the lab environment
-<details>
-<summary>How to use the lab environment</summary>
-
 How to use the lab environment
 
 ### Accessing the lab environment
@@ -267,7 +264,7 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
 | ------------- |:-------------|
 | ![](./images/media/info.png?cropResize=100,100)   | <p><strong>Important:</strong> <p><strong>Click CANCEL</strong>…. If, at any time during the lab, you get a pop-up asking to install updated software onto the Ubuntu VM.</p> <p>The one we experience is an update available for VS Code.</p><p><strong>CLICK CANCEL!</strong></p><p>![](./images/media/vscode_popup_update.png?cropResize=100,100)</p> |
 
-</details>
+
 
 ## Getting started 
 
