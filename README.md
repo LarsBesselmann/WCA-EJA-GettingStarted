@@ -37,7 +37,7 @@ You will need an estimated **60 to 90 minutes** to complete this lab.
 
 - [Scenario: Modernize the modresorts application from WebSphere Traditional to Liberty](#scenario-modernize-the-modresorts-application-from-websphere-traditional-to-liberty)
 
-    - [Modernize: Analyze the applicatzion via watsonx Code Assistant for Enterprise Java Application](#modernize-analyze-the-application-via-watsonx-code-assistant-for-enterprise-java-application)
+    - [Modernize: Analyze the application via watsonx Code Assistant for Enterprise Java Application](#modernize-analyze-the-application-via-watsonx-code-assistant-for-enterprise-java-application)
 
     - [Modernize: Test the application as is to show the impact of the issues](#modernize-test-the-application-as-is-to-show-the-impact-of-the-issues)
 
@@ -187,7 +187,7 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
 	 
 	 <br>
 
-2. If prompted to Login to the "workstation" VM, use the credetials below: 
+2. If prompted to Login to the "workstation" VM, use the credentials below: 
 
     The login credentials for the **workstation”** VM is:
  
@@ -195,7 +195,7 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
 
      - Password: **IBMDem0s!**
 
-     > Note: That is a numneric zero in the password
+     > Note: That is a numeric zero in the password
 
 	 <br>
  
@@ -219,7 +219,7 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
 
 1. You can resize the viewable area using the **noVNC Settings** options to resize the virtual desktop to fit your screen.
 
-    a. From the environemnt VM, click on the **twisty** on the noNC control pane to open the menu.  
+    a. From the environment VM, click on the **twisty** on the noNC control pane to open the menu.  
 
     ![fit to window](./images/media/z-twisty.png)
 
@@ -460,7 +460,7 @@ There are different ways to interact with watsonx Code Assistant.
 
 ### Scenario: Understand the Java Enterprise application modresorts
 <details>
-<summary>How to use the WCA code explanation capabilities</summary>
+<summary> How to use the WCA code explanation capabilities. </summary>
 One of the challenges during an application modernization project is often, that there is no good documentation about the application code available. Often also the developers that developed the application initially are no longer available.
 You will use the explain capabilities in watsonx Code Assistant to get a better understanding of the Java Enterprise applications. 
 This will include three parts:
