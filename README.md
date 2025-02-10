@@ -96,6 +96,7 @@ IBM, the IBM logo, and ibm.com are trademarks of International Business Machines
 
 
 ## Lab requirements
+<details>
 
 <summary>The section contains details about the environment.
 If you use the lab environment that we prepared for this lab. It already has the prerequisite software installed and configured.</summary>
@@ -113,6 +114,8 @@ To perform the exercise, the following software is required:
 
 ### Connectivity
 Internet access is required to download artefacts from the maven repository.
+
+</details>
 
 
 ## Introduction – watsonx Code Assistant
@@ -132,7 +135,7 @@ In this lab, you will use the **watsonx Code Assistant** to understand and moder
 
 ## Accessing and using the lab environment
 
-<summary>How to use the lab environment</summary>
+How to use the lab environment
 
 ### Accessing the lab environment
 
@@ -455,6 +458,8 @@ There are different ways to interact with watsonx Code Assistant.
 
 
 ### Scenario: Understand the Java Enterprise application modresorts
+<details>
+<summary>How to use the WCA code explanation capabilities</summary>
 One of the challenges during an application modernization project is often, that there is no good documentation about the application code available. Often also the developers that developed the application initially are no longer available.
 You will use the explain capabilities in watsonx Code Assistant to get a better understanding of the Java Enterprise applications. 
 This will include three parts:
@@ -604,7 +609,7 @@ As you could see, watsonx Code Assistant makes it much easier to understand the 
 
 Additional capabilities that have not been covered as part of the section are the generation of code documentation for example.
 
-
+</details>
 
 ### Scenario: Modernize the modresorts application from WebSphere Traditional to Liberty
 
