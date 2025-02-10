@@ -1022,6 +1022,8 @@ Congratulations! You have successfully used **watsonx Code Assistant** to perfor
 
 
 # Appendix
+<details>
+<summary>How to set up the lab environment and more</summary>
 
 ## How to set up Visual Studio Code and the watsonx Code Assistant Plugin
 If an environment is provided to you, this section is only for your interest and to get a better understanding - the steps described here have already been performed.
@@ -1194,6 +1196,6 @@ To test if gradle works, run the following command
 
     gradle -v
 
-
+</details>
 
  
