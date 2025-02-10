@@ -536,7 +536,7 @@ Another way to get an explanation for a class is to use the chat window directly
 
 
 #### Use the WCA chat to ask questions about the application
-As mentioned above, the chat function within watsonx Code Assisant can also be used to ask questions about the code for example. Here some examples
+As mentioned above, the chat function within watsonx Code Assistant can also be used to ask questions about the code for example. Here some examples
 
 1. In the chat window, enter the question: **Where does the weather data come from?**
 
@@ -606,7 +606,7 @@ To set the context, you could use the following commands:
 
 
 #### Understand: Summary
-As you could see, watsonx Code Assistant makes it much easier to understand the code. Instead of having to read through all the application code, you can get explanations or ask questions or even use a combination to get the nsiht that you need.
+As you could see, watsonx Code Assistant makes it much easier to understand the code. Instead of having to read through all the application code, you can get explanations or ask questions or even use a combination to get the insight that you need.
 
 Additional capabilities that have not been covered as part of the section are the generation of code documentation for example.
 
@@ -724,7 +724,7 @@ Now you will use watsonx Code Assistant to fix the identified automated fix issu
 
 2.	Click on the blue button called **Run automated fixes**. This will start three recipes to fix the issues. They should complete in less than a minute.
 
-3.	In the **terminal window** in VS Code, you should see that the build was successfull.
+3.	In the **terminal window** in VS Code, you should see that the build was successful.
 
     <kbd>![](./images/media/ModResorts_Modernize_AutomatedFixes2.png)</kbd>
 
@@ -1044,7 +1044,7 @@ You can download Visual Studio Code (VS Code) from the side https://code.visuals
     To update VS Code, open VS Code. In VS Code, select **Help > Update**, then open the URL (https://code.visualstudio.com/docs/setup/setup-overview) and follow the steps provided. Then stop and start VS Code.
     In the provided environment, those steps have already been done.
 
-#### How the update to vscode 1.95.1 was done in this environment:
+#### How the update to VS-Code 1.95.1 was done in this environment:
 
 1. In VS-Code, select Help > Update, then open the URL https://code.visualstudio.com/
 2. Select rpm and follow the instructions to execute the following commands. For your convenience, here the commands:
