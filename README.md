@@ -1195,4 +1195,20 @@ To test if gradle works, run the following command
 
 </details>
 
- 
+## Troubleshooting API key
+If you insert your API key into VS Code and the key is shown as not valid, check the WCA output if any rason is shown.
+If there seems to be a connectivity problem, please check if you can reach the login API via command line:
+
+On Linux, ise the following command:
+
+        curl -X POST 'https://iam.cloud.ibm.com/identity/token' -H 'Content-Type: application/x-www-form-urlencoded' -d 'grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=MY_APIKEY'
+
+On Windows Powershell, the curl calls under the cover Invoke-WebRequest. Therefore the syntax must be adjusted to:
+
+    curl -Method 'POST' -Uri 'https://iam.cloud.ibm.com/identity/token' -header @{'Accept'='application/json'} -ContentType 'application/x-www-form-urlencoded' -body @{'grant_type' = 'urn:ibm:params:oauth:grant-type:apikey';'apikey'='<API-LEY>'}
+
+You could also call directly the Invoke-WebRequest
+
+    Invoke-WebRequest -Method 'POST' -Uri 'https://iam.cloud.ibm.com/identity/token' -header @{'Accept'='application/json'} -ContentType 'application/x-www-form-urlencoded' -body @{'grant_type' = 'urn:ibm:params:oauth:grant-type:apikey';'apikey'='<API-LEY>'}
+
+For additional details about the command, take a look at https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey
