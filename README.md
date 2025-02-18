@@ -1019,6 +1019,7 @@ Congratulations! You have successfully used **watsonx Code Assistant** to perfor
 
 
 # Appendix
+
 <details>
 <summary>How to set up the lab environment and more</summary>
 
@@ -1195,7 +1196,12 @@ To test if gradle works, run the following command
 
 </details>
 
+<details>
+<summary>Troubleshooting</summary>
+
 ## Troubleshooting API key
+
+### Troubleshooting API key
 If you insert your API key into VS Code and the key is shown as not valid, check the WCA output if any rason is shown.
 If there seems to be a connectivity problem, please check if you can reach the login API via command line:
 
