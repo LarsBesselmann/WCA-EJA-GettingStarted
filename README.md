@@ -1206,9 +1206,11 @@ To get more insight what happens in WCA under the cover and debug issues, you ca
 These are the steps to do so:
 
 Open the **watsonx Code Assistant extension** (not the one for Enterprise Java Applications).
+
 <kbd>![](./images/media/WCA_Core_Extension_Overview.png)</kbd>
 
 Click on the gear to open the menu with the management options.
+
 <kbd>![](./images/media/WCA_Core_Extension_Manage.png)</kbd>
 
 Select **Settings**
