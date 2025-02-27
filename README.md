@@ -1226,7 +1226,7 @@ Now you should see debug information in the WCA output panel:
 
 <kbd>![](./images/media/WCA_Core_Extension_Debug.png)</kbd>
 
-
+<br>
 
 
 
