@@ -1199,7 +1199,34 @@ To test if gradle works, run the following command
 <details>
 <summary>Troubleshooting</summary>
 
-## Troubleshooting API key
+## Troubleshooting
+
+### Enable WCA extension debugging
+To get more insight what happens in WCA under the cover and debug issues, you can set WCA in debug mode.
+These are the steps to do so:
+
+Open the **watsonx Code Assistant extension** (not the one for Enterprise Java Applications).
+<kbd>![](./images/media/WCA_Core_Extension_Overview.png)</kbd>
+
+Click on the gear to open the menu with the management options.
+<kbd>![](./images/media/WCA_Core_Extension_Manage.png)</kbd>
+
+Select **Settings**
+
+<kbd>![](./images/media/WCA_Core_Extension_Settings.png)</kbd>
+
+
+Scroll down to the section **Wca Log Level** and set the Log level for example to **TRACE**
+
+<kbd>![](./images/media/WCA_Core_Extension_Log_Level.png)</kbd>
+
+Now you should see debug information in the WCA output panel:
+
+<kbd>![](./images/media/WCA_Core_Extension_Debug.png)</kbd>
+
+
+
+
 
 ### Troubleshooting API key
 If you insert your API key into VS Code and the key is shown as not valid, check the WCA output if any rason is shown.
@@ -1218,3 +1245,4 @@ You could also call directly the Invoke-WebRequest
     Invoke-WebRequest -Method 'POST' -Uri 'https://iam.cloud.ibm.com/identity/token' -header @{'Accept'='application/json'} -ContentType 'application/x-www-form-urlencoded' -body @{'grant_type' = 'urn:ibm:params:oauth:grant-type:apikey';'apikey'='<API-LEY>'}
 
 For additional details about the command, take a look at https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey
+
