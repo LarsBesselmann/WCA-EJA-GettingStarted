@@ -583,7 +583,7 @@ The answer to a question is only as good as the context that has been provided.
 - If an "Explain application" has been performed, all Java files have been loaded into the context.
 - If an "Explain application" has not been performed, WCA typically only knows a subset of the files which impacts the quality of the answer. 
 
-##### How to explain all classes of a project?
+*** How to explain all classes of a project? ***
 
 To set the context, you could use the following commands:
 
