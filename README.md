@@ -1091,7 +1091,7 @@ Steps to install the extension for WCA for Enterprise Java Applications
 
 ### Configure watsonx Code Assistant 
 
-To access the cloud-based watsonx Code Assistant, an API key must be provided.
+To access the cloud-based watsonx Code Assistant, an API key must have been provided.
 
 1. Click on the shortcut for watsonx Code Assistant.
 
@@ -1249,4 +1249,29 @@ You could also call directly the Invoke-WebRequest
     Invoke-WebRequest -Method 'POST' -Uri 'https://iam.cloud.ibm.com/identity/token' -header @{'Accept'='application/json'} -ContentType 'application/x-www-form-urlencoded' -body @{'grant_type' = 'urn:ibm:params:oauth:grant-type:apikey';'apikey'='<API-LEY>'}
 
 For additional details about the command, take a look at https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey
+</details>
+
+
+
+<details>
+<summary>Good to know</summary>
+
+## Display of Code Suggestions
+IBM watsonx Code Assistant checks whether a generated code suggestion is similar to other code sources.
+
+The generated code must be:
+
+10 or more lines
+Python, Java, JavaScript, TypeScript, C++, C, or Go
+You can set how the code suggestion is displayed in the IDE.
+
+By default, IBM watsonx Code Assistant blocks code that is similar to other code sources.
+You can change this setting for selected license types to show the code suggestion alongside a reference to the similar code source and its license.
+
+<kbd>![](./images/media/WCA_Suggestions_1.png)</kbd>
+
+<kbd>![](./images/media/WCA_Suggestions_2.png)</kbd>
+
+For a full list of which licenses are blocked by default and which licenses can be configured, see the watsonx Code Assistant documentation at 
+https://cloud.ibm.com/docs/watsonx-code-assistant?topic=watsonx-code-assistant-cloud-setup-configurations
 
