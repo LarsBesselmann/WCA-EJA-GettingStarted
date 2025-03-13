@@ -1065,16 +1065,14 @@ You can download Visual Studio Code (VS Code) from the side https://code.visuals
 ### Install the Visual Studio Code extensions for watsonx Code Assistant 
 There are two extensions required to install wats, the one for WCA Core and the one for WCA EJA. The extension WCA-EJA will install the WCA Core automatically.
 
-Comment: The WCA for Java Enterprise extension is at this point of time not available in the public extension repository. 
-
 Steps to install the extension for WCA for Enterprise Java Applications
 
-1. Switch to the Extensions View in VS- Code.
+1. Switch to the Extensions View in VS-Code.
 
     <kbd>![](./images/media/vscode_Extensions.png)</kbd>
 
 
-2. In VS Code, enter **watsonx** to search in the marketplace for watsonx extensions: 
+2. In VS-Code, enter **watsonx** to search in the marketplace for watsonx extensions: 
  
     <kbd>![](./images/media/vscode_WCA_Install_Extension_Marketplace1.png)</kbd>
 
@@ -1087,6 +1085,22 @@ Steps to install the extension for WCA for Enterprise Java Applications
 4. Click on the extension **watsonx Code Assistant for Enterprise Java Applications** and take a look at the description
 
     <kbd>![](./images/media/vscode_WCA_Extension_installed.png)</kbd>
+
+Comment:
+If your development environment does not have access to the VS-Code Market Place, you can download the VSIX files and import them later.
+
+To download the WCA Core extension, use the command:
+
+    wget https://IBM.gallery.vsassets.io/_apis/public/gallery/publisher/IBM/extension/wca-core/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage -o IBM.wca-core.latest.vsix
+
+
+To download the WCA EJA extension, use the command:
+
+    wget https://IBM.gallery.vsassets.io/_apis/public/gallery/publisher/IBM/extension/wca-eja/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage -o IBM.wca-eja.latest.vsix
+
+Transfer the two vsix files to the target machine where VS-Code is installed.
+
+Finally switch in VS Code to the VS-Code Extensions page, and select the option **Install from VSIX** to install first the WCA-Core extension, then the WCA-EJA extension.
 
 
 ### Configure watsonx Code Assistant 
@@ -1270,4 +1284,5 @@ Extract of the differnt license types:
 
 For a full list of which licenses are blocked by default and which licenses can be configured, see the watsonx Code Assistant documentation at 
 https://cloud.ibm.com/docs/watsonx-code-assistant?topic=watsonx-code-assistant-cloud-setup-configurations
+
 
