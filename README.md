@@ -1259,16 +1259,12 @@ For additional details about the command, take a look at https://cloud.ibm.com/d
 ## Display of Code Suggestions
 IBM watsonx Code Assistant checks whether a generated code suggestion is similar to other code sources.
 
-The generated code must be:
-
-10 or more lines
-Python, Java, JavaScript, TypeScript, C++, C, or Go
-You can set how the code suggestion is displayed in the IDE.
-
 By default, IBM watsonx Code Assistant blocks code that is similar to other code sources.
 You can change this setting for selected license types to show the code suggestion alongside a reference to the similar code source and its license.
 
 <kbd>![](./images/media/WCA_Suggestions_1.png)</kbd>
+
+Extract of the differnt license types:
 
 <kbd>![](./images/media/WCA_Suggestions_2.png)</kbd>
 
