@@ -1270,6 +1270,18 @@ For additional details about the command, take a look at https://cloud.ibm.com/d
 <details>
 <summary>Good to know</summary>
 
+## WCA Security and Privacy
+
+Here two links regarding WCA security and privacy:
+
+Security and privacy for foundation models
+https://cloud.ibm.com/docs/watsonx-code-assistant?topic=watsonx-code-assistant-wca-privacy
+
+Securing your data in watsonx Code Assistant
+https://cloud.ibm.com/docs/watsonx-code-assistant?topic=watsonx-code-assistant-mng-data
+
+
+
 ## Display of Code Suggestions
 IBM watsonx Code Assistant checks whether a generated code suggestion is similar to other code sources.
 
@@ -1284,5 +1296,4 @@ Extract of the differnt license types:
 
 For a full list of which licenses are blocked by default and which licenses can be configured, see the watsonx Code Assistant documentation at 
 https://cloud.ibm.com/docs/watsonx-code-assistant?topic=watsonx-code-assistant-cloud-setup-configurations
-
 
