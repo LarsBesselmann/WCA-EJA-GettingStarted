@@ -1086,22 +1086,6 @@ Steps to install the extension for WCA for Enterprise Java Applications
 
     <kbd>![](./images/media/vscode_WCA_Extension_installed.png)</kbd>
 
-Comment:
-If your development environment does not have access to the VS-Code Market Place, you can download the VSIX files and import them later.
-
-To download the WCA Core extension, use the command:
-
-    wget https://IBM.gallery.vsassets.io/_apis/public/gallery/publisher/IBM/extension/wca-core/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage -o IBM.wca-core.latest.vsix
-
-
-To download the WCA EJA extension, use the command:
-
-    wget https://IBM.gallery.vsassets.io/_apis/public/gallery/publisher/IBM/extension/wca-eja/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage -o IBM.wca-eja.latest.vsix
-
-Transfer the two vsix files to the target machine where VS-Code is installed.
-
-Finally switch in VS Code to the VS-Code Extensions page, and select the option **Install from VSIX** to install first the WCA-Core extension, then the WCA-EJA extension.
-
 
 ### Configure watsonx Code Assistant 
 
@@ -1274,10 +1258,10 @@ For additional details about the command, take a look at https://cloud.ibm.com/d
 
 Here two links regarding WCA security and privacy:
 
-Security and privacy for foundation models
+- Security and privacy for foundation models
 https://cloud.ibm.com/docs/watsonx-code-assistant?topic=watsonx-code-assistant-wca-privacy
 
-Securing your data in watsonx Code Assistant
+- Securing your data in watsonx Code Assistant
 https://cloud.ibm.com/docs/watsonx-code-assistant?topic=watsonx-code-assistant-mng-data
 
 
@@ -1296,4 +1280,36 @@ Extract of the differnt license types:
 
 For a full list of which licenses are blocked by default and which licenses can be configured, see the watsonx Code Assistant documentation at 
 https://cloud.ibm.com/docs/watsonx-code-assistant?topic=watsonx-code-assistant-cloud-setup-configurations
+
+
+## How to install the WCA drivers without access to the market place
+
+If your development environment does not have access to the VS-Code Market Place, you can download the VSIX files for air-gapped installation.
+
+Step 1: Download the two required drivers
+
+- Download the WCA Core extension via command:
+
+        wget https://IBM.gallery.vsassets.io/_apis/public/gallery/publisher/IBM/extension/wca-core/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage -o IBM.wca-core.latest.vsix
+
+
+- Download the WCA EJA extension via command:
+
+        wget https://IBM.gallery.vsassets.io/_apis/public/gallery/publisher/IBM/extension/wca-eja/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage -o IBM.wca-eja.latest.vsix
+
+Step 2: Transfer the two vsix files to the target machine where VS-Code is installed.
+
+Step 3: Switch in VS Code to the VS-Code Extensions page, and select the option **Install from VSIX** to install first the WCA-Core extension, then the WCA-EJA extension.
+
+Comment: 
+**For Eclipse**, the approach is similar.
+If your environment has no access to the Eclipse Market Place but is allowed to access IBM sites, add the following two repository URLs under "Help > Install New Software" and install from there.
+Otherwise download the repositories as ZIP.
+
+The related links to the driver repositories are: 
+- https://public.dhe.ibm.com/ibmdl/export/pub/software/wca/wca-core/latest/
+- https://public.dhe.ibm.com/ibmdl/export/pub/software/wca/wca-eja/v1.0.1/
+
+
+
 
