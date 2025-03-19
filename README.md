@@ -485,6 +485,8 @@ This will include three parts:
 
     <kbd>![](./images/media/WCA_explainApplication_popup.png)</kbd>
 
+    If the class files of the application cannot be found in the project, WCA will inform you that a built must be performed before.
+
 4. Click on **Proceed with code analysis**. 
 You will see something several messages
 
@@ -1309,7 +1311,6 @@ Otherwise download the repositories as ZIP.
 The related links to the driver repositories are: 
 - https://public.dhe.ibm.com/ibmdl/export/pub/software/wca/wca-core/latest/
 - https://public.dhe.ibm.com/ibmdl/export/pub/software/wca/wca-eja/v1.0.1/
-
 
 
 
