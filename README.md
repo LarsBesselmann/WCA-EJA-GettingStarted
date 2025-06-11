@@ -360,7 +360,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
     a.  Click on the **Extensions** icon in the left navigation bar in
         VS Code.
         
-    <kbd>![](./images/media/vscode_Extensions.png)</kbd>
+    <kbd>![](./images/media/vscode_modresorts_Extensions.png)</kbd>
     
     b.  Expand the “INSTALLED” extensions section to list the extensions that are currently installed in this environment. The notable extensions used in this lab are:
         
