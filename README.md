@@ -152,7 +152,7 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
 
   ![](./images/media/workstation.png)
     
-  The Ubuntu Linux **Workstation** VM has the following software installed for the lab:
+  The Linux **Workstation** VM has the following software installed for the lab:
   
   - Maven 3.6.0 
   - IBM Semeru Runtime Open Edition 17.0.8.1
@@ -262,7 +262,7 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
 
 |         |           |  
 | ------------- |:-------------|
-| ![](./images/media/info.png?cropResize=100,100)   | <p><strong>Important:</strong> <p><strong>Click CANCEL</strong>…. If, at any time during the lab, you get a pop-up asking to install updated software onto the Ubuntu VM.</p> <p>The one we experience is an update available for VS Code.</p><p><strong>CLICK CANCEL!</strong></p><p>![](./images/media/vscode_popup_update.png?cropResize=100,100)</p> |
+| ![](./images/media/info.png?cropResize=100,100)   | <p><strong>Important:</strong> <p><strong>Click CANCEL</strong>…. If, at any time during the lab, you get a pop-up asking to install updated software onto the VM.</p> <p>The one we experience is an update available for VS Code.</p><p><strong>CLICK CANCEL!</strong></p><p>![](./images/media/vscode_popup_update.png?cropResize=100,100)</p> |
 
 
 
