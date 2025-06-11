@@ -344,7 +344,12 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
     If you get asked to trust the authors, click on "Yes, I trust the authors".
     <kbd>![](./images/media/vscode_TrustAuthors.png)</kbd>
     
-    When the VS Code UI launches, the Explorer view is shown. The “START” folder contains the source code for the project.
+    The VS Code **Welcome** panel is shown.Click on **X** toclose it.
+
+    <kbd>![](./images/media/vscode_welcome.png)</kbd>
+    
+
+    On the left, you can see the **Explorer view**. 
 
     <kbd>![](./images/media/vscode_modresorts_1.png)</kbd>
 
