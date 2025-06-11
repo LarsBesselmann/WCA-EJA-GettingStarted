@@ -914,7 +914,7 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
 
     c.	Click within the terminal on the **application link** or open the URL **localhost:9080/resorts** in a browser.
 
-     <kbd>![](./images/media/Modresorts.png)</kbd>
+     <kbd>![modresorts](./images/media/Modresorts.png)</kbd>
  
     d.	Click the **Where to** drop-down. Select any value. You should observer errors in the UI:
 
