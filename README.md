@@ -344,7 +344,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
     If you get asked to trust the authors, click on "Yes, I trust the authors".
     <kbd>![](./images/media/vscode_TrustAuthors.png)</kbd>
     
-    The VS Code **Welcome** panel is shown.Click on **X** toclose it.
+    The VS Code **Welcome** panel is shown.Click on **X** to close it.
 
     <kbd>![](./images/media/vscode_welcome.png)</kbd>
     
