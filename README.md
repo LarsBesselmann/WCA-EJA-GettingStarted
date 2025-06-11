@@ -351,7 +351,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
 
     On the left, you can see the **Explorer view**. 
 
-    <kbd>![](./images/media/vscode_modresorts_1.png)</kbd>
+    <kbd>![](./images/media/vscode_modresorts_Explorer.png)</kbd>
 
     <br/>
 
