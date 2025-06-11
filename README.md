@@ -486,7 +486,7 @@ This will include three parts:
     <kbd>![](./images/media/vscode_ProjectExplorer.png)</kbd>
 
 
-2. Right-click on **src** and select **watsonx Code Assistant > Explain Application**
+2. Click on **MODRESORTS** to expand the application project, then right-click on **src** and select **watsonx Code Assistant > Explain Application**
  
     <kbd>![](./images/media/WCA_menu-explainApplication.png)</kbd>
 
@@ -510,10 +510,10 @@ You will see something several messages
 
     <kbd>![](./images/media/WCA_explainApplication_CodeAnalysis3.png)</kbd>
 
-5. Click on Open explanation to see the results.
+5. Click on **Open explanation** to see the results.
  
     <kbd>![](./images/media/WCA_explainApplication_Result.png)</kbd>
-
+    After the executive summary, all the found services will be explained. Scroll down and you can see that you save the explanation as a markdown file. You do not need the explanation later, so you don't have to save it.
 
 #### Use the wizard inside the application code to explain a class:
 
