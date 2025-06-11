@@ -428,9 +428,9 @@ There are different ways to interact with watsonx Code Assistant.
 
 ### Build the war file via maven (necessary for the next steps)
 
-1. Open a terminal window in VS Code.
+1. Open a terminal window in VS Code via the menu option **Terminal > New Terminal**.
 
-    <kbd>![](./images/media/vcsode_NewTerminal.png)</kbd>
+    <kbd>![](./images/media/vscode_NewTerminal.png)</kbd>
 
 2. Run the command 
 
