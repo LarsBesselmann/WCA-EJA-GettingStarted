@@ -415,7 +415,7 @@ There are different ways to interact with watsonx Code Assistant.
  
     <kbd>![](./images/media/WCA_Chat-Hello.png)</kbd>
  
-3. Enter **/help** and press **Enter** or click on the **blue arrow**.
+3. Enter **/help** and click on the **blue arrow**.
 
     <kbd>![](./images/media/WCA_Chat-help.png)</kbd>
 
