@@ -998,7 +998,7 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
 
 3.	Click within the terminal on the **application link** or open the URL **localhost:9080/resorts** in a browser.
 
-     <kbd>![](./images/media/Modresorts.png)</kbd>
+     <kbd>![ModResorts](./images/media/ModResorts.png)</kbd>
  
 4.	Click the **Where to** drop-down. Select any value. You should observer that the previous errors in the UI have been resolved.
 
