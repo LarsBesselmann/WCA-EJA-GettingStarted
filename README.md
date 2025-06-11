@@ -407,7 +407,7 @@ There are different ways to interact with watsonx Code Assistant.
 
 ### Using the watsonx Code Assistant Chat
 
-1. Click on the shortcut for watsonx Code Assistant.
+1. Click on the shortcut for the **watsonx Code Assistant**.
 
     <kbd>![](./images/media/WCA_shortcut.png)</kbd>
 
