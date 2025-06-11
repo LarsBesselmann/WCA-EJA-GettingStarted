@@ -374,16 +374,21 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
     <br/>
 
     c. Click on the extension **watsonx Code Assistant for Enterprise Java Applications** to view its details.
+    The displayed version might differ from the screenshot.
 
     <kbd>![](./images/media/vscode_Extension_for_WCA.png)</kbd>
 
 
-    d. Click on the extension **Liberty Tools** to view its details.
+    d. Click on the extension **Liberty Tools** to view its details. The displayed version might differ from the screenshot.
 
     <kbd>![](./images/media/vscode_LibertyTools.png)</kbd>
 
 
-    e. Switch back to the Project Explorer view and you should see the Liberty Dashboard at the bottom.
+    e. Close the extension details and switch to the **Project Explorer** view.
+    
+    <kbd>![](./images/media/vscode_modresorts_Explorer2.png)</kbd>
+
+      and you should see the Liberty Dashboard at the bottom.
 
     <kbd>![](./images/media/vscode_LibertyTools_Dashboard.png)</kbd>
 
