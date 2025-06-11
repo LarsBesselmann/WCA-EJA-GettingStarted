@@ -388,7 +388,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
     
     <kbd>![](./images/media/vscode_modresorts_Explorer2.png)</kbd>
 
-    f. At the bottom, you can see the Liberty Dashboard which is part of the Liberty Tools. You will use it later on.
+    f. At the bottom, you can see the **Liberty Dashboard** which is part of the Liberty Tools. You will use it later on.
 
     <kbd>![](./images/media/vscode_LibertyTools_Dashboard.png)</kbd>
 
