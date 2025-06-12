@@ -891,7 +891,7 @@ and you can see the instructions and the code next to each other.
 
 To launch the application, you must start the Liberty server which will be installed under the cover by the related maven process.
 
-1.	Switch to the Project Explorer and use the **Liberty Dashboard** to start Liberty:
+1.	Switch to the **Project Explorer** and use the **Liberty Dashboard** to start Liberty:
 
     <kbd>![](./images/media/ModernizeLiberty_Start_Liberty.png)</kbd>
 
@@ -906,7 +906,7 @@ To launch the application, you must start the Liberty server which will be insta
     <kbd>![ModResorts](./images/media/ModResorts.png)</kbd>
 
     
-4.	Click on Logout and verify that the Logout has been fixed.
+4.	Click on **Logout** and verify that the Logout has been fixed.
 
     You should see a login page similar to this:
 
