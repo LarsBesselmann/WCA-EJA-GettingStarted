@@ -574,6 +574,7 @@ Another way to get an explanation for a class is to use the chat window directly
 
     <kbd>![WCA_explainCode_CustomerInformation-Result](./images/media/WCA_explainCode_CustomerInformation-Result.png)</kbd>
 
+<br>
 
 #### Use the WCA chat to ask questions about the application
 As mentioned above, the chat function within watsonx Code Assistant can also be used to ask questions about the code for example. Here some examples
