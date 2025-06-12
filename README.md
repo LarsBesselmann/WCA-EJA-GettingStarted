@@ -411,19 +411,43 @@ There are different ways to interact with watsonx Code Assistant.
 
     <kbd>![](./images/media/WCA_shortcut.png)</kbd>
 
-2. In the chat session, you should see a Chat session.
+2. If you see on the welcome screen a blue button to **Log in with your API key**, follow these steps to add the watsonx Code Assistant API key. 
+
+    1. On the welcome screen, click on Log in with you API key.
+ 
+        <kbd>![](./images/media/WCA_WelcomeScreen.png)</kbd>
+
+    2. On the pop-up, click Allow to sign in.
+
+        <kbd>![](./images/media/WCA_API-Key-1.png)</kbd>
+
+    3. Enter the provided API key into the entry field.
+
+        <kbd>![](./images/media/WCA_API-Key-2.png)</kbd>
+ 
+    4. Wait until you get a message changes to **Valid API** Key. 
+
+        <kbd>![](./images/media/WCA_API-Key-3.png)</kbd>
+ 
+    5. Press **Enter** to confirm the key.
+
+3. In the chat session, you should see a Chat session.
+ 
+    <kbd>![](./images/media/WCA_Chat-Hello.png)</kbd>
+
+
+4. In the chat session, you should see a Chat session.
  
     <kbd>![](./images/media/WCA_Chat-Hello.png)</kbd>
  
-3. Enter **/help** and click on the **blue arrow**.
+5. Enter **/help** and click on the **blue arrow**.
 
     <kbd>![](./images/media/WCA_Chat-help.png)</kbd>
 
  
-4. You should see a short introduction. Feel free to expand the different sections.
+6. You should see a short introduction. Feel free to expand the different sections.
 
     <kbd>![](./images/media/WCA_Chat-help2.png)</kbd>
-
 
 
 ### Build the war file via maven (necessary for the next steps)
@@ -514,6 +538,7 @@ You will see something several messages
  
     <kbd>![](./images/media/WCA_explainApplication_Result.png)</kbd>
     After the executive summary, all the found services will be explained. Scroll down and you can see that you save the explanation as a markdown file. You do not need the explanation later, so you don't have to save it.
+<br>
 
 #### Use the wizard inside the application code to explain a class:
 
