@@ -603,11 +603,11 @@ As mentioned above, the chat function within watsonx Code Assistant can also be 
     
 5. To better understand the **DefaultWeatherData** method, ask for an explanation for the method. Enter **/explain getDefault** and you can see, that two classes were found, the WeatherServlet class (which calls the method) and the DefaultWeatherData class (which implements the method).  Select the **DefaultWeatherData** class and press the **blue arrow**. 
 
-    <kbd>![WCA_Chat-askQuestion5](./images/media/WCA_Chat-askQuestion5.png)</kbd>
+    <kbd>![WCA_Chat-askQuestion5](./images/media/WCA_Chat-explainDefaultData.png)</kbd>
 
     Take a look at the result:
 
-    <kbd>![WCA_Chat-askQuestion5-result](./images/media/WCA_Chat-askQuestion5-result.png)</kbd>
+    <kbd>![WCA_Chat-askQuestion5-result](./images/media/WCA_Chat-explainDefaultData-result.png)</kbd>
 
 
 6. In the chat window, enter the question: **When is the default weather data used?** and take a look at the result.
