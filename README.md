@@ -542,18 +542,21 @@ You will see something several messages
 
 #### Use the wizard inside the application code to explain a class:
 
-1. In the Project Explorer, expand the **src** directory and open the file **WeatherServlet.java**.
+1. In the Project Explorer, expand the **src** directory and open in the directory **src/main/java/com/acme/modres** the file **WeatherServlet.java**.
 
  
-    <kbd>![](./images/media/vscode_Explorer_WeatherServer.png)</kbd>
+    <kbd>![](./images/media/vscode_Explorer_WeatherServlet.png)</kbd>
 
 2. Scroll down to **line 45**.
 
-    <kbd>![](./images/media/WCA_WeatherServer_snippet.png)</kbd>
+    <kbd>![](./images/media/WCA_WeatherServlet_snippet.png)</kbd>
 
 
-3. Click on **Explain** in the line above line 45 to get the explanation for the class.
-This will trigger watsonx Code Assistant to analyze the code.
+3. Click on **Explain** in the line above line 45 to get the explanation for the class WeatherServlet.
+
+    <kbd>![](./images/media/WCA_WeatherServlet_snippet_explain.png)</kbd>
+
+    This will trigger watsonx Code Assistant to analyze the code.
 
 4. The WCA chat window will open to explain the WeatherServlet. Take a look at the resulting explanation.
 
