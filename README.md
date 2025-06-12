@@ -808,7 +808,7 @@ Now you will use watsonx Code Assistant to fix the identified automated fix issu
 
     As you can see, the code to get the server name and the initialContext have been adjusted automatically to work for Liberty.
 
-
+13. Close the comparison view to switch back to the **Modernize to Liberty** tab.
 
 
 
