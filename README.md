@@ -657,7 +657,7 @@ The data collection can be found in the file **ta-collection/ AppSrv01.zip**, th
     <kbd>![ModResorts_Modernize_Overview](./images/media/ModResorts_Modernize_Overview.png)</kbd>
 
  
-2. Select the option Upload migration bundle.
+2. Select the option **Upload migration bundle**.
 
     In the pop-up **Open File**, navigate to the directory **/modresorts/migration-bundle**
     and select the file **modresorts.ear_migrationBundle.zip**, the click on **Open**.
