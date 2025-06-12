@@ -565,12 +565,12 @@ You will see something several messages
 #### Use the chat command to explain a class or method:
 Another way to get an explanation for a class is to use the chat window directly.
 
-1. Enter into the chat window the text **/explain @ModResortsCustomerInformation.java**
+1. Enter into the chat window the text **/explain @ModResortsCustomerInformation.java** and select the java class that is offered. 
 
     <kbd>![](./images/media/WCA_explainCode_CustomerInformation.png)</kbd>
 
 
-2. Press Enter and you should get an explanation like:
+2. Press the **blue arrow** and you should get an explanation like:
 
     <kbd>![WCA_explainCode_CustomerInformation-Result](./images/media/WCA_explainCode_CustomerInformation-Result.png)</kbd>
 
