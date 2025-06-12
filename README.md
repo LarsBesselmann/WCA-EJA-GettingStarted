@@ -845,19 +845,13 @@ and you can see the instructions and the code next to each other.
 
 8. Replace the previously selected with the code recommended by watsonx Code Assistant.
 
-    You could use copy and paste to update the code. But as the code to be replaced has already been selected, use teh function **Insert at cursor** to replace the code.
+    You could use copy and paste to update the code. But as the code to be replaced has already been selected, you can use the function **Insert at cursor** to replace the code.
+
+    a. Click on the tab **UpperServlet.java** to give it focus (but keep the code selected). Then click in the chat on the icon **Insert at cursor**. 
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes08.png)</kbd>
 
-    Hint: You can use the copy function to select/copy the code.
- 
-    <kbd>![](./images/media/WCA_copyCode.png)</kbd>
-
-    b.	Switch back to the source code and replace the selected code.
- 
-    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes09.png)</kbd>
-
-    c.	Save the code changes, then close the Java class.
+    c.	Review and save the code changes, then close the Java class.
 
 9.	Add the recommended dependency to the pom.xml. 
 
