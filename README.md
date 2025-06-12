@@ -828,13 +828,9 @@ and you can see the instructions and the code next to each other.
  
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes04.png)</kbd>
 
-4.	Select the class or the method that uses the **ResponseUtils.encodeDataString()** method.  Recommended it so select the code from line 14 to 34.
- 
+4.	Select the class or the method that uses the **ResponseUtils.encodeDataString()** method. Inthis case, select the code from line 14 to 34. On the **Modernize to Liberty** tab, click the button **Help me**.
+
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes05.png)</kbd>
-
-5. Switch back to the tab **Modernize to Liberty** and click the button **Help me**.
-
-    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes06.png)</kbd>
 
 6. The IDE will automatically switch to the chat window, and you will see that watsonx Code Assistant is working on the solution. After a couple of moments, you should get a code snippet returned:
  
