@@ -699,12 +699,18 @@ To launch the application, you must start the Liberty server which will be insta
 
 1. Open the **Liberty Dashboard** and right-click on the application **modresorts**.
 
-    |         |           |  
-    | ------------- |:-------------|
-    | ![](./images/media/info.png?cropResize=100,100)   | If the application is not listed, click the reload button on the right.</p></p> |
-  <br/>
+    If the application is not listed, click the reload button on the right.
+
+    <kbd>![](./images/media/ModernizeLiberty_OpenDashboard-reload.png)</kbd>
+
+    Finally you should see the **modresorts** application listed.
+
+    <kbd>![](./images/media/ModernizeLiberty_OpenDashboard-modresorts.png)</kbd>
+
     
-2.	Select Start to start the Liberty instance including the application.
+
+
+2.	and right-click on the application **modresorts**.Select Start to start the Liberty instance including the application.
  
     <kbd>![](./images/media/ModernizeLiberty_Start_Liberty.png)</kbd>
 
