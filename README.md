@@ -784,6 +784,33 @@ Now you will use watsonx Code Assistant to fix the identified automated fix issu
 
     <kbd>![](./images/media/ModResorts_Modernize_AutomatedFixes7.png)</kbd>
 
+9. You might be interested to see which changes have been performed by the automated fixes. Open the **Source Control** to review the changes.
+
+    <kbd>![](./images/media/ModResorts_Modernize_SourceControl1.png)</kbd>
+
+    As you can see, three files have been modfied and the server.xml has been added.
+
+10. In the **Source Control** view, click on **pom.xml** to see the changes.
+
+    <kbd>![](./images/media/ModResorts_Modernize_SourceControl_pom.png)</kbd>
+
+    As you can see, the Liberty maven plugin has been added.
+
+11. In the **Source Control** view, click on **LogoutServlet.java** to see the changes.
+
+    <kbd>![](./images/media/ModResorts_Modernize_SourceControl_logout.png)</kbd>
+
+    As you can see, the WSSecurityHelper method has been replaced automatically with the appropriate method for Liberty. This will resolve the logout issue.
+
+11. In the **Source Control** view, click on **WeatherServlet.java** to see the changes.
+
+    <kbd>![](./images/media/ModResorts_Modernize_SourceControl_weather.png)</kbd>
+
+    As you can see, the code to get the server name and the initialContext have been adjusted automatically to work for Liberty.
+
+
+
+
 
 #### Modernize: Resolve the assisted fix issues using watsonx Code Assistant
 Now we will use watsonx Code Assistant to fix the remaining issue.
