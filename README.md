@@ -622,36 +622,11 @@ There are additional questions that you could ask. For example:
 - What is the package name of the DefaultWeatherData class?
 
 
-Hint:
-
-The answer to a question is only as good as the context that has been provided. 
-
-*** How to explain all classes of a project? ***
-
-To set the context, you could use the following commands:
-
-1. Create a list of all relevant files
-
-    a) On Windows, use a command like 
-        
-        dir /s/b *.java > modres_java.txt
-
-    b) On Linux, use a command like 
-    
-        find ./src -type f | grep java > modres_java.txt
-
-2. In chat, enter the following "command" to get all files explained and loaded:
-
-        explain all files listed in @modres_java.txt
-
-3. Once the files has been interpreted, you can ask questions like:
-    - "what is the purpose of the modres application?"
-    - "what happens if the weather data endpoint is not available?"
-
 
 
 #### Understand: Summary
-As you could see, watsonx Code Assistant makes it much easier to understand the code. Instead of having to read through all the application code, you can get explanations or ask questions or even use a combination to get the insight that you need.
+As you could see, watsonx Code Assistant makes it much easier to understand the code. Instead of having to read through all the application code and understand it, you can get explanations or ask questions or even use a combination to get the insight that you need. 
+
 
 Additional capabilities that have not been covered as part of the section are the generation of code documentation for example.
 
@@ -1236,6 +1211,36 @@ To install grade and register it to the system, use the following commands:
 To test if gradle works, run the following command
 
     gradle -v
+    
+## How to improve the WCA chat results
+
+Hint:
+
+The answer to a question is only as good as the context that has been provided. 
+
+*** How to explain all classes of a project? ***
+
+To set the context, you could use the following commands:
+
+1. Create a list of all relevant files
+
+    a) On Windows, use a command like 
+        
+        dir /s/b *.java > modres_java.txt
+
+    b) On Linux, use a command like 
+    
+        find ./src -type f | grep java > modres_java.txt
+
+2. In chat, enter the following "command" to get all files explained and loaded:
+
+        explain all files listed in @modres_java.txt
+
+3. Once the files has been interpreted, you can ask questions like:
+    - "what is the purpose of the modres application?"
+    - "what happens if the weather data endpoint is not available?"
+
+
 
 </details>
 
