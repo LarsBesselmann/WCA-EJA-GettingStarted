@@ -832,7 +832,7 @@ and you can see the instructions and the code next to each other.
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes05.png)</kbd>
 
-6. The IDE will automatically switch to the chat window, and you will see that watsonx Code Assistant is working on the solution. After a couple of moments, you should get a code snippet returned:
+6. The IDE will automatically open the chat window, and you will see that watsonx Code Assistant is working on the solution. After a couple of moments, you should get a code snippet returned:
  
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes07.png)</kbd>
 
@@ -845,7 +845,7 @@ and you can see the instructions and the code next to each other.
 
 8. Replace the previously selected with the code recommended by watsonx Code Assistant.
 
-    a. Select the code suggested by watsonx Code Assistant 
+    You could use copy and paste to update the code. But as the code to be replaced has already been selected, use teh function **Insert at cursor** to replace the code.
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes08.png)</kbd>
 
