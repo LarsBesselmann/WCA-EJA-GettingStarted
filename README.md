@@ -819,7 +819,7 @@ Now we will use watsonx Code Assistant to fix the remaining issue.
 
    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes01.png)</kbd>
 
-2.	Open the twisties to see the details of the issue as well as the guideline to fix it.
+2.	Open the two twisties to see the details of the issue as well as the guideline how to fix it.
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes02.png)</kbd>
  
@@ -828,7 +828,7 @@ and you can see the instructions and the code next to each other.
  
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes04.png)</kbd>
 
-4.	Select the class or the method that uses the ResponseUtils.encodeDataString() method.  Recommended it so select the code from line 14 to 34.
+4.	Select the class or the method that uses the **ResponseUtils.encodeDataString()** method.  Recommended it so select the code from line 14 to 34.
  
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes05.png)</kbd>
 
