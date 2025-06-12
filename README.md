@@ -832,18 +832,18 @@ and you can see the instructions and the code next to each other.
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes05.png)</kbd>
 
-6. The IDE will automatically open the chat window, and you will see that watsonx Code Assistant is working on the solution. After a couple of moments, you should get a code snippet returned:
+5. The IDE will automatically open the chat window, and you will see that watsonx Code Assistant is working on the solution. After a couple of moments, you should get a code snippet returned:
  
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes07.png)</kbd>
 
     This code suggestion shows how the Apache Commons Text library can be used instead of the ResponseUtils.encodeDataString() method
 
-7.	Take a look at the recommended changes. The returned solution consists of two parts:
+6.	Take a look at the recommended changes. The returned solution consists of two parts:
 
     - The returned code snippet contains the code you selected but adjusted to fix the issue. 
     - The required adjustment to the pom file to reflect the additional dependency.
 
-8. Replace the previously selected with the code recommended by watsonx Code Assistant.
+7. Replace the previously selected with the code recommended by watsonx Code Assistant.
 
     You could use copy and paste to update the code. But as the code to be replaced has already been selected, you can use the function **Insert at cursor** to replace the code.
 
@@ -858,7 +858,7 @@ and you can see the instructions and the code next to each other.
     c.	Save the code changes, then close the Java class.
     
 
-9.	Add the recommended dependency to the pom.xml. 
+8.	Add the recommended dependency to the pom.xml. 
 
     a.	Switch to the **Project Explorer** and open the **pom.xml**
  
@@ -878,11 +878,11 @@ and you can see the instructions and the code next to each other.
 
     e.	Save the configuration change and close the pom file.
 
-10.	If not automatically done, switch to the **Modernize to Liberty** tab. Scroll to the top and click on **Rebuild and refresh**.
+9.	If not automatically done, switch to the **Modernize to Liberty** tab. Scroll to the top and click on **Rebuild and refresh**.
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes13.png)</kbd>
  
-11.	Watsonx Code Assistant rebuilds the code and scans It again. The issue should have gone.
+10.	Watsonx Code Assistant rebuilds the code and scans it again. The issue should have gone.
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes14.png)</kbd>
 
