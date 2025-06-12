@@ -949,7 +949,7 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
 
     a.	The **Source Java** version is selected based on the build configuration but can be changed.
 
-    b.	The valid **Target Java** version depends on the selected source version. For Java 8 as source, the target options are currently Java 11, 17 and 21. For older Java versions, also Java 8 is available as target .
+    b.	The list of **Target Java** versions depends on the selected source version. For Java 8 as source, the target options are currently Java 11, 17 and 21. For older Java versions, also Java 8 is available as target .
 
 3.	Before you analyze the application, the application needs to be built. 
 
