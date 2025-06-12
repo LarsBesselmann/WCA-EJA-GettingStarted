@@ -486,11 +486,13 @@ There are different ways to interact with watsonx Code Assistant.
 
     Make sure that you get a **BUILD SUCCESS** message
 
-    > Hints:
+    <br>
+
+    > **Hints**:
     > - The build of the application is needed to perform watsonx Code Assistant tasks on Enterprise Java Application level (e.g. explain, modernize, upgrade).
     > - If you did not install the file was_public.jar into maven, the maven command will fail with an error like: <br> Could not resolve dependencies for project com.acme.modres:modresorts:war:2.0.0: The following artifacts could not be resolved: com.ibm.websphere.appserver:was_public:jar:9.0.0 (absent)
 
-
+<br>
 
 ### Scenario: Understand the Java Enterprise application modresorts
 <details>
@@ -919,6 +921,10 @@ To launch the application, you must start the Liberty server which will be insta
     <kbd>![](./images/media/ModernizeLiberty_Stop_Liberty.png)</kbd>
 
 
+#### Housekeeping
+Within VS Code, close any open tab like the Modernize to Liberty tab for example.
+
+
 Congratulations, you have just migrated an enterprise application from WebSphere Traditional to Liberty. ModResorts is now a Liberty application! At this point, your code should be the same as the code in the zip called modresorts-lib-j8.zip. 
 
 **===== END OF Application Modernization LAB =====**
@@ -941,9 +947,9 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
      <kbd>![](./images/media/ModResorts_Upgrade_Panel_01.png)</kbd>
 
 
-    a.	The **Source Java** version displayed is detected in the build configuration.
+    a.	The **Source Java** version is selected based on the build configuration but can be changed.
 
-    b.	The **Target Java** version displayed is calculated by first determining the current Java version set in the build configuration (pom.xml). It will give a list of target versions that are supported when coming from the detected source version.
+    b.	The valid **Target Java** version depends on the selected source version. For Java 8 as source, the target options are currently Java 11, 17 and 21. For older Java versions, also Java 8 is available as target .
 
 3.	Before you analyze the application, the application needs to be built. 
 
