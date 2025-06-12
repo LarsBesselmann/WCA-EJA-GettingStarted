@@ -750,7 +750,7 @@ To launch the application, you must start the Liberty server which will be insta
 
 Now you will use watsonx Code Assistant to fix the identified automated fix issues.
 
-1.	In VS Code, switch back to the **Modernize too Liberty** panel. 
+1.	In VS Code, switch back to the **Modernize to Liberty** panel. 
 
     Scroll down and you will see on the Automated Fixes tab three issues. 
  
