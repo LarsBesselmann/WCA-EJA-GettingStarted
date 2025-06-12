@@ -630,6 +630,9 @@ As you could see, watsonx Code Assistant makes it much easier to understand the 
 
 Additional capabilities that have not been covered as part of the section are the generation of code documentation for example.
 
+#### Housekeeping
+Within VS Code, close any open file like the WeatherServlet.java for example.
+
 </details>
 
 ### Scenario: Modernize the modresorts application from WebSphere Traditional to Liberty
