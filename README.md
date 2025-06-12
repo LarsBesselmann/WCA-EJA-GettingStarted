@@ -697,7 +697,7 @@ At this point **BEFORE** you actually fix the issues, it is interesting to take 
 
 To launch the application, you must start the Liberty server which will be installed under the cover by the related maven process.
 
-1. Open the **Liberty Dashboard** and right-click on the application **modresorts**.
+1. Open the **Liberty Dashboard** and find the application **modresorts**.
 
     If the application is not listed, click the reload button on the right.
 
@@ -707,10 +707,9 @@ To launch the application, you must start the Liberty server which will be insta
 
     <kbd>![](./images/media/ModernizeLiberty_OpenDashboard-modresorts.png)</kbd>
 
-    
 
 
-2.	and right-click on the application **modresorts**.Select Start to start the Liberty instance including the application.
+2.	Right-click on the application **modresorts** and select **Start** to start the Liberty instance including the application.
  
     <kbd>![](./images/media/ModernizeLiberty_Start_Liberty.png)</kbd>
 
