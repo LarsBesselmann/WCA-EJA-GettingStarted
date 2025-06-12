@@ -736,6 +736,10 @@ To launch the application, you must start the Liberty server which will be insta
 
 6.	Switch back to VS Code and see the related error message in the VS Code terminal window. You will fix the issue in the next steps.
 
+
+    <kbd>![ModResorts-error](./images/media/ModernizeLiberty_Logout-error-Output.png)</kbd>
+
+
 7.	Stop the Liberty instance by using the Liberty Dashboard.
  
     <kbd>![](./images/media/ModernizeLiberty_Stop_Liberty.png)</kbd>
