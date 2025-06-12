@@ -678,7 +678,7 @@ The data collection can be found in the file **ta-collection/ AppSrv01.zip**, th
     - The **server.xml** contains the configuration for the application. 
     - The Containerfile can be used to build a Liberty image of your application (outside the scope of this scenario)
     
-4. Click the button to **Proceed** the files to the project. You should see the following panel:
+4. Click the button **Proceed** which will add the selected files to the project. You should see the following panel:
  
     <kbd>![](./images/media/ModResorts_Modernize_AnalysisResults.png)</kbd>
 
