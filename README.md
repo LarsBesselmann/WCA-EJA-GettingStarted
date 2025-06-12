@@ -597,10 +597,13 @@ As mentioned above, the chat function within watsonx Code Assistant can also be 
 
     <kbd>![WCA_Chat-askQuestion3](./images/media/WCA_Chat-askQuestion3.png)</kbd>
 
+4. In the chat window, enter the question: **What happens if the Weather Underground API key is not valid?** and take a look at the result.
+
+    <kbd>![WCA_Chat-askQuestion4](./images/media/WCA_Chat-askQuestion4.png)</kbd>
     
 4. In the chat window, enter the question: **Where is the default weather data defined?** and take a look at the result.
 
-    <kbd>![WCA_Chat-askQuestion4](./images/media/WCA_Chat-askQuestion4.png)</kbd>
+    <kbd>![WCA_Chat-askQuestion5](./images/media/WCA_Chat-askQuestion5.png)</kbd>
 
 5. To better understand the **DefaultWeatherData** class, ask for an explanation by entering
 
