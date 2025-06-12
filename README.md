@@ -851,29 +851,34 @@ and you can see the instructions and the code next to each other.
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes08.png)</kbd>
 
-    c.	Review and save the code changes, then close the Java class.
+    b.	Review the updated code which should look like this:
+    
+    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes09.png)</kbd>
+
+    c.	Save the code changes, then close the Java class.
+    
 
 9.	Add the recommended dependency to the pom.xml. 
 
-    a.	Switch to the Project Explorer and open the pom.xml
+    a.	Switch to the **Project Explorer** and open the **pom.xml**
  
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes10.png)</kbd>
 
-    b.	Switch to the watsonx Code Assistant and select/copy the recommended dependency. 
+    b.	Switch to the watsonx Code Assistant and scroll down to see the additional dependency that needs to be added to the **pom.xml**. 
  
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes11.png)</kbd>
 
-    Hint: You can use the copy function to select/copy the code.
- 
-    <kbd>![](./images/media/WCA_copyCode.png)</kbd>
-
-    c.	Add the dependency to the pom.xml
+    c.	In the **pom.xml**, create an empty line after the line **\<dependencies>**. Switch to the chat window and click on the icon **Insert at cursor**.
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes12.png)</kbd>
 
-    d.	Save the configuration change and close the pom file.
+    d. Review the code update that should look like this:
 
-10.	Switch to the Modernize to Liberty tab and click on Rebuild and refresh
+    <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes12a.png)</kbd>
+
+    e.	Save the configuration change and close the pom file.
+
+10.	If not automatically done, switch to the **Modernize to Liberty** tab. Scroll to the top and click on **Rebuild and refresh**.
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes13.png)</kbd>
  
