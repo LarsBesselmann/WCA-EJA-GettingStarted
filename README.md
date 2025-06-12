@@ -1056,7 +1056,7 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
 
 8.	**Save** the code, then close the java class.
     
-9. On the **Upgrade Java Version** tab, click on **Rebuild and refresh**.
+9. On the tab **Upgrade Java Version**, click on **Rebuild and refresh**.
 
 
      <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes08.png)</kbd>
