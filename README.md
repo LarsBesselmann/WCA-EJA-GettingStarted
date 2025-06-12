@@ -539,7 +539,9 @@ You will see something several messages
 5. Click on **Open explanation** to see the results.
  
     <kbd>![](./images/media/WCA_explainApplication_Result.png)</kbd>
+    
     After the executive summary, all the found services will be explained. Scroll down and you can see that you save the explanation as a markdown file. You do not need the explanation later, so you don't have to save it.
+
 <br>
 
 #### Use the wizard inside the application code to explain a class:
@@ -641,6 +643,7 @@ Within VS Code, close any open file like the WeatherServlet.java for example.
 <details>
 <summary>How to use WCA to modernize the runtime</summary>
 
+<br>
 watsonx Code Assistant helps with the application modernize from a traditional application server like WebSphere Application Server Traditional, Oracle WebLogic, JBoss EAP or Tomcat to Liberty. It uses a binary scanner to scan the existing Java Enterprise applications and provides insight into issues when migrating to Liberty and/or another Java version. It also can scan the existing application server configuration.
 The generated data collection can be used as input for Transformation Advisor to estimate modernization efforts as well as to generate the deployment artefacts as part of a migration bundle.
 In this case, the IBM Transformation Advisor was used to scan the application and create a migration bundle which contains next to the reports about required code changes also the Liberty server configuration (server.ml).
@@ -934,6 +937,7 @@ Congratulations, you have just migrated an enterprise application from WebSphere
 <details>
 <summary>How to use WCA to upgrade the Java version</summary>
 
+<br>
 watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 8 to Java 17 or Java 21. This scenarios assumes that the ModResorts application has already been modernized to work on Liberty. It begins with the code in the state that we finished the Modernize to Liberty scenario. You can also start the scenario by starting with the zip called modresorts-lib-j8.zip.
 
 #### Upgrade: Identify the issues resulting of a Java upgrade
@@ -1414,3 +1418,5 @@ To set the context, you could use the following commands:
     - "what happens if the weather data endpoint is not available?"
 
 
+</details>
+</details>
