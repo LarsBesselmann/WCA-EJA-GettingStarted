@@ -992,13 +992,17 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
 
      <kbd>![ModResorts](./images/media/ModResorts.png)</kbd>
  
-    d.	Click the **Where to** drop-down. Select any value. You should observer errors in the UI:
+    d.	Click the **Where to** drop-down. Select any value. You should observe errors in the UI:
 
      <kbd>![](./images/media/ModResorts-Paris-Error.png)</kbd>
  
+    e. Take a look at the VS Code  **Terminal window** and yu should see a servlet exception related to **MBeanOperatorInfo** 
+
+     <kbd>![](./images/media/ModResorts-Paris-Exception.png)</kbd>
+ 
     These errors are ultimately the result of the Java upgrade issue with the **MBeanOperatorInfo constructor** which causes a server error when fetching data for the UI.
 
-    e.	Stop the Liberty instance via the Liberty Dashboard
+    f.	Stop the Liberty instance via the **Liberty Dashboard**
 
      <kbd>![](./images/media/UpgradeJava_Stop_Liberty.png)</kbd>
  
@@ -1009,7 +1013,7 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
 
      <kbd>![](./images/media/ModResorts_Upgrade_AutomatedFixes1.png)</kbd>
 
-2. Click on Rebuild and refresh to check if the issues have been resolved.
+2. Once the fixes have been applied, click on **Rebuild and refresh** to check if the issues have been resolved.
 
      <kbd>![](./images/media/ModResorts_Upgrade_AutomatedFixes2.png)</kbd>
 
@@ -1019,13 +1023,13 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
 
 
 #### Upgrade: Resolve the assisted fix issues
-1. Switch to the tab for Assisted fixes.
+1. Switch to the tab for **Assisted fixes**.
 
      <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes01.png)</kbd>
 
-    The issue **Behavior change in the javax.management.MBeanOperationInfo constructor** is listed. You will resolve the issue with the help of the watsonx Code Assistant. 
+    The issue **Behavior change in the javax.management.MBeanOperationInfo constructor** is listed which is the one that caused the dispay errors. You will resolve the issue with the help of the watsonx Code Assistant. 
 
-2.	Scroll down and open all twisties to see the guidance how to fix the issue.
+2.	Scroll down and open the two twisties to see the guidance how to fix the issue.
 
      <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes02.png)</kbd>
 
@@ -1041,9 +1045,9 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
 
      <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes06.png)</kbd>
  
-6.	Review the changes, which are mainly in the try-catch block, then replace the previously selected code with the suggestion provided by watsonx Code Assistant. You can use the copy function to select/copy the code.
+6.	Review the changes, which are mainly in the try-catch block, then replace the previously selected code with the suggestion provided by watsonx Code Assistant. You can use the **Insert at cursor** function to update the code.
 
-     <kbd>![](./images/media/WCA_copyCode.png)</kbd>
+     <kbd>![](./images/media/ModResorts_Upgrade_AssistedFixes_copy.png)</kbd>
 
 7.	Your final update code should look like this:
 
