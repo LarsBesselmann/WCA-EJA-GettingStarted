@@ -579,7 +579,7 @@ Another way to get an explanation for a class is to use the chat window directly
 #### Use the WCA chat to ask questions about the application
 As mentioned above, the chat function within watsonx Code Assistant can also be used to ask questions about the code for example. Here some examples
 
-1. In the chat window, enter the question: **Where does the weather data come from?**
+1. In the chat window, enter the question: **Where does the weather data come from?** and press the **blue arrow**.
 
     <kbd>![WCA_Chat-askQuestion1](./images/media/WCA_Chat-askQuestion1.png)</kbd>
 
