@@ -601,21 +601,18 @@ As mentioned above, the chat function within watsonx Code Assistant can also be 
 
     <kbd>![WCA_Chat-askQuestion4](./images/media/WCA_Chat-askQuestion4.png)</kbd>
     
-5. In the chat window, enter the question: **When is the default weather data used?** and take a look at the result.
-
-    <kbd>![WCA_Chat-askQuestion4](./images/media/WCA_Chat-askQuestion5.png)</kbd>
-
-6. In the chat window, enter the question: **Where is the default weather data defined?** and take a look at the result.
+5. To better understand the **DefaultWeatherData** method, ask for an explanation for the method. Enter **/explain getDefault** and you can see, that two classes were found, the WeatherServlet class (which calls the method) and the DefaultWeatherData class (which implements the method).  Select the **DefaultWeatherData** class and press the **blue arrow**. 
 
     <kbd>![WCA_Chat-askQuestion5](./images/media/WCA_Chat-askQuestion5.png)</kbd>
 
-5. To better understand the **DefaultWeatherData** class, ask for an explanation by entering
+    Take a look at the result:
 
-        /explain @DefaultWeatherData
+    <kbd>![WCA_Chat-askQuestion5-result](./images/media/WCA_Chat-askQuestion5-result.png)</kbd>
 
-    watsonx Code Assistant will provide an explanation of the class.
 
-    <kbd>![WCA_explainCode_DefaultWeatherData](./images/media/WCA_explainCode_DefaultWeatherData.png)</kbd>
+6. In the chat window, enter the question: **When is the default weather data used?** and take a look at the result.
+
+    <kbd>![WCA_Chat-askQuestion6](./images/media/WCA_Chat-askQuestion6.png)</kbd>
 
 There are additional questions that you could ask. For example:
 
@@ -627,9 +624,7 @@ There are additional questions that you could ask. For example:
 
 Hint:
 
-The answer to a question is only as good as the context that has been provided.
-- If an "Explain application" has been performed, all Java files have been loaded into the context.
-- If an "Explain application" has not been performed, WCA typically only knows a subset of the files which impacts the quality of the answer. 
+The answer to a question is only as good as the context that has been provided. 
 
 *** How to explain all classes of a project? ***
 
