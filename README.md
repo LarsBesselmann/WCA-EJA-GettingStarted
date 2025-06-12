@@ -962,29 +962,29 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
 
         mvn clean package 
 
-4.	Expand the list of targets and select **Java 17** or **Java21** based on your environment. In this case, you will use **Java 17**.
+4.	Expand the list of targets and select your target Java based on your environment. In this case, you will use **Java 17**.
  
      <kbd>![](./images/media/ModResorts_Upgrade_Panel_02.png)</kbd>
 
-5.	Once you have selected a target Java, the **Build and Analyze** button gets enabled.
+5.	Once you have selected a target Java, the **Build and analyze** button gets enabled.
 
      <kbd>![](./images/media/ModResorts_Upgrade_Panel_03.png)</kbd>
 
 
-6.	Click the **Build and Analyze** button to analyze the application for target Java 17 (in this case). After a few moments you should see the issues. There are two issues with an auto fix, and one issue with a watsonx Code Assistant assisted fix:
+6.	Click the **Build and analyze** button to analyze the application for target Java 17 (in this case). After a few moments you should see the issues. There are two issues with an automated fix and one issue with an assisted fix:
  
      <kbd>![](./images/media/ModResorts_Upgrade_Panel_04.png)</kbd>
  
 
 #### Upgrade: Test the application on the target Java before upgrading
 
-1.	At this point you can run ModResorts in a Java 17 or Java 21 environment to observe how the application is not functioning correctly **BEFORE** you fix the Java upgrade issues. 
+1.	At this point you can run ModResorts in a Java 17 environment to observe how the application is not functioning correctly **BEFORE** you fix the Java upgrade issues. 
 
-    a.	Start the application using the **LIBERTY DASHBOARD**  in the side panel.
+    a.	To start Liberty, open the **LIBERTY DASHBOARD** in the side panel, right-click on **MODRESORTS** and select **Start**.
   
      <kbd>![](./images/media/UpgradeJava_Start_Liberty.png)</kbd>
 
-    b.	Monitor the **terminal window** and wait until Liberty has been started.
+    b.	Monitor the **Terminal window** and wait until Liberty has been started.
  
      <kbd>![](./images/media/UpgradeJava_Start_Liberty-Output.png)</kbd>
 
