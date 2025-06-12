@@ -984,7 +984,7 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
   
      <kbd>![](./images/media/UpgradeJava_Start_Liberty.png)</kbd>
 
-    b.	Monitor the **Terminal window** and wait until Liberty has been started.
+    b.	Monitor the **Terminal** window and wait until Liberty has been started.
  
      <kbd>![](./images/media/UpgradeJava_Start_Liberty-Output.png)</kbd>
 
@@ -1068,11 +1068,11 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
 
 ## Upgrade: Test the application if the error has been resolved
 
-1.	Start the application using the **LIBERTY DASHBOARD**  in the side panel.
+1.	Switch to the **Explorer view** and start the application using the **LIBERTY DASHBOARD**  in the side panel.
   
      <kbd>![](./images/media/UpgradeJava_Start_Liberty.png)</kbd>
 
-2.	Monitor the **terminal window** and wait until Liberty has been started.
+2.	Monitor the **Terminal** window and wait until Liberty has been started.
  
      <kbd>![](./images/media/UpgradeJava_Start_Liberty-Output2.png)</kbd>
 
@@ -1084,7 +1084,6 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
 
      <kbd>![](./images/media/ModResorts-Paris-working.png)</kbd>
  
-    These errors are ultimately the result of the Java upgrade issue with the **MBeanOperatorInfo constructor** which causes a server error when fetching data for the UI.
 
  5. Stop the Liberty instance via the Liberty Dashboard
 
@@ -1097,13 +1096,17 @@ Congratulations, you have just migrated an enterprise application from Java 8 to
 
 </details>
 
+<br> 
 Congratulations! You have successfully used **watsonx Code Assistant** to perform different tasks during an application modernization journey. 
+
+<br>
 
 **===== END OF LAB =====**
 
+<br>
+
 
 # Appendix
-
 <details>
 <summary>How to set up the lab environment and more</summary>
 
