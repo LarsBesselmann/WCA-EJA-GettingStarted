@@ -831,7 +831,7 @@ and you can see the instructions and the code next to each other.
  
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes04.png)</kbd>
 
-4.	Select the class or the method that uses the **ResponseUtils.encodeDataString()** method. Inthis case, select the code from line 14 to 34. On the **Modernize to Liberty** tab, click the button **Help me**.
+4.	You could select the class or the method that uses the **ResponseUtils.encodeDataString()** method. In this case, select the code from line 14 to 34. On the **Modernize to Liberty** tab, click the button **Help me**.
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes05.png)</kbd>
 
