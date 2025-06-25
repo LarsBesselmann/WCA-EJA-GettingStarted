@@ -512,6 +512,8 @@ This will include three parts:
  
     <kbd>![](./images/media/WCA_menu-explainApplication.png)</kbd>
 
+    **Hint**:
+    If the VS Code Extension "Application Modenrization Accelerator Developer Tools" is installed in VS Code, you might see next to the menu option "watsonx Code Assistant" also the menu option called "Modernize Java Applications". Please ignore this option for the lab as we will not use those capabilities.
  
 3. You will get a pop-up like:
 
