@@ -565,12 +565,12 @@ Another way to get an explanation for a class is to use the chat window directly
 
 1. Enter into the chat window the text **/explain @WeatherServlet.java** and select the java class that is offered. 
 
-    <kbd>![](./images/media/WCA_explainCode_CustomerInformation.png)</kbd>
+    <kbd>![](./images/media/WCA_explainCode_WeatherServlet.png)</kbd>
 
 
 2. Press the **blue arrow** and you should get an explanation like:
 
-    <kbd>![WCA_explainCode_CustomerInformation-Result](./images/media/WCA_explainCode_CustomerInformation-Result.png)</kbd>
+    <kbd>![WCA_explainCode_WeatherServlet-Result](./images/media/WCA_explainCode_WeatherServlet-Result.png)</kbd>
 
 <br>
 
