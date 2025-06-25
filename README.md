@@ -431,7 +431,7 @@ There are different ways to interact with watsonx Code Assistant.
  
     5. Press **Enter** to confirm the key.
 
-3. In the chat session, you should see a Chat session.
+3. You should see a Chat session.
  
     <kbd>![](./images/media/WCA_Chat-Hello.png)</kbd>
 
