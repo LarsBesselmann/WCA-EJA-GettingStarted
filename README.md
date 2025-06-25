@@ -603,7 +603,7 @@ As mentioned above, the chat function within watsonx Code Assistant can also be 
 
     <kbd>![WCA_Chat-askQuestion4](./images/media/WCA_Chat-askQuestion4.png)</kbd>
     
-5. To better understand the **DefaultWeatherData** method, ask for an explanation for the method. Enter **/explain getDefault** and you can see, that two classes were found, the WeatherServlet class (which calls the method) and the DefaultWeatherData class (which implements the method).  Select the **DefaultWeatherData** class and press the **blue arrow**. 
+5. To better understand the **DefaultWeatherData** method, ask for an explanation for the method. Enter **/explain @getDefault** and you can see, that two classes were found, the WeatherServlet class (which calls the method) and the DefaultWeatherData class (which implements the method).  Select the **DefaultWeatherData** class and press the **blue arrow**. 
 
     <kbd>![WCA_Chat-askQuestion5](./images/media/WCA_Chat-explainDefaultData.png)</kbd>
 
