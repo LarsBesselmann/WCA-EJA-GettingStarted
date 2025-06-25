@@ -436,16 +436,12 @@ There are different ways to interact with watsonx Code Assistant.
     <kbd>![](./images/media/WCA_Chat-Hello.png)</kbd>
 
 
-4. In the chat session, you should see a Chat session.
- 
-    <kbd>![](./images/media/WCA_Chat-Hello.png)</kbd>
- 
-5. Enter **/help** and click on the **blue arrow**.
+4. Enter **/help** and click on the **blue arrow**.
 
     <kbd>![](./images/media/WCA_Chat-help.png)</kbd>
 
  
-6. You should see a short introduction. Feel free to expand the different sections.
+5. You should see a short introduction. Feel free to expand the different sections.
 
     <kbd>![](./images/media/WCA_Chat-help2.png)</kbd>
 
