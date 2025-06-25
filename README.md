@@ -826,7 +826,7 @@ Now we will use watsonx Code Assistant to fix the remaining issue.
 
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes02.png)</kbd>
  
-3. Click on the blue link to open the file **UpperServlet.java** in the IDE. The UpperSetvlet.java window will open in a new group
+3. Click on the blue link to open the file **UpperServlet.java** in the IDE. The UpperServlet.java window will open in a new group
 and you can see the instructions and the code next to each other.
  
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes04.png)</kbd>
