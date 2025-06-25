@@ -558,12 +558,12 @@ You will see something several messages
 
 3. The WCA chat window will open to explain the class Constants. Take a look at the resulting explanation.
 
-    <kbd>![](./images/media/WCA_explainCode_WeatherServlet.png)</kbd>
+    <kbd>![](./images/media/WCA_explainCode_Constants.png)</kbd>
 
 #### Use the chat command to explain a class or method:
 Another way to get an explanation for a class is to use the chat window directly.
 
-1. Enter into the chat window the text **/explain @ModResortsCustomerInformation.java** and select the java class that is offered. 
+1. Enter into the chat window the text **/explain @WeatherServlet.java** and select the java class that is offered. 
 
     <kbd>![](./images/media/WCA_explainCode_CustomerInformation.png)</kbd>
 
