@@ -770,7 +770,7 @@ Now you will use watsonx Code Assistant to fix the identified automated fix issu
  
      <kbd>![](./images/media/ModResorts_Modernize_AutomatedFixes3.png)</kbd>
 
-5.	Once done, you should observe that the 3 issues with automated fixes have gone away from the list. But another issue has been found for which also an automated fix exist.
+5.	Once done, you should observe that the 3 issues with automated fixes have gone away from the list. But another issue has been found for which also an automated fix exists.
 
      <kbd>![](./images/media/ModResorts_Modernize_AutomatedFixes4.png)</kbd>
 
