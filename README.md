@@ -550,7 +550,7 @@ You will see something several messages
 
     <kbd>![](./images/media/vscode_Explorer_Constants.png)</kbd>
 
-2. Click on **Explain** in the line above line 45 to get the explanation for the class Constants.
+2. Click on **Explain** to get the explanation for the class Constants.
 
     <kbd>![](./images/media/WCA_explain_Constants.png)</kbd>
  
