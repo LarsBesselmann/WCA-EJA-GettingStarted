@@ -1094,6 +1094,7 @@ Congratulations, you have just migrated an enterprise application from Java 8 to
 </details>
 
 <br> 
+
 Congratulations! You have successfully used **watsonx Code Assistant** to perform different tasks during an application modernization journey. 
 
 <br>
