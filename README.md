@@ -334,7 +334,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
 
     Once completed, the local lab artifacts repo is cloned at the following directory on the desktop VM. 
     
-    > **/home/techzone/Student/labs/wca/temp*/modresorts**
+    > **/home/techzone/Student/labs/wca/temp-*/modresorts**
 
 5.  Launch VS Code using the current directory as the root folder for
     the workspace
