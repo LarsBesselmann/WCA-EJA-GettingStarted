@@ -364,7 +364,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
 
         code .
 
-    If a pop-ip appears telling you that authentication is required, enter **IBMDem0s!** and click on **Unlock**.
+    If a pop-up appears telling you that authentication is required, enter **IBMDem0s!** and click on **Unlock**.
     <kbd>![](./images/media/Login_Keyring_Action_Required.png)</kbd>
     
 
