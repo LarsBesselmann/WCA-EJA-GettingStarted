@@ -621,18 +621,7 @@ As mentioned above, the chat function within watsonx Code Assistant can also be 
 
     <kbd>![WCA_Chat-askQuestion4](./images/media/WCA_Chat-askQuestion4.png)</kbd>
     
-5. To better understand the **DefaultWeatherData** method, ask for an explanation for the method. Enter **/explain @getDefault** and you can see, that two classes were found, the WeatherServlet class (which calls the method) and the DefaultWeatherData class (which implements the method).  Select the **DefaultWeatherData** class and press the **blue arrow**. 
-
-    <kbd>![WCA_Chat-askQuestion5](./images/media/WCA_Chat-explainDefaultData.png)</kbd>
-
-    Take a look at the result:
-
-    <kbd>![WCA_Chat-askQuestion5-result](./images/media/WCA_Chat-explainDefaultData-result.png)</kbd>
-
-
-6. In the chat window, enter the question: **When is the default weather data used?** and take a look at the result.
-
-    <kbd>![WCA_Chat-askQuestion6](./images/media/WCA_Chat-askQuestion6.png)</kbd>
+<br>
 
 There are additional questions that you could ask. For example:
 
