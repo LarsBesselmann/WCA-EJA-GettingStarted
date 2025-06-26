@@ -65,6 +65,7 @@ You will need an estimated **60 to 90 minutes** to complete this lab.
 
 ## Notices and disclaimers
 <details>
+<summary>© 2025 International Business Machines Corporation. No part of this document may be reproduced or transmitted in any form without written permission from IBM.</summary>
 
 © 2025 International Business Machines Corporation. No part of this document may be reproduced or transmitted in any form without written permission from IBM.
 
@@ -129,6 +130,18 @@ IBM watsonx Code Assistant is an innovative, generative AI coding companion that
 - **Prebuilt chat commands**: Use optimized prompts for specific tasks.
 - **Integrated directly into IDEs**: Available directly within Visual Studio Code and Eclipse, integrating seamlessly with your workflow.
 
+There are different ways to interact with watsonx Code Assistant.
+- Use the **chat** 
+    - to generate code, documentation, explanation and more via command line
+    - to ask questions to watsonx Code Assistant
+- Use the **Enterprise Java Application menu** project to access Enterprise Java capabilities such as 
+    - Explain an application
+    - Modernize an application to Liberty
+    - Update the Java version 
+- Use the functions embedded in the editor to explain code and more
+
+
+
 <br>
 
 ![](./images/media/WCA_Intro.png)
@@ -138,7 +151,7 @@ In this lab, you will use the **watsonx Code Assistant** to understand and moder
 
 ## Accessing and using the lab environment
 <details>
-How to use the lab environment
+<summary>How to use the lab environment</summary>
 
 ### Accessing the lab environment
 
@@ -268,9 +281,13 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
 
 </details>
 
-## Getting started 
+## About the application and the IDE
+
+<details>
+<summary> Details about the application and the used IDE</summary>
 
 Before you get started, here some additional information which should allow you to get a better understanding about the environment and how it has been set up.
+In addition the section contains some steps to 
 
 ### Source code
 
@@ -288,7 +305,7 @@ The source code here is provided in zips. You can unzip the code and run the Mod
     - This is the version of ModResorts after it has been modernized to Liberty and it has been upgraded to Java 21.
     - The archive is only required if you so not want to start with modresorts-twas-j8.zip or run into issues.
 
-### Building the Source
+### Building the application
 
 - WebSphere APIs
 The ModResorts application uses WebSphere APIs. In order to build the ModResorts application in its original state, the WebSphere library must be available in your environment. You can use the following command to install the WebSphere public jar into your local maven repository where the build can automatically pick it up from:
@@ -307,10 +324,14 @@ Related links:
 - https://openliberty.io/blog/2022/08/01/liberty-tools-eclipse.html
 - https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext
 In the prepared lab environment, the Visual Studio Code and the Liberty Tools are already installed. 
- 
 
-### Getting started with the tutorial
+</details> 
 
+## Getting started with the tutorial
+<details>
+<summary> Initial setup </summary>
+
+### Set up the project and review in VS Code
 
 1.  **Close** all **Terminal** windows and **Browser** Tabs used in any previous lab.
 
@@ -394,20 +415,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
 
     <kbd>![](./images/media/vscode_LibertyTools_Dashboard.png)</kbd>
 
-
-## How to use watsonx Code Assistant and setup
-
-There are different ways to interact with watsonx Code Assistant.
-- Use the **chat** 
-    - to generate code, documentation, explanation and more via command line
-    - to ask questions to watsonx Code Assistant
-- Use the **Enterprise Java Application menu** project to access Enterprise Java capabilities such as 
-    - Explain an application
-    - Modernize an application to Liberty
-    - Update the Java version 
-- Use the functions embedded in the editor to explain code and more
-
-### Using the watsonx Code Assistant Chat
+### Complete the setup of the watsonx Code Assistant extension
 
 1. Click on the shortcut for the **watsonx Code Assistant**.
 
@@ -491,6 +499,7 @@ There are different ways to interact with watsonx Code Assistant.
     > - If you did not install the file was_public.jar into maven, the maven command will fail with an error like: <br> Could not resolve dependencies for project com.acme.modres:modresorts:war:2.0.0: The following artifacts could not be resolved: com.ibm.websphere.appserver:was_public:jar:9.0.0 (absent)
 
 <br>
+</details>
 
 ### Scenario: Understand the Java Enterprise application modresorts
 <details>
