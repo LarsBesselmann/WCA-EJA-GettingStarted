@@ -796,8 +796,6 @@ Now you will use watsonx Code Assistant to fix the identified automated fix issu
     **Comment:**
     If you see that another issue has been found for which also an automated fix exists, do continue with step 6. Otherwise continue with step 9.
 
-     <kbd>![](./images/media/ModResorts_Modernize_AutomatedFixes4.png)</kbd>
-
 6.	Open the twisty next to the new issue to see the details and you will find out that it complains about the missing Liberty Maven plugin in the pom.xml. As the initional analysis was done on the migration bundle (which does not contain the pom file)  Click on **Run automated fixes** to fix that issue as well.
 
      <kbd>![](./images/media/ModResorts_Modernize_AutomatedFixes5.png)</kbd>
