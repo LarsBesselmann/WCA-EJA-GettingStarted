@@ -578,6 +578,12 @@ Another way to get an explanation for a class is to use the chat window directly
 
     <kbd>![](./images/media/WCA_explainCode_getDefaultWeatherData.png)</kbd>
 
+4. Press the **blue arrow** and you should get an explanation like:
+
+    <kbd>![WCA_explainCode_getDefaultWeatherData-Result](./images/media/WCA_explainCode_getDefaultWeatherData-Result.png)</kbd>
+
+<br>
+
 
 #### Use the WCA chat to ask questions about the application
 As mentioned above, the chat function within watsonx Code Assistant can also be used to ask questions about the code for example. Here some examples
