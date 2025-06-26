@@ -554,11 +554,16 @@ You will see something several messages
 
     <kbd>![](./images/media/WCA_explainApplication_CodeAnalysis3.png)</kbd>
 
+    HINT: If the pop-up does not appear, click on the Notification icon 
+
+    <kbd>![](./images/media/WCA_explainApplication_Notifiction.png)</kbd>
+
 5. Click on **Open explanation** to see the results.
  
     <kbd>![](./images/media/WCA_explainApplication_Result.png)</kbd>
     
     After the executive summary, all the found services will be explained. Scroll down and you can see that you save the explanation as a markdown file. You do not need the explanation later, so you don't have to save it.
+
 
 <br>
 
