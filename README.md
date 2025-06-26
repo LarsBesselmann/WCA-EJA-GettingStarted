@@ -428,7 +428,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
 
 2. If you see on the welcome screen a blue button to **Log in with your API key**, follow these steps to add the watsonx Code Assistant API key. 
 
-    1. On the welcome screen, click on Log in with you API key.
+    1. On the welcome screen, click on **Log in with you API key**.
  
         <kbd>![](./images/media/WCA_WelcomeScreen.png)</kbd>
 
