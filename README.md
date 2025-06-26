@@ -789,7 +789,12 @@ Now you will use watsonx Code Assistant to fix the identified automated fix issu
  
      <kbd>![](./images/media/ModResorts_Modernize_AutomatedFixes3.png)</kbd>
 
-5.	Once done, you should observe that the 3 issues with automated fixes have gone away from the list. But another issue has been found for which also an automated fix exists.
+5.	Once done, you should observe that the 3 issues with automated fixes have gone away from the list. 
+
+     <kbd>![](./images/media/ModResorts_Modernize_AutomatedFixes4a.png)</kbd>
+
+    **Comment:**
+    If you see that another issue has been found for which also an automated fix exists, do continue with step 6. Otherwise continue with step 9.
 
      <kbd>![](./images/media/ModResorts_Modernize_AutomatedFixes4.png)</kbd>
 
@@ -808,17 +813,11 @@ Now you will use watsonx Code Assistant to fix the identified automated fix issu
 
 9. You might be interested to see which changes have been performed by the automated fixes. Open the **Source Control** to review the changes.
 
-    <kbd>![](./images/media/ModResorts_Modernize_SourceControl1.png)</kbd>
+    <kbd>![](./images/media/ModResorts_Modernize_SourceControl1a.png)</kbd>
 
-    As you can see, three files have been modfied and the server.xml has been added.
+    As you can see, some files have been modfied and the server.xml has been added.
 
-10. In the **Source Control** view, click on **pom.xml** to see the changes.
-
-    <kbd>![](./images/media/ModResorts_Modernize_SourceControl_pom.png)</kbd>
-
-    As you can see, the Liberty maven plugin has been added.
-
-11. In the **Source Control** view, click on **LogoutServlet.java** to see the changes.
+10. In the **Source Control** view, click on **LogoutServlet.java** to see the changes.
 
     <kbd>![](./images/media/ModResorts_Modernize_SourceControl_logout.png)</kbd>
 
@@ -830,7 +829,7 @@ Now you will use watsonx Code Assistant to fix the identified automated fix issu
 
     As you can see, the code to get the server name and the initialContext have been adjusted automatically to work for Liberty.
 
-13. Close the comparison view to switch back to the **Modernize to Liberty** tab.
+12. Close the comparison view to switch back to the **Modernize to Liberty** tab.
 
 
 
