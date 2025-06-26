@@ -533,7 +533,7 @@ This will include three parts:
     <kbd>![](./images/media/WCA_menu-explainApplication.png)</kbd>
 
     **Hint**:
-    If the VS Code Extension "Application Modernization Accelerator Developer Tools" is also installed, there will be an additional menu option called "Modernize Java Applications". Please ignore that for the lab.
+    As the VS Code Extension "Application Modernization Accelerator Developer Tools" is also installed, there is an additional menu option called "Modernize Java Applications". Please ignore that for the lab.
  
 3. You will get a pop-up like:
 
