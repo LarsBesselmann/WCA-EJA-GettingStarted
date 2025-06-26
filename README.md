@@ -64,6 +64,7 @@ You will need an estimated **60 to 90 minutes** to complete this lab.
 </details>
 
 ## Notices and disclaimers
+<details>
 
 © 2025 International Business Machines Corporation. No part of this document may be reproduced or transmitted in any form without written permission from IBM.
 
@@ -95,7 +96,7 @@ The provision of the information contained herein is not intended to, and does n
 IBM, the IBM logo, and ibm.com are trademarks of International Business Machines Corporation, registered in many jurisdictions worldwide. Other product and service names might be trademarks of IBM or other companies. A current list of IBM trademarks is available on the Web at “Copyright and trademark information” at
 [Learn more →](https://www.ibm.com/legal/copyright-trademark)
 
-
+</details>
 
 ## Lab requirements
 <details>
@@ -136,6 +137,7 @@ In this lab, you will use the **watsonx Code Assistant** to understand and moder
 </details>
 
 ## Accessing and using the lab environment
+<details>
 How to use the lab environment
 
 ### Accessing the lab environment
@@ -264,7 +266,7 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
 | ------------- |:-------------|
 | ![](./images/media/info.png?cropResize=100,100)   | <p><strong>Important:</strong> <p><strong>Click CANCEL</strong>…. If, at any time during the lab, you get a pop-up asking to install updated software onto the VM.</p> <p>The one we experience is an update available for VS Code.</p><p><strong>CLICK CANCEL!</strong></p><p>![](./images/media/vscode_popup_update.png?cropResize=100,100)</p> |
 
-
+</details>
 
 ## Getting started 
 
@@ -393,7 +395,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
     <kbd>![](./images/media/vscode_LibertyTools_Dashboard.png)</kbd>
 
 
-## How to use watsonx Code Assistant
+## How to use watsonx Code Assistant and setup
 
 There are different ways to interact with watsonx Code Assistant.
 - Use the **chat** 
