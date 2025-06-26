@@ -627,9 +627,7 @@ There are additional questions that you could ask. For example:
 
 - What is the Weather Underground API?
 - Who is providing the Weather Underground API? 
-- What is the URL of the Weather Underground API? 
-- What is the package name of the DefaultWeatherData class?
-
+- What is the purpose of the modresorts application?
 
 
 
