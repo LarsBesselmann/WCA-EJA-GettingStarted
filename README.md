@@ -855,7 +855,7 @@ and you can see the instructions and the code next to each other.
  
     <kbd>![](./images/media/ModResorts_Modernize_AssistedFixes07.png)</kbd>
 
-    This code suggestion shows how the Apache Commons Text library can be used instead of the ResponseUtils.encodeDataString() method
+    The code suggestion shows how the Apache Commons Text library can be used instead of the ResponseUtils.encodeDataString() method
 
 6.	Take a look at the recommended changes. The returned solution consists of two parts:
 
@@ -914,7 +914,7 @@ To launch the application, you must start the Liberty server which will be insta
 
     <kbd>![](./images/media/ModernizeLiberty_Start_Liberty.png)</kbd>
 
-2.	Monitor the terminal window to see when the server has been started.
+2.	Monitor the Terminal window to see when the server has been started.
  
     <kbd>![](./images/media/ModernizeLiberty_Start_Liberty-Output2.png)</kbd>
 
@@ -1001,7 +1001,7 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
  
      <kbd>![](./images/media/UpgradeJava_Start_Liberty-Output.png)</kbd>
 
-    c.	Click within the terminal on the **application link** or open the URL **localhost:9080/resorts** in a browser.
+    c.	Click on the related link in the terminal or open in a browser the URL http://localhost:9080/resorts. 
 
      <kbd>![ModResorts](./images/media/ModResorts.png)</kbd>
  
