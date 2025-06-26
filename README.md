@@ -432,7 +432,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
  
         <kbd>![](./images/media/WCA_WelcomeScreen.png)</kbd>
 
-    2. On the pop-up, click Allow to sign in.
+    2. On the pop-up, click **Allow** to sign in.
 
         <kbd>![](./images/media/WCA_API-Key-1.png)</kbd>
 
@@ -502,6 +502,10 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
     > **Hints**:
     > - The build of the application is needed to perform watsonx Code Assistant tasks on Enterprise Java Application level (e.g. explain, modernize, upgrade).
     > - If you did not install the file was_public.jar into maven, the maven command will fail with an error like: <br> Could not resolve dependencies for project com.acme.modres:modresorts:war:2.0.0: The following artifacts could not be resolved: com.ibm.websphere.appserver:was_public:jar:9.0.0 (absent)
+
+<br>
+
+**Now you are ready to start with the modernization of your application.**
 
 <br>
 </details>
