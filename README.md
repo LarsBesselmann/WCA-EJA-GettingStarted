@@ -1009,7 +1009,7 @@ watsonx Code Assistant helps to upgrade a Java Enterprise application from Java 
 
      <kbd>![](./images/media/ModResorts-Paris-Error.png)</kbd>
  
-    e. Take a look at the VS Code  **Terminal window** and you should see a servlet exception related to **MBeanOperatorInfo** 
+    e. Take a look at the VS Code  **Terminal** window and you should see a servlet exception related to **MBeanOperatorInfo** 
 
      <kbd>![](./images/media/ModResorts-Paris-Exception.png)</kbd>
  
