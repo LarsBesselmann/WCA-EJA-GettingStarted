@@ -576,7 +576,7 @@ Another way to get an explanation for a class is to use the chat window directly
 
 <br>
 
-3. As you can see, the WeatherServlet refers to the method getDefaultWeatherData. So let's get an explanation of that method. Enter into the chat window the text **/explain @getDefault**. Ad you can see, it will find the method call in the WeatherServlet class and the method in the DefaultData class.
+3. The **WeatherServlet** refers to the method **getDefaultWeatherData**. So let's get an explanation of that method. Enter into the chat window the text **/explain @getDefault**. As you can see, it will find the method call in the WeatherServlet class and the method in the DefaultWeatherData class. Click on the method in the DefaultWeatherData class.
 
     <kbd>![](./images/media/WCA_explainCode_getDefaultWeatherData.png)</kbd>
 
