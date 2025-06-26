@@ -364,6 +364,11 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
 
         code .
 
+    If a pop-ip appears telling you that authentication is required, enter **IBMDem0s!** and click on **Unlock**.
+    <kbd>![](./images/media/Login_Keyring_Action_Required.png)</kbd>
+    
+
+
     If you get asked to trust the authors, click on "Yes, I trust the authors".
     <kbd>![](./images/media/vscode_TrustAuthors.png)</kbd>
     
