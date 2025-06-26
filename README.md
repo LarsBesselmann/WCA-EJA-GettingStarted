@@ -780,7 +780,7 @@ Now you will use watsonx Code Assistant to fix the identified automated fix issu
 
 2.	Click on the blue button called **Run automated fixes**. This will start three recipes to fix the issues. They should complete in less than a minute.
 
-3.	In the **terminal window** in VS Code, you should see that the build was successful.
+3.	In the **Output** window in VS Code, you should see that the build was successful.
 
     <kbd>![](./images/media/ModResorts_Modernize_AutomatedFixes2.png)</kbd>
 
