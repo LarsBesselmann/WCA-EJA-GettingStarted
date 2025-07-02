@@ -1439,6 +1439,39 @@ To set the context, you could use the following commands:
     - "what is the purpose of the modres application?"
     - "what happens if the weather data endpoint is not available?"
 
+## How to analyze a Gradle project
+For a Gradle project, the use case "Modernize to Liberty" fails with the error "Unable to modernize Java project to Liberty: The project is not a Maven project".
+If you want wCA to analyze the application instead of using the migration bundle, the "analyze" fails as it cannot find the application binaries. Here a workaround until the llimitation has been removed:
+
+Workaround:
+1. Build the application with gradle
+
+	    .\gradlew build
+
+	The generated war will be located in the directory build\libs
+
+2. Create a Maven directory for the generated war
+
+	    mkdir .\target	
+        cp .\build\libs\*.*ar .\target\
+
+3. Use WCA to generate a pom-file.
+	1. Create a new file called pom.xml
+	2. Use the WCA chat to convert the grade build file to maven 
+        
+        **translate from gradle to maven @build.gradle**
+
+    3. Copy the result of the WCA request into pom.xml
+     (remove the first two lines of comments)
+
+Now you should be able to analyze the application.
+
+HINT: If the wCA sub-menu does not appear after right-click on src, do a right-click on pom.xml.
+Then select Modernize Java Applications > Modernize to Liberty
+
+
+
+
 
 </details>
 </details>
