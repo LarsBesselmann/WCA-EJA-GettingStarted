@@ -1179,7 +1179,11 @@ Steps to install the extension for WCA for Enterprise Java Applications
     <kbd>![](./images/media/vscode_WCA_Install_Extension_Marketplace2.png)</kbd>
 
     The extension will also add the extension for watsonx Code Assistant Core.
-    Finally, you should see both extensions. 
+    Finally, you should see both extensions.  <br>
+    Update: The latest version of WCA-EJA will also install an extension called **IBM Application Modernization Accelerator Developer Tools**
+
+    <kbd>![](./images/media/VSCode-Extensions_new.png)</kbd>
+
 
 4. Click on the extension **watsonx Code Assistant for Enterprise Java Applications** and take a look at the description
 
@@ -1390,12 +1394,20 @@ Step 1: Download the two required drivers
 
 - Download the WCA Core extension via command:
 
-        wget https://IBM.gallery.vsassets.io/_apis/public/gallery/publisher/IBM/extension/wca-core/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage -o IBM.wca-core.latest.vsix
+        wget https://IBM.gallery.vsassets.io/_apis/public/gallery/publisher/IBM/extension/wca-core/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage -O IBM.wca-core.latest.vsix
 
 
 - Download the WCA EJA extension via command:
 
-        wget https://IBM.gallery.vsassets.io/_apis/public/gallery/publisher/IBM/extension/wca-eja/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage -o IBM.wca-eja.latest.vsix
+        wget https://IBM.gallery.vsassets.io/_apis/public/gallery/publisher/IBM/extension/wca-eja/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage -O IBM.wca-eja.latest.vsix
+
+
+- For the latest release of WCA EJA, you will also need the AMA Dev Tools extension. Download the AMA Dev Tools extension via command:
+
+        wget https://IBM.gallery.vsassets.io/_apis/public/gallery/publisher/IBM/extension/ama-dev-tools/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage -O IBM.ama-dev-tools.latest.vsix
+
+
+
 
 Step 2: Transfer the two vsix files to the target machine where VS-Code is installed.
 
