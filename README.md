@@ -1411,7 +1411,7 @@ Step 1: Download the two required drivers
 
 Step 2: Transfer the two vsix files to the target machine where VS-Code is installed.
 
-Step 3: Switch in VS Code to the VS-Code Extensions page, and select the option **Install from VSIX** to install first the WCA-Core extension, then the WCA-EJA extension.
+Step 3: Switch in VS Code to the VS-Code Extensions page, and select the option **Install from VSIX** to install first the WCA-Core extension, then the AMA Dev Tools extension and finally the WCA-EJA extension.
 
 Comment: 
 **For Eclipse**, the approach is similar.
