@@ -159,9 +159,7 @@ If you are doing this lab as part of an instructor led workshop (virtual or face
 
 Otherwise, you will need to reserve an environment for the lab. You can obtain one here. Follow the on-screen instructions for the “**Reserve now**” option.
 
-**TBD: Link to be updated**
-
-<https://techzone.ibm.com/my/reservations/create/660d7f062945d2001e009449>
+<https://techzone.ibm.com/my/reservations/create/685d6521be320b834e0e117d>
 
  The lab environment contains one (1) Linux VM, named **Workstation**.
 
