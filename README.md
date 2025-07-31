@@ -163,7 +163,7 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
 
  The lab environment contains one (1) Linux VM, named **Workstation**.
 
-  ![](./images/media/workstation.png)
+  ![workstation](./images/media/workstation.png)
     
   The Linux **Workstation** VM has the following software installed for the lab:
   
