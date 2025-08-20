@@ -704,6 +704,11 @@ The data collection can be found in the file **ta-collection/ AppSrv01.zip**, th
 
     You will see **4 issues** that must be fixed before the application can run successfully in Liberty. Three of the issues have automated fixes, and one issue has an assisted fix using the watsonx Code Assistant. 
 
+    Hint: If the tab for **Assisted fixes** is not shown, click on **Rebuild and refresh**.
+
+    <kbd>![](./images/media/ModResorts_Modernize_AnalysisResults_noAssistedFix_Rebuild.png)</kbd>
+
+    
     <br>
 
     > - If you want to get more details about the issues, click on the blue link called **View analysis report**. 
