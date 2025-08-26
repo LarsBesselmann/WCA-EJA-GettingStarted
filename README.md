@@ -149,6 +149,14 @@ There are different ways to interact with watsonx Code Assistant.
 In this lab, you will use the **watsonx Code Assistant** to understand and modernize an existing Java Enterprise application.
 </details>
 
+## Disclaimer
+watsonx Code Assistant is developed and released in an agile manner. In addition to adding new capabilities, the interface is likely to change over time. Therefore, the screenshots used in this lab guide might not always look exactly like what you see in the product. These differences should not affect how the lab works.
+However, there are some changes that can affect the results:
+
+- Foundation models can be very sensitive to input. If you enter slightly different text than what the exercise is using (even if it is just a single word or a modified set of labeled data), the outcome can be different.
+- There is ongoing tuning of the models. If the models themselves are updated, then some of the results may vary.
+
+
 ## Accessing and using the lab environment
 <details>
 <summary>How to use the lab environment</summary>
