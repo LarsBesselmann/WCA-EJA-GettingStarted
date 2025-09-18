@@ -1401,7 +1401,7 @@ Now you should see debug information in the WCA output panel:
 
 
 
-#### Inbalid API Key
+#### Invalid API Key
 If you insert your API key into VS Code and the key is shown as not valid, check the WCA output if any rason is shown.
 If there seems to be a connectivity problem, please check if you can reach the login API via command line:
 
