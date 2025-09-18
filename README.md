@@ -1359,6 +1359,36 @@ Now you should see debug information in the WCA output panel:
 
 
 ### Troubleshooting API key
+
+#### Validation of API key does not work
+ If you enter the API key and you do not get the message **Valid API Key** after some seconds, check the output for WCA. 
+
+1. In the VS Code menu, click on **View** and select **Output**.
+ 
+    <kbd>![](./images/media/WCA_Certificate_Issue_1.png)</kbd>
+
+2. Select **WCA** and take a look at the output.
+
+    <kbd>![](./images/media/WCA_Certificate_Issue_2.png)</kbd>
+
+3. If you see a certificate error as in the screenshot above, VS Code must be updated. To update VS Code, stop VS Code and execute in the terminal where you started VS Code the following command:
+
+        . vscode_update.sh
+
+    Once completed, VS COde has been updated. 
+
+4. If needed, use the **cd** command switch back to your working directory 
+    
+        cd /home/techzone/Student/labs/wca/temp-*/modresorts
+
+5.  Launch VS Code using the current directory as the root folder for the workspace
+
+        code .
+
+
+
+
+#### Inbalid API Key
 If you insert your API key into VS Code and the key is shown as not valid, check the WCA output if any rason is shown.
 If there seems to be a connectivity problem, please check if you can reach the login API via command line:
 
