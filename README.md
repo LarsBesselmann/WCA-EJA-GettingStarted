@@ -361,9 +361,12 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
 
         . /home/techzone/Student/labs/wca/showEnv.sh vscode
 
+     If it shows a version **1.104.x** as in the screenshot below, you can continue with the next step. 
+    
+    
     <kbd>![vscode_version](./images/media/vscode_version.png)</kbd>
 
-    If it shows a version **1.104.x** as in the screenshot above, you can continue with the next step. Otherwise run the following command to update vscode:
+    Otherwise run the following command to update vscode:
 
         . vscode_update.sh
 
@@ -397,13 +400,16 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
     <kbd>![](./images/media/vscode_welcome.png)</kbd>
     
 
-    On the left, you can see the **Explorer view**. 
+    HINT: If you updated VS Code, you might also see another panel about the new VS Code version. Close that panel as well. 
+
+
+7.  On the left, you can see the **Explorer view**. 
 
     <kbd>![](./images/media/vscode_modresorts_Explorer.png)</kbd>
 
     <br/>
 
-7.  Review the installed extensions in VS Code that are used for this lab. The installed version might be higher than in the screenshots.
+8.  Review the installed extensions in VS Code that are used for this lab. The installed version might be higher than in the screenshots.
     
     a.  Click on the **Extensions** icon in the left navigation bar in
         VS Code.
