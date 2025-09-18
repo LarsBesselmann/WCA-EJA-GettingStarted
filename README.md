@@ -446,11 +446,24 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
 
         <kbd>![](./images/media/WCA_API-Key-2.png)</kbd>
  
-    4. Wait until you get a message changes to **Valid API** Key. 
+    4. Wait until you get a message changes to **Valid API Key**. 
 
         <kbd>![](./images/media/WCA_API-Key-3.png)</kbd>
  
     5. Press **Enter** to confirm the key.
+
+    Hint: If you do not get the message **Valid API Key** after some seconds, check the output for WCA. 
+
+    1. In the VS Code menu, click on **View** and select **Output**.
+ 
+        <kbd>![](./images/media/WCA_Certificate_Issue_1.png)</kbd>
+
+    2. Select **WCA** and take a look at the output.
+
+        <kbd>![](./images/media/WCA_Certificate_Issue_2.png)</kbd>
+
+        If you see a certificate error as in the screenshot above, VS Code must be updated. For details how to update VS Code, see appendix.
+
 
 3. You should see a Chat session.
  
