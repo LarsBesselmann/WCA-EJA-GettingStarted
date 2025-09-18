@@ -1145,10 +1145,13 @@ Congratulations! You have successfully used **watsonx Code Assistant** to perfor
 
 
 # Appendix
-<details>
-<summary>How to set up the lab environment and more</summary>
+Additional information aboud setup, troubleshooting and more and more
 
-## How to set up Visual Studio Code and the watsonx Code Assistant Plugin
+
+## How to set up the lab environment
+<details>
+<summary>How to set up Visual Studio Code and the watsonx Code Assistant Plugin</summary>
+
 If an environment is provided to you, this section is only for your interest and to get a better understanding - the steps described here have already been performed.
 
 ### Install VS Code
@@ -1323,11 +1326,14 @@ To test if gradle works, run the following command
     
 
 </details>
-
-<details>
-<summary>Troubleshooting</summary>
+</details>
 
 ## Troubleshooting
+
+<details>
+<summary>Different Troubleshooting hints</summary>
+
+
 
 ### Enable WCA extension debugging
 <details>
@@ -1356,10 +1362,10 @@ Scroll down to the section **Wca Log Level** and set the Log level for example t
 Now you should see debug information in the WCA output panel:
 
 <kbd>![](./images/media/WCA_Core_Extension_Debug.png)</kbd>
-</details>
 
 <br>
 
+</details>
 
 
 ### Troubleshooting API key
@@ -1413,13 +1419,14 @@ You could also call directly the Invoke-WebRequest
 
 For additional details about the command, take a look at https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey
 </details>
+</details>
 
 
 ## Good to know
 <details>
 <summary>Additional information about WCA</summary>
 
-## WCA Security and Privacy
+### WCA Security and Privacy
 
 Here two links regarding WCA security and privacy:
 
@@ -1431,7 +1438,7 @@ https://cloud.ibm.com/docs/watsonx-code-assistant?topic=watsonx-code-assistant-m
 
 
 
-## Display of Code Suggestions
+### Display of Code Suggestions
 IBM watsonx Code Assistant checks whether a generated code suggestion is similar to other code sources.
 
 By default, IBM watsonx Code Assistant blocks code that is similar to other code sources.
@@ -1447,7 +1454,7 @@ For a full list of which licenses are blocked by default and which licenses can 
 https://cloud.ibm.com/docs/watsonx-code-assistant?topic=watsonx-code-assistant-cloud-setup-configurations
 
 
-## How to install the WCA drivers without access to the market place
+### How to install the WCA drivers without access to the market place
 
 If your development environment does not have access to the VS-Code Market Place, you can download the VSIX files for air-gapped installation.
 
@@ -1484,7 +1491,7 @@ The related links to the driver repositories are:
 - https://public.dhe.ibm.com/ibmdl/export/pub/software/wca/wca-eja/v1.0.1/
 
 
-## How to improve the WCA chat results
+### How to improve the WCA chat results
 
 Hint:
 
@@ -1512,7 +1519,7 @@ To set the context, you could use the following commands:
     - "what is the purpose of the modres application?"
     - "what happens if the weather data endpoint is not available?"
 
-## How to analyze a Gradle project
+### How to analyze a Gradle project
 For a Gradle project, the use case "Modernize to Liberty" fails with the error "Unable to modernize Java project to Liberty: The project is not a Maven project".
 If you want wCA to analyze the application instead of using the migration bundle, the "analyze" fails as it cannot find the application binaries. Here a workaround until the llimitation has been removed:
 
@@ -1541,9 +1548,6 @@ Now you should be able to analyze the application.
 
 HINT: If the wCA sub-menu does not appear after right-click on src, do a right-click on pom.xml.
 Then select Modernize Java Applications > Modernize to Liberty
-
-
-
 
 
 </details>
