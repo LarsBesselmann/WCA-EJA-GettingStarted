@@ -3,4 +3,4 @@ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com
 
 
 dnf check-update
-sudo dnf install code
+sudo dnf install code --assumeyes
