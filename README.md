@@ -1330,6 +1330,9 @@ To test if gradle works, run the following command
 ## Troubleshooting
 
 ### Enable WCA extension debugging
+<details>
+<summary>Steps to enable WCA debugging</summary>
+
 To get more insight what happens in WCA under the cover and debug issues, you can set WCA in debug mode.
 These are the steps to do so:
 
@@ -1353,12 +1356,16 @@ Scroll down to the section **Wca Log Level** and set the Log level for example t
 Now you should see debug information in the WCA output panel:
 
 <kbd>![](./images/media/WCA_Core_Extension_Debug.png)</kbd>
+</details>
 
 <br>
 
 
 
 ### Troubleshooting API key
+<details>
+<summary>Details how to debug and resolve API Key issues</summary>
+
 
 #### Validation of API key does not work
  If you enter the API key and you do not get the message **Valid API Key** after some seconds, check the output for WCA. 
@@ -1408,9 +1415,9 @@ For additional details about the command, take a look at https://cloud.ibm.com/d
 </details>
 
 
-
+## Good to know
 <details>
-<summary>Good to know</summary>
+<summary>Additional information about WCA</summary>
 
 ## WCA Security and Privacy
 
