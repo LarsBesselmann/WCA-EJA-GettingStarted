@@ -357,7 +357,21 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
         mv modresorts*.zip ~/software
         
 
-4. Run the following command to set up the modresorts environment.
+4. Check the version of VS Code via the command
+
+        . /home/techzone/Student/labs/wca/showEnv.sh vscode
+
+    <kbd>![vscode_version](./images/media/vscode_version.png)</kbd>
+
+    If it shows a version **1.104.x** as in the screenshot above, you can continue with the next step. Otherwise run the following command to update vscode:
+
+        . vscode_update.sh
+
+    Once completed, VS Code has been updated. 
+    Feel free to check again the version.
+
+
+5. Run the following command to set up the modresorts environment.
 
         . modresorts_demo_setup.sh
 
@@ -365,7 +379,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
     
     > **/home/techzone/Student/labs/wca/temp-*/modresorts**
 
-5.  Launch VS Code using the current directory as the root folder for
+6.  Launch VS Code using the current directory as the root folder for
     the workspace
 
         code .
@@ -389,7 +403,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
 
     <br/>
 
-4.  Review the installed extensions in VS Code that are used for this lab.
+7.  Review the installed extensions in VS Code that are used for this lab. The installed version might be higher than in the screenshots.
     
     a.  Click on the **Extensions** icon in the left navigation bar in
         VS Code.
@@ -452,6 +466,11 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
  
     5. Press **Enter** to confirm the key.
 
+    6. If you are asked to select a backend, select the backend closest to you. 
+
+        <kbd>![](./images/media/WCA_API-Key-4.png)</kbd>
+ 
+
     Hint: If you do not get the message **Valid API Key** after some seconds, check the output for WCA. 
 
     1. In the VS Code menu, click on **View** and select **Output**.
@@ -462,7 +481,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
 
         <kbd>![](./images/media/WCA_Certificate_Issue_2.png)</kbd>
 
-        If you see a certificate error as in the screenshot above, VS Code must be updated. For details how to update VS Code, see appendix.
+        If you see a certificate error as in the screenshot above, VS Code must likely be updated. For details how to update VS Code, see the troubleshooting section in the Appendix.
 
 
 3. You should see a Chat session.
@@ -1243,7 +1262,7 @@ To access the cloud-based watsonx Code Assistant, an API key must have been prov
  
 6. Press **Enter** to confirm the key.
 
-7. If you are asked to select a backend, select **Dallas (DAL)**. 
+7. If you are asked to select a backend, select the closest backend. 
 
     <kbd>![](./images/media/WCA_API-Key-4.png)</kbd>
  
