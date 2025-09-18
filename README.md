@@ -1243,7 +1243,11 @@ To access the cloud-based watsonx Code Assistant, an API key must have been prov
  
 6. Press **Enter** to confirm the key.
 
-7. In the chat session, you should see a Chat session.
+7. If you are asked to select a backend, select **Dalas (DAL)**. 
+
+    <kbd>![](./images/media/WCA_API-Key-4.png)</kbd>
+ 
+8. In the chat session, you should see a Chat session.
  
     <kbd>![](./images/media/WCA_Chat-Hello.png)</kbd>
  
