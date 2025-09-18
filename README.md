@@ -1388,7 +1388,7 @@ Now you should see debug information in the WCA output panel:
 
         . vscode_update.sh
 
-    Once completed, VS COde has been updated. 
+    Once completed, VS Code has been updated. 
 
 4. If needed, use the **cd** command switch back to your working directory 
     
