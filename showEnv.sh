@@ -27,7 +27,7 @@ do
 		break
 		;;
     vscode)
-		code --version
+		code --version | grep "1.*.*" -m 1
 		break
 		;;
 		

@@ -361,12 +361,11 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
 
         . /home/techzone/Student/labs/wca/showEnv.sh vscode
 
-     If it shows a version **1.104.x** as in the screenshot below, you can continue with the next step. 
-    
-    
+
     <kbd>![vscode_version](./images/media/vscode_version.png)</kbd>
 
-    Otherwise run the following command to update vscode:
+    If it shows version **1.97.0** (as in the screenshot above) or any other version lower **1.104.x**, you need to update vscode. 
+    To do so, run the following command to update vscode:
 
         . vscode_update.sh
 
