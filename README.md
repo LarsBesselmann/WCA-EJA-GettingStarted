@@ -364,7 +364,7 @@ In the prepared lab environment, the Visual Studio Code and the Liberty Tools ar
 
     <kbd>![vscode_version](./images/media/vscode_version.png)</kbd>
 
-    If it shows version **1.97.0** (as in the screenshot above) or any other version lower **1.104.x**, you need to update vscode. 
+    If it shows version **1.97.0** (as in the screenshot above) or any other version lower than **1.104.x**, you need to update vscode. 
     To do so, run the following command to update vscode:
 
         . vscode_update.sh
